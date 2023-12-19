@@ -1,24 +1,39 @@
+import { Container, Box, Grid } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FaFacebookF,FaTwitter,FaLinkedinIn,FaYoutube,FaInstagram,FaEnvelopeOpen,FaPhoneAlt  } from "react-icons/fa";
+import { FaLocationDot, FaXTwitter  } from "react-icons/fa6";
+import Newsletter from './Newsletter';
+
 
 const Footer = () => {
     return (
-        <footer>
-            <div className='container'>
-                <div className='footerTop'>
-                    <div className='row'>
-                        <div className='col-md-4'>
-                            <div className='footerCol fCol1'>
+        <Box className='footer'>
+        <Newsletter />
+        <Container>
+            <Box>
+                <Box className='footerTop'>
+                    <Grid container spacing={3}>
+                    <Grid item xs={12} md={3}>
+                            <Box className='footerCol fCol1'>
                                 <h4>About Company</h4>
                                 <p>
                                     Wilson Consulting Group (WCG) is an innovative global cybersecurity consulting firm headquartered in Washington D.C., with a European office in London, England.
                                 </p>
-                            </div>
-                        </div>
+                                
+                                <ul className='footerSocial'>
+                                <li><a href='#'><FaFacebookF /></a></li>
+                                <li><a href='#'><FaXTwitter /></a></li>
+                                <li><a href='#'><FaLinkedinIn /></a></li>
+                                <li><a href='#'><FaYoutube /></a></li>
+                                <li><a href='#'><FaInstagram /></a></li>
+                                </ul>
+                            </Box>
+                        </Grid>
 
-                        <div className='col-md-4'>
-                            <div className='footerCol fCol2'>
-                                <h4>Quick links</h4>
+                        <Grid item xs={12} md={3}>
+                            <Box className='footerCol fCol2'>
+                                <h4>Quick Links</h4>
                                 <div className='footerMenu'>
                                     <ul>
                                         <li><Link to="/">About Us</Link></li>
@@ -30,11 +45,11 @@ const Footer = () => {
                                         <li><Link to="/">Privacy Policy</Link></li>
                                     </ul>
                                 </div>
-                            </div>
-                        </div>
+                            </Box>
+                        </Grid>
 
-                        <div className='col-md-4'>
-                            <div className='footerCol fCol3'>
+                        <Grid item xs={12} md={3}>
+                            <Box className='footerCol fCol3'>
                                 <h4>Our Services</h4>
                                 <div className='footerMenu'>
                                     <ul>
@@ -46,16 +61,16 @@ const Footer = () => {
                                         <li><Link to="/">IT Governance</Link></li>
                                     </ul>
                                 </div>
-                            </div>
-                        </div>
+                            </Box>
+                        </Grid>
 
-                        <div className='col-md-4'>
-                            <div className='footerCol fCol4'>
+                        <Grid item xs={12} md={3}>
+                            <Box className='footerCol fCol4'>
                                 <h4>Contact Info</h4>
                                 <div className='contactInfo'>
                                     <div className='contactInfoItem'>
                                         <div className='contactInfoItem__icon'>
-
+<FaEnvelopeOpen />
                                         </div>
                                         <div className='contactInfoItem__text'>
                                             sales@wilsoncgrp.com
@@ -64,6 +79,7 @@ const Footer = () => {
 
                                     <div className='contactInfoItem'>
                                         <div className='contactInfoItem__icon'>
+                                        <FaLocationDot />
 
                                         </div>
                                         <div className='contactInfoItem__text'>
@@ -74,23 +90,24 @@ const Footer = () => {
 
                                     <div className='contactInfoItem'>
                                         <div className='contactInfoItem__icon'>
-
+                                        <FaPhoneAlt />
                                         </div>
                                         <div className='contactInfoItem__text'>
                                             1.866.780.1655
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </Box>
+                        </Grid>
 
-                    </div>
-                </div>
+                    </Grid>
+                </Box>
                 <div className='footerBottom'>
-                <p className='copyright text-center'>© 2023 Wilson consulting group. All Rights Reserved.</p>
+                <p className='copyright text-center'>© 2023 Wilson Consulting Group. All Rights Reserved.</p>
                 </div>
-            </div>
-        </footer>
+            </Box>
+            </Container>
+        </Box>
     )
 }
 

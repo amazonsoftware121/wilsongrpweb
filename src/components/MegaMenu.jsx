@@ -19,9 +19,7 @@ const MegaMenu = (props) => {
                                                                 <li><NavLink to={"#"} >Local Government Medical Agency Case History</NavLink></li>
                                                                 <li><NavLink to={"#"} >Financial Services Provider Case History</NavLink></li>
                                                                 <li><NavLink to={"#"} >Power and Utility Company Case History</NavLink></li>
-
-                                                            </ul>
-                                                            
+                                                            </ul>                                                            
                                                         </Grid>
                                                         <Grid item xs={3} md={6}>
                                                             <ul className='dropdownChild'>
@@ -49,7 +47,6 @@ const MegaMenu = (props) => {
                                                         <li><NavLink to={"#"} >Info Sheets</NavLink></li>
                                                         <li><NavLink to={"#"} >Our Videos</NavLink></li>
                                                         <li><NavLink to={"#"} >Our E-Book</NavLink></li>
-
                                                     </ul>
                                                 </Grid>
 

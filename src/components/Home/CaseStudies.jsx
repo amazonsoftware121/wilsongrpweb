@@ -12,7 +12,7 @@ const CaseStudies = () => {
             <Box>
                 <Box className="caseStudies" >
                     <Container maxWidth={false} sx={{ maxWidth: "1448px" }} >
-                        <Grid container spacing={2}>
+                        <Grid container>
 
                             <Grid item md={6} xs={12} >
                                 <motion.div initial={{ y: 200, opacity: 0 }}
@@ -62,7 +62,7 @@ const CaseStudies = () => {
 
                                     position: {sm: 'relative', md: 'absolute'},
                                     right: 0,
-                                    height: {sm: '100%',md: 'calc(100% - 16px)'},
+                                    height: {sm: '100%',md: 'calc(100%)'},
                                     clipPath: {sm: 'none', md: 'polygon(55% 0, 100% 0%, 100% 100%, 0 100%)'}, backgroundColor: "#fff"
                                 }}>
 

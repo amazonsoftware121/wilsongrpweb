@@ -38,6 +38,7 @@ $color-text-light: #fff;
 body {
   margin: 0;
   padding: 0;
+  background-color: transparent;
 
   h1 {
     font-size: 3.2em;
@@ -234,33 +235,8 @@ body {
 
 
 
-  /*Grid*/
-  .row {
-    display: flex;
-    margin: 0 -15px;
-
-    .col-md-2,
-    .col-md-3,
-    .col-md-4,
-    .col-md-5,
-    .col-md-6,
-    .col-md-7,
-    .col-md-8,
-    .col-md-9,
-    .col-md-10,
-    .col-md-11,
-    .col-md-12 {
-      padding: 0 15px;
-    }
-
-    .col-md-4 {
-      width: 33.3333%;
-    }
-
-    .col-md-6 {
-      width: 50%;
-    }
-  }
+  
+  
 
   /*Align*/
   .text-center {
@@ -597,9 +573,20 @@ body {
   }
 
   /*Home Banner*/
+  video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  position: absolute;
+  //z-index: -9;
+  }
   .mainBanner {
     height: 100vh;
     width: 100%;
+    z-index: 99;
+    position: relative;
+   
 
     .bannerContent {
       display: flex;
@@ -1291,6 +1278,102 @@ body {
         .slide-content {
           padding: 30px 15px 15px 15px;
         }
+      }
+    }
+
+
+    /* Mobile Menu */
+
+    .navigationMenu {
+      flex-direction: column;
+
+
+
+
+      .toggle-button {
+        cursor: pointer;
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+      
+      .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      
+      .content.visible {
+        max-height: 500px; /* Set an appropriate max-height */
+        transition: max-height 0.5s ease-in;
+      }
+      
+
+
+
+
+      li {
+        a {
+          color: $color-text-dark;
+          padding: 8px 15px;
+        }
+
+        &.dropdownParent {
+          .megaMenu {
+            position: relative;
+            width: 100%;
+            padding: 0;
+            left: inherit;
+            opacity: 1;
+            visibility: visible;
+            top: inherit;
+            border: none;
+            padding-left: 5px;
+            h6{
+              padding-left: 0;
+              border-left: 0;
+              margin-bottom: 10px;
+              a{
+              font-size: 14px;
+              color: $color-primary;
+              }
+            }
+
+            ul.dropdownChild {
+              visibility: visible;
+              opacity: 1;
+              padding-left: 5px;
+              border: none;
+              padding-bottom: 20px;
+              display: none;
+
+              li {
+                padding: 5px;
+                border-bottom: 1px solid #ccc;
+                &:last-child{
+                  border-bottom: none;
+                }
+                a {
+                  color: $color-text-dark;
+                  text-align: left;
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+          &:hover{
+            .megaMenu{
+              top: inherit;
+
+            }
+            &::after{
+              display: none;
+            }
+          }
+        }
+
+        
       }
     }
 

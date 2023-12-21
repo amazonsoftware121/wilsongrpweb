@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
-import { Slide, Box, AppBar, Grid, Typography, Toolbar, IconButton, Drawer, Divider, CssBaseline, useScrollTrigger, Container } from '@mui/material';
+import { Slide, Box, AppBar, Typography, Toolbar, IconButton,  Divider, CssBaseline, useScrollTrigger } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MegaMenu from './MegaMenu';
 import logo from '../assets/img/logo.png'
 import NavBar from './NavBar';
 
@@ -25,14 +22,8 @@ const HideOnScroll = (props) => {
 
 const Header = (props) => {
 
-    const [mobileOpen, setMobileOpen] = useState(false);
+    
     const [navbar, setNavbar] = useState(false);
-
-    const [isDropdownOpen, setDropdownOpen] = useState(false);
-
-    const handleDropdownToggle = () => {
-        setDropdownOpen(!isDropdownOpen);
-    };
 
 
 
@@ -46,14 +37,10 @@ const Header = (props) => {
     }
     window.addEventListener('scroll', changeBackground);
 
-    // Handle Menu Click
 
-    const handleDrawerToggle = () => {
-        setMobileOpen(!mobileOpen);
-    }
     // Menu drawer
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }} >
+        <Box sx={{ textAlign: 'center' }} >
             <Typography component="div" sx={{ flexGrow: 1, my: 2 }}>
                 <div className='headerLogoMobile'>
                     <img src={logo} alt="Logo" />
@@ -70,13 +57,13 @@ const Header = (props) => {
             <Box>
                 <CssBaseline />
                 <HideOnScroll {...props}>
-                    <AppBar component={"nav"} sx={{ bgcolor: navbar ? '#000' : 'transparent' }}>
+                    <AppBar component={"nav"} sx={{ bgcolor: navbar ? '#000' : 'transparent', boxShadow: 'none' }}>
                         <Toolbar>
                             <IconButton color="inherit"
                                 aria-label="open drawer"
                                 edge="start"
                                 sx={{ mr: 2, display: { sm: "none" } }}
-                                onClick={handleDrawerToggle}
+                                
                             >
                                 <MenuIcon sx={{ color: 'white' }} fontSize='26'></MenuIcon>
                             </IconButton>
@@ -84,32 +71,17 @@ const Header = (props) => {
                                 <div className='headerLogo'>
                                     <img src={logo} alt="Logo" />
                                 </div></Typography>
-                                <Box sx={{ display: { xs: "none", sm: "block" } }}>
+                            <Box sx={{ display: { xs: "none", sm: "block" } }}>
                                 <NavBar />
-                                </Box>
-                            
+                            </Box>
+
                         </Toolbar>
 
                     </AppBar>
                 </HideOnScroll>
-                <Box>
-                    <Drawer
-                        variant="temporary"
-                        open={mobileOpen}
-                        hideBackdrop: true
-                        onClose={handleDrawerToggle}
-                        
 
-                        sx={{
-                            display: { xs: 'block', sm: 'none' },
-                            '& .MuiDrawer-paper': {
-                                boxSizing: 'border-box',
-                                width: '240px',
-                            },
-                        }}
-                    >
-                        {drawer}
-                    </Drawer>
+                <Box className="mobileNavigationWrapper" sx={{display: {xs: 'none', md: 'none'}}}>
+                    {drawer}
                 </Box>
             </Box>
         </>

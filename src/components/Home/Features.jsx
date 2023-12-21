@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Box, Container,Button, Typography } from "@mui/material";
+import { Box, Container, Button, Typography } from "@mui/material";
 
 import 'swiper/css';
 import 'swiper/css/grid';
@@ -13,7 +13,7 @@ import { Label } from '@mui/icons-material';
 import { useRef } from "react";
 import hover3d from '../../utils/hover';
 
-import {motion, useScroll, useTransform} from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Communication from '../../../src/assets/img/communications_new.jpg';
 import Features2 from '../../../src/assets/img/features2.jpg';
 import HealthIndustiresnew from '../../../src/assets/img/healthIndustiresnew.jpg';
@@ -25,22 +25,22 @@ import InsuranceNew from '../../../src/assets/img/insuranceNew.jpg'
 
 const Features = () => {
 
-const secRef = useRef(null);
-    const {scrollYProgress} = useScroll({
+    const secRef = useRef(null);
+    const { scrollYProgress } = useScroll({
         target: secRef,
         offset: ["start end", "end start"],
     });
 
-    const scale = useTransform(scrollYProgress, [0, 0.4], [0,1]);
+    const scale = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
 
-    
+
     const [swiper, setSwiper] = useState(null);
 
     const slides = [
-        { id: 1, title: 'Communications', desc:"Wilson Consulting Group (WCG) assists businesses in improving their communications infrastructure by conducting a comprehensive analysis of their current system to identify strengths and weaknesses.", img: Communication },
-        { id: 2, title: 'Banking and Capital Markets', desc:"Today’s dynamic and evolving insurance industry faces complex information technology challenges. Wilson Consulting Group’s (WCG) team of professionals guide our insurance industry clients to achieve a competitive advantage.", img: Features2 },
-        { id: 3, title: 'Healthcare Industry', desc:"The dynamic use of information technology in the healthcare industry presents unique challenges for healthcare providers. E-health has become the preferred method of communication,research, and record-keeping for many care services.", img: HealthIndustiresnew },
-        { id: 4, title: 'Insurance', desc:"Today’s dynamic and evolving insurance industry faces complex information technology challenges. Wilson Consulting Group’s (WCG) team of professionals guide our insurance industry clients to achieve a competitive advantage.", img: InsuranceNew }
+        { id: 1, title: 'Government and Public', desc: "Wilson Consulting Group (WCG) is effectively positioned to assist organizations in numerous industries to successfully achieve their objectives and transform and secure their IT environments and applications by providing expert IT governance, risk management, and compliance consulting services.", img: Communication },
+        { id: 2, title: 'Banking and Capital Markets', desc: "Meeting regulatory requirements and securing businesses against cyber-attacks helps bolster customer satisfaction, increase workforce productivity, improve supplier or partner integration, and reduce operational costs.", img: Features2 },
+        { id: 3, title: 'Financial Institutions', desc: "Today's data-driven, hacker-filled digital world presents unique opportunities for growth in the financial industry. However, the challenges to financial IT are persistent and constantly evolving.", img: HealthIndustiresnew },
+        { id: 4, title: 'Educational Institutions and Nonprofit Organizations', desc: "Wilson Consulting Group’s (WCG) secure e-learning models by creating a comprehensive defense mechanism against threats and vulnerabilities in cyber education practices.", img: InsuranceNew }
         // Add more slides as needed
     ];
     const pagination = {
@@ -55,9 +55,9 @@ const secRef = useRef(null);
 
     return (
         <>
-        
-            <Box component="section" className="features" sx={{ height: 'calc(100vh - 16px)' }} >
-                <Swiper 
+
+            <Box component="section" className="features" sx={{ height: 'calc(100vh)' }} >
+                <Swiper
                     direction={'horizontal'}
                     mousewheel={false}
                     onSwiper={(swiper) => setSwiper(swiper)}
@@ -66,34 +66,37 @@ const secRef = useRef(null);
                     modules={[Pagination, Mousewheel]}
                 >
                     {slides.map((slide) => (
-                        <SwiperSlide key={slide.id} style={{ background: `linear-gradient(1.22deg, rgba(4, 77, 105, 0.7) 21.34%, rgba(4, 77, 105, 0) 92.71%),
-url(${slide.img})`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover', height: "100vh", backgroundPosition: 'bottom center' }} >
+                        <SwiperSlide key={slide.id} style={{
+                            background: `linear-gradient(1.22deg, rgba(4, 77, 105, 0.7) 21.34%, rgba(4, 77, 105, 0) 92.71%),
+url(${slide.img})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', height: "100vh", backgroundPosition: 'bottom center'
+                        }} >
                             <Box className='slideWrapper'>
                                 <Container>
-                                <motion.div initial={{y: 200 , opacity: 0}}
-  whileInView={{ y: 0, opacity: 1 }}
-  transition={{ duration: 1.5 }}>
-                                <Box className="slide-content" style={{
-                color: '#fff'
-              }}>
-                                <span className='labelCustom'>Features</span>
-                                    <h2 className='title' style={{marginTop: "35px"}}>{slide.title}</h2>
-                                    <Typography my={3}>{slide.desc}</Typography>
+                                    <motion.div initial={{ y: 200, opacity: 0 }}
+                                        whileInView={{ y: 0, opacity: 1 }}
+                                        transition={{ duration: 1.5 }}>
+                                        <Box className="slide-content" style={{
+                                            color: '#fff'
+                                        }}>
+                                            <span className='labelCustom'>Features</span>
+                                            <h2 className='title' style={{ marginTop: "35px" }}>{slide.title}</h2>
+                                            <Typography my={3}>{slide.desc}</Typography>
 
-                                    <Button variant='text' className='textBtn-light' href='#' mt={2} endIcon={<FaArrowRight  size={12} />} sx={{color: "#fff",
-                                    '&:hover': {
-color: '#000'
-                                    }
-                                    }} >Read More </Button>
-                                </Box>
-                                </motion.div>
+                                            <Button variant='text' className='textBtn-light' href='#' mt={2} endIcon={<FaArrowRight size={12} />} sx={{
+                                                color: "#fff",
+                                                '&:hover': {
+                                                    color: '#000'
+                                                }
+                                            }} >Read More </Button>
+                                        </Box>
+                                    </motion.div>
                                 </Container>
                             </Box>
                         </SwiperSlide>
                     ))}
                 </Swiper>
             </Box>
-            
+
         </>
     )
 }

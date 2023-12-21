@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 import Banner from "../../assets/img/banner.jpg";
 import {motion} from 'framer-motion'
 import {Button,Container, Typography} from "@mui/material";
-
+import videoBg from '../../assets/videoBg.mp4';
 import { useRef } from "react";
 import { Stack } from "@mui/system";
 
@@ -19,15 +19,22 @@ const MainBanner = () => {
     
     transition={{ ease: "easeOut", duration: 2 }}
   >
+
+
+<video src={videoBg} autoPlay loop muted></video>
     <section className='mainBanner'
         style={{
-        backgroundImage: `url(${Banner})`,
+        //backgroundImage: `url(${Banner})`,
+        backgroundColor: '#000000b0',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         overflow: "hidden"
       }}
 >
+
+
+
 <Container maxWidth={false} sx={{maxWidth:"1400px"}}>
 <motion.div   animate={{ x: 100 }}
 transition={{

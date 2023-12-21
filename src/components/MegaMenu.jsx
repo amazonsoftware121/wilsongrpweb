@@ -8,11 +8,11 @@ const MegaMenu = (props) => {
     <>
           <Box className="megaMenu">
           <Container>
-                                            <Grid container spacing={3}>
-                                                <Grid item xs={3} md={6}>
+                                            <Grid container spacing={{md: 3}}>
+                                                <Grid item xs={12} md={6}>
                                                     <Typography variant='h6' sx={{ fontWeight: 700 }}><NavLink to={'#'}>Our Track Record</NavLink></Typography>
-                                                    <Grid container spacing={4}>
-                                                        <Grid item xs={3} md={6}>
+                                                    <Grid container spacing={{md: 4}}>
+                                                        <Grid item xs={12} md={6}>
                                                             <ul className='dropdownChild'>
                                                                 <li><NavLink to={"#"} >Howard University – School of Social Work: Case History</NavLink></li>
                                                                 <li><NavLink to={"#"} >Jamaican Government Security Solution</NavLink></li>
@@ -21,7 +21,7 @@ const MegaMenu = (props) => {
                                                                 <li><NavLink to={"#"} >Power and Utility Company Case History</NavLink></li>
                                                             </ul>                                                            
                                                         </Grid>
-                                                        <Grid item xs={3} md={6}>
+                                                        <Grid item xs={12} md={6}>
                                                             <ul className='dropdownChild'>
                                                                 <li><NavLink to={"#"} >Federal Agency Case History</NavLink></li>
                                                                 <li><NavLink to={"#"} >Federal Agency Case History 2</NavLink></li>
@@ -38,7 +38,7 @@ const MegaMenu = (props) => {
 
 
 
-                                                <Grid item xs={3} md={3}>
+                                                <Grid item xs={12} md={3}>
                                                     <Typography variant='h6' sx={{ fontWeight: 700 }}><NavLink to={'#'}>Media Center</NavLink></Typography>
                                                     <ul className='dropdownChild'>
                                                         <li><NavLink to={"#"} >Blog</NavLink></li>
@@ -51,7 +51,7 @@ const MegaMenu = (props) => {
                                                 </Grid>
 
 
-                                                <Grid item xs={3} md={3}>
+                                                <Grid item xs={12} md={3}>
                                                     <Typography variant='h6'><NavLink to={'#'}>Featured</NavLink></Typography>
                                                     <ul className='dropdownChild'>
                                                         <li><NavLink to={"#"} >About Us</NavLink></li>

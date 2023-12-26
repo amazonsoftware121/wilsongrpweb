@@ -14,7 +14,7 @@ const CaseStudies = () => {
                     <Container maxWidth={false} sx={{ maxWidth: "1448px" }} >
                         <Grid container>
 
-                            <Grid item md={6} xs={12} >
+                            <Grid item md={6} lg={6} xs={12} >
                                 <motion.div initial={{ y: 200, opacity: 0 }}
                                     whileInView={{ y: 0, opacity: 1 }}
                                     transition={{ duration: 1.5 }}>
@@ -47,14 +47,14 @@ const CaseStudies = () => {
                                             WCG conducted a review of the E. Franklin Frazier Center’s systems, and then provided recommendations and developed a strategic plan that enabled them to transform the methods used to provide services to the underserved population.
                                         </Typography>
                                         <Stack mt={2} spacing={{xs: 0, sm: 3, md: 3, lg: 3}} direction={{xs: 'column',  sm: 'row'}} alignItems='start'>
-                                            <Button variant='text' href='#' className='textBtn-sky' > Read More &nbsp; <span><FaArrowRight size={14} /></span></Button>
-                                            <Button variant='text' href='#' className='textBtn-sky' >Explore All Our Case Studies &nbsp; <span><FaArrowRight size={14} /></span></Button></Stack>
+                                            <Button variant='text' href='https://wilsoncgrp.com/howard-university-school-of-social-work-case-history' className='textBtn-sky' > Read More &nbsp; <span><FaArrowRight size={14} /></span></Button>
+                                            <Button variant='text' href='https://wilsoncgrp.com/track-record' className='textBtn-sky' >Explore All Our Case Studies &nbsp; <span><FaArrowRight size={14} /></span></Button></Stack>
                                     </Box>
                                 </motion.div>
                             </Grid>
 
 
-                            <Grid item xs={12} md={6}>
+                            <Grid item xs={12} md={6} lg={6}>
 
 
 
@@ -63,7 +63,7 @@ const CaseStudies = () => {
                                     position: {sm: 'relative', md: 'absolute'},
                                     right: 0,
                                     height: {sm: '100%',md: 'calc(100%)'},
-                                    clipPath: {sm: 'none', md: 'polygon(55% 0, 100% 0%, 100% 100%, 0 100%)'}, backgroundColor: "#fff"
+                                    clipPath: {sm: 'none', md: 'polygon(65% 0, 100% 0%, 100% 100%, 25% 100%)', lg: 'polygon(55% 0, 100% 0%, 100% 100%, 0 100%)' }, backgroundColor: "#fff"
                                 }}>
 
 

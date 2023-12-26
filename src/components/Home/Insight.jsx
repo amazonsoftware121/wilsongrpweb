@@ -23,12 +23,12 @@ const Insight = () => {
     const [activeTab, setActiveTab] = useState(0);
 
     const slides = [
-        { id: 1, title: "FedRAMP’s Latest Changes and Expectations", date: "Sep 5, 2023", img: img1 },
-        { id: 2, title: "FedRAMP Has New Baseline Security Control Requirements", date: "Aug 31, 2023", img: img2 },
-        { id: 3, title: "FedRAMP: Mandatory Protection for Your Cloud Services with Federal Businesses", date: "Jul 24, 2023", img: img3 },
-        { id: 4, title: "Improving Cybersecurity Awareness in Healthcare", date: "Oct 27, 2022", img: img4 },
-        { id: 5, title: "FedRAMP Compliance: What You Need to Know?", date: "Oct 19, 2022", img: img5 },
-        { id: 6, title: "What NIST 800-53 Revision 5 Means to Cybersecurity?", date: "Oct 12, 2022", img: img6 },
+        { id: 1, title: "FedRAMP’s Latest Changes and Expectations", date: "Sep 5, 2023", img: img1, link: 'https://wilsoncgrp.com/blog/fedramp-latest-changes-and-expectations' },
+        { id: 2, title: "FedRAMP Has New Baseline Security Control Requirements", date: "Aug 31, 2023", img: img2, link: 'https://wilsoncgrp.com/blog/fedramp-has-new-baseline-security-control-requirements' },
+        { id: 3, title: "FedRAMP: Mandatory Protection for Your Cloud Services with Federal Businesses", date: "Jul 24, 2023", img: img3, link: 'https://wilsoncgrp.com/blog/mandatory-protection-for-your-cloud-services' },
+        { id: 4, title: "Improving Cybersecurity Awareness in Healthcare", date: "Oct 27, 2022", img: img4, link: 'https://wilsoncgrp.com/blog/improving-cybersecurity-awareness-in-healthcare' },
+        { id: 5, title: "FedRAMP Compliance: What You Need to Know?", date: "Oct 19, 2022", img: img5, link: 'https://wilsoncgrp.com/blog/fedramp-compliance-what-you-need-to-know' },
+        { id: 6, title: "What NIST 800-53 Revision 5 Means to Cybersecurity?", date: "Oct 12, 2022", img: img6, link: 'https://wilsoncgrp.com/blog/what-nist-800-53-revision-5-means-to-cybersecurity' },
         // Add more slides as needed
     ];
 
@@ -48,11 +48,11 @@ const Insight = () => {
             <Box className="insight" sx={{ display: 'flex', 
             height: {
                 sm: 'auto',
-                md: '100vh'
+                lg: '100vh'
                 }, 
             minHeight: {
                 sm: 'auto',
-                md: '750px'
+                lg: '750px'
             } }} >
                 {/* Left Side Tabs */}
 
@@ -61,7 +61,7 @@ const Insight = () => {
                     <Grid item sm={12} md={4} xs={12} sx={{
                         position: 'relative',
                         padding: {
-                            md: '70px 40px 40px 70px',
+                            lg: '70px 40px 40px 70px',
                             xs: '40px 15px'
                         }, backgroundColor: '#F1F1F1', color: '#fff'
                     }}>
@@ -70,16 +70,18 @@ const Insight = () => {
                         <Typography component={"h2"} variant='h2' color={"black"} className='sectionTitle' mb={3} mt={1}>Discover Innovative Solutions</Typography>
                         <Box sx={{
                             display: {
+                                lg: 'block',
                                 md: 'block',
+                                sm: 'none',
                                 xs: 'none'
                             }
                         }}>
                             {slides.map((slide, index) => (
-                                <div key={slide.id} onClick={() => swiper.slideTo(index)} style={{ cursor: 'pointer', marginBottom: '20px' }}>
+                                <Box className="titleBtn" key={slide.id} onClick={() => swiper.slideTo(index)} sx={{ cursor: 'pointer', marginBottom: {md: '10px', lg: '20px'} }}>
                                     <Button variant="outlined" sx={{ width: '400px', color: activeTab === index ? '#fff' : '#28A0CF', backgroundColor: activeTab === index ? '#28A0CF' : 'transparent' }}>
                                         {slide.title.length > 38 ? `${slide.title.slice(0, 38)}...` : slide.title}
                                     </Button>
-                                </div>
+                                </Box>
                             ))}
                         </Box>
 
@@ -95,7 +97,7 @@ const Insight = () => {
                         >
 
 
-                            <Button variant="contained" className='bottomButton'>Explore Latest Insights</Button>
+                            <Button href='https://wilsoncgrp.com/blog' sx={{padding: '9px 16px', borderRadius: 0, fontSize: '16px'}} variant="contained" className='bottomButton'>Explore Latest Insights</Button>
 
                             <Box mt={3} className="insightNav">
                                 <ArrowBackIcon
@@ -118,10 +120,11 @@ const Insight = () => {
                         <Box
                             sx={{ width: '100%', height: {
                                 xs: 'auto',
-                                md: '100vh'
+                                lg: '100vh'
                                 }, minHeight: {
                                 xs: '50vh',
-                                md: '750px',
+                                md: 'auto',
+                                lg: '750px',
                                 } }}
                         >
                             <Swiper className='insigtSwipperRight'
@@ -139,7 +142,7 @@ const Insight = () => {
                                         slidesPerView: 1, // 1 slide for screens less than 600 pixels wide
                                         direction: 'horizontal'
                                     },
-                                    960: {
+                                    991: {
                                         slidesPerView: 1.5, // 1.5 slides for screens between 600 and 960 pixels wide
                                         direction: 'vertical'
                                     },
@@ -171,13 +174,14 @@ const Insight = () => {
                                                     <Typography mb={2}>{slide.date}</Typography>
                                                     <Typography variant="h2" className='title' component={'h2'} mb={3}>{slide.title}</Typography>
 
-                                                    <Button variant='text' href='#' mt={2} sx={{ color: "#fff" }}>Read More &nbsp; <FaArrowRight size={12} /></Button>
+                                                    <Button variant='text' href={slide.link} mt={2} sx={{ color: "#fff" }}>Read More &nbsp; <FaArrowRight size={12} /></Button>
                                                 </Box>
                                             </Box>
                                         </Box>
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
+                            
                         </Box>
                     </Grid>
                 </Grid>

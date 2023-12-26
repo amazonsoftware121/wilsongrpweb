@@ -1,7 +1,7 @@
 import { Container, Box, Grid } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaFacebookF,FaTwitter,FaLinkedinIn,FaYoutube,FaInstagram,FaEnvelopeOpen,FaPhoneAlt  } from "react-icons/fa";
+import { FaFacebookF,FaTwitter,FaRss,FaLinkedinIn,FaYoutube,FaInstagram,FaEnvelopeOpen,FaPhoneAlt  } from "react-icons/fa";
 import { FaLocationDot, FaXTwitter  } from "react-icons/fa6";
 import Newsletter from './Newsletter';
 
@@ -22,11 +22,11 @@ const Footer = () => {
                                 </p>
                                 
                                 <ul className='footerSocial'>
-                                <li><a href='#'><FaFacebookF /></a></li>
-                                <li><a href='#'><FaXTwitter /></a></li>
-                                <li><a href='#'><FaLinkedinIn /></a></li>
-                                <li><a href='#'><FaYoutube /></a></li>
-                                <li><a href='#'><FaInstagram /></a></li>
+                                <li><a href='https://www.facebook.com/WilsonCGroupLLC/' target='_blank'><FaFacebookF /></a></li>
+                                <li><a href='https://twitter.com/WilsonCGroupllc' target='_blank'><FaXTwitter /></a></li>
+                                <li><a href='https://www.linkedin.com/company/wilson-consulting-group-llc/' target='_blank'><FaLinkedinIn /></a></li>
+                                <li><a href='https://www.youtube.com/channel/UCNxMVbZaosUNemmSmkjJOOw' target='_blank'><FaYoutube /></a></li>
+                                <li><a href='https://wilsoncgrp.com/blog' target='_blank'><FaRss /></a></li>
                                 </ul>
                             </Box>
                         </Grid>
@@ -36,13 +36,13 @@ const Footer = () => {
                                 <h4>Quick Links</h4>
                                 <div className='footerMenu'>
                                     <ul>
-                                        <li><Link to="/">About Us</Link></li>
-                                        <li><Link to="/">Our Services</Link></li>
-                                        <li><Link to="/">Cyber Security</Link></li>
-                                        <li><Link to="/">Industries We Serve</Link></li>
-                                        <li><Link to="/">Careers</Link></li>
-                                        <li><Link to="/">Contact</Link></li>
-                                        <li><Link to="/">Privacy Policy</Link></li>
+                                        <li><Link to="https://wilsoncgrp.com/about-us">About Us</Link></li>
+                                        <li><Link to="https://wilsoncgrp.com/our-services">Our Services</Link></li>
+                                        <li><Link to="https://wilsoncgrp.com/cyber-security-services">Cyber Security</Link></li>
+                                        <li><Link to="https://wilsoncgrp.com/industry-sectors">Industries We Serve</Link></li>
+                                        <li><Link to="https://wilsoncgrp.com/careers">Careers</Link></li>
+                                        <li><Link to="https://wilsoncgrp.com/contact-us">Contact</Link></li>
+                                        <li><Link to="https://wilsoncgrp.com/privacy-policy">Privacy Policy</Link></li>
                                     </ul>
                                 </div>
                             </Box>
@@ -53,12 +53,12 @@ const Footer = () => {
                                 <h4>Our Services</h4>
                                 <div className='footerMenu'>
                                     <ul>
-                                        <li><Link to="/">Cyber Security Assessment</Link></li>
-                                        <li><Link to="/">Risk Management and Assessment</Link></li>
-                                        <li><Link to="/">Cloud Services</Link></li>
-                                        <li><Link to="/">Cybersecurity Maturity Model Certification (CMMC)</Link></li>
-                                        <li><Link to="/">FedRAMP Advisory and Assessment Services</Link></li>
-                                        <li><Link to="/">IT Governance</Link></li>
+                                        <li><Link to="https://wilsoncgrp.com/cybersecurity-assessment">Cyber Security Assessment</Link></li>
+                                        <li><Link to="https://wilsoncgrp.com/risk-management-and-assessment-services">Risk Management and Assessment</Link></li>
+                                        <li><Link to="https://wilsoncgrp.com/cloud-services">Cloud Services</Link></li>
+                                        <li><Link to="https://wilsoncgrp.com/cybersecurity-maturity-model-certification">Cybersecurity Maturity Model Certification (CMMC)</Link></li>
+                                        <li><Link to="https://wilsoncgrp.com/fedramp-consulting">FedRAMP Advisory and Assessment Services</Link></li>
+                                        <li><Link to="https://wilsoncgrp.com/information-technology-governance">IT Governance</Link></li>
                                     </ul>
                                 </div>
                             </Box>

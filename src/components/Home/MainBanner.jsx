@@ -57,8 +57,8 @@ initial={{opacity: 0, x: 500 }}
             <Typography variant="h1" className="bannerHeading">FedRAMP and StateRAMP Compliance Consulting</Typography>
             <Typography className="bannerDescription">Achieve or maintain your FedRAMP & StateRAMP authorization with our Advisory and Assessment Services. </Typography>
             <Stack spacing={3} direction='row' mt={3}>
-                <Button size="large" variant="contained" endIcon={<FaArrowRight size={14} />} href="/">Read More</Button>
-                <Button size="large" variant="outlined" endIcon={<FaArrowRight size={14} />} href="/">Services </Button>
+                <Button size="large" variant="contained" endIcon={<FaArrowRight size={14} />} href="https://wilsoncgrp.com/fedramp-consulting">Read More</Button>
+                <Button size="large" variant="outlined" endIcon={<FaArrowRight size={14} />} href="https://wilsoncgrp.com/our-services">Services </Button>
             </Stack>
             
         </div>

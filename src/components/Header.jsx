@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { Slide, Box, AppBar, Typography, Toolbar, IconButton,  Divider, CssBaseline, useScrollTrigger } from '@mui/material';
+import { Slide, Box, AppBar, Typography, Toolbar, IconButton, Divider, CssBaseline, useScrollTrigger } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import logo from '../assets/img/logo.png'
 import NavBar from './NavBar';
+import MobileNav from './MobileNav';
+import CustomLeftSidebar from './CustomLeftSidebar';
 
 const HideOnScroll = (props) => {
     const { children, window } = props;
@@ -22,10 +25,14 @@ const HideOnScroll = (props) => {
 
 const Header = (props) => {
 
-    
+
     const [navbar, setNavbar] = useState(false);
 
+    const [sidebarOpen, setSidebarOpen] = useState(false);
 
+    const toggleSidebar = () => {
+        setSidebarOpen(!sidebarOpen);
+    };
 
     const changeBackground = () => {
         if (window.scrollY >= 80) {
@@ -59,19 +66,32 @@ const Header = (props) => {
                 <HideOnScroll {...props}>
                     <AppBar component={"nav"} sx={{ bgcolor: navbar ? '#000' : 'transparent', boxShadow: 'none' }}>
                         <Toolbar>
-                            <IconButton color="inherit"
-                                aria-label="open drawer"
-                                edge="start"
-                                sx={{ mr: 2, display: { sm: "none" } }}
-                                
-                            >
-                                <MenuIcon sx={{ color: 'white' }} fontSize='26'></MenuIcon>
-                            </IconButton>
                             <Typography component="div" sx={{ flexGrow: 1 }}>
                                 <div className='headerLogo'>
                                     <img src={logo} alt="Logo" />
                                 </div></Typography>
-                            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+
+                            <Box sx={{ xs: 'block', sm: 'block', md: 'block', lg: 'none' }}>
+                                <IconButton color="inherit"
+                                    onClick={toggleSidebar}
+                                    aria-label="open drawer"
+                                    edge="start"
+                                    sx={{ display: { lg: "none" } }}
+                                    className='mobileMenu'
+
+                                >
+
+                                    {sidebarOpen ? <HighlightOffIcon sx={{ color: 'white' }} fontSize='large'></HighlightOffIcon> : <MenuIcon sx={{ color: 'white' }} fontSize='large'></MenuIcon>}
+
+
+
+
+                                </IconButton>
+
+
+                            </Box>
+
+                            <Box sx={{ display: { xs: "none", sm: "none", md: 'none', lg: 'block' } }}>
                                 <NavBar />
                             </Box>
 
@@ -80,10 +100,11 @@ const Header = (props) => {
                     </AppBar>
                 </HideOnScroll>
 
-                <Box className="mobileNavigationWrapper" sx={{display: {xs: 'none', md: 'none'}}}>
-                    {drawer}
-                </Box>
+
             </Box>
+
+            <Box sx={{ display: { sm: 'block', md: 'bolck', lg: 'none' }, position: 'fixed', zIndex: 99999 }}><CustomLeftSidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} /></Box>
+
         </>
     );
 };

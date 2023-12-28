@@ -69,7 +69,7 @@ const Features = () => {
                     {slides.map((slide) => (
                         <SwiperSlide key={slide.id} style={{
                             background: `linear-gradient(1.22deg, rgba(4, 77, 105, 0.7) 21.34%, rgba(4, 77, 105, 0) 92.71%),
-url(${slide.img})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', minHeight: "100vh", backgroundPosition: 'bottom center'
+url(${slide.img})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover',height: '100vh', backgroundPosition: 'bottom center'
                         }} >
                             <Box className='slideWrapper'>
                                 <Container>

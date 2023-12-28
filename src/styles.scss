@@ -1,4 +1,4 @@
-$small: 991px;
+$small: 768px;
 $medium: 900px;
 
 $color-primary: #28A0CF;
@@ -85,20 +85,13 @@ body {
   }
 
   .caseStudies {
+    .clipPath {
+      position: absolute;
 
-    img {
-      object-fit: cover;
-      height: 100%;
-      width: 100%;
-
-      @media screen and (max-width: $small) {
+      img {
         object-fit: cover;
         height: 100%;
-        width: calc(100% + 32px);
-        margin-left: -16px;
-        float: left;
-        z-index: 9999;
-        position: relative;
+        width: 100%;
       }
     }
 
@@ -307,10 +300,17 @@ body {
 
   button:focus,
   button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+    //outline: 4px auto -webkit-focus-ring-color;
   }
 
   /*Header*/
+
+  .headerSearch{
+    &:focus, &:hover{
+      outline: none;
+      color: $color-primary;
+    }
+  }
   .headerLogo {
     position: relative;
     z-index: 999;
@@ -556,6 +556,11 @@ body {
   }
 
   /*Mobile Navigation*/
+  .mobileMenu {
+    &:focus {
+      outline: none;
+    }
+  }
 
   .mobileNavSidebar {
     list-style: none;
@@ -567,10 +572,27 @@ body {
       padding: 5px 15px;
       background-color: $color-primary;
       display: flex;
+      gap: 25px;
+      width: 100%;
+      flex-wrap: nowrap;
+      flex-direction: row;
 
-      img {
-        filter: invert(0) brightness(9);
-        max-width: 100%;
+      .mobileLogo {
+        display: flex;
+        align-items: center;
+
+        img {
+          filter: invert(0) brightness(9);
+          max-width: 100%;
+        }
+      }
+
+      button {
+        padding: 0;
+
+        &:focus {
+          outline: none;
+        }
       }
     }
 
@@ -596,7 +618,7 @@ body {
             padding: 7px 0;
             line-height: normal;
             min-height: auto;
-            
+
 
             a {
               min-height: auto;
@@ -656,12 +678,14 @@ body {
           }
         }
       }
-      &.dropDowns{
-        li{
+
+      &.dropDowns {
+        li {
           padding: 7px 0;
-    line-height: normal;
-    min-height: auto;
-          a{
+          line-height: normal;
+          min-height: auto;
+
+          a {
             text-transform: none;
           }
         }
@@ -672,16 +696,18 @@ body {
 
   /*Home Banner*/
   video {
-    width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     position: absolute;
     //z-index: -9;
+    width: 100%;
   }
 
   .mainBanner {
     height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
     width: 100%;
     z-index: 99;
     position: relative;
@@ -690,12 +716,10 @@ body {
     .bannerContent {
       display: flex;
       height: 100vh;
+      min-height: 500px;
+      max-height: 800px;
       width: 100%;
       align-items: end;
-
-      @media screen and (max-width: $small) {
-        align-items: center;
-      }
 
       .bannerContentInner {
         width: 100%;
@@ -705,10 +729,6 @@ body {
         border-radius: 10px;
         background: linear-gradient(90.14deg, rgba(40, 160, 207, 0.23) 2.37%, rgba(0, 0, 0, 0.23) 95.12%);
         margin-bottom: 50px;
-
-        @media screen and (max-width: $small) {
-          margin-bottom: 0;
-        }
 
         .bannerDescription {
           font-size: 18px;
@@ -746,7 +766,15 @@ body {
 
   .homeServices {
     .mySwiper {
-      min-height: 640px;
+      //min-height: 640px;
+      height: 640px !important;
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 90px;
+      margin-top: 80px;
+      box-sizing: content-box;
 
       .swiper-slide-active+div+div+div+div+div+div,
       .swiper-slide-active+div+div+div+div+div+div+div {
@@ -771,28 +799,132 @@ body {
         }
       }
 
+
       .swiper-slide {
+
+
+        /* Center slide text vertically */
+        justify-content: center;
+        align-items: center;
+        overflow: visible;
+
+
         text-align: center;
         font-size: 18px;
         background: #fff;
         height: calc((100% - 40px) / 2) !important;
+
+        &:hover {
+          z-index: 999;
+
+          .slide-content {
+            width: calc(200% + 30px);
+            overflow: visible;
+            height: 100%;
+          }
+        }
+
+        .slideWrapper {
+          height: 100%;
+          background-size: cover;
+          padding: 15px 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+
+          position: relative;
+          overflow: visible;
+          width: 100%;
+          transition: all 0.5s linear;
+          animation-delay: 1000ms;
+
+          .slide-content {
+            transition: ease .3s;
+            transform: scaleX(1);
+            width: 100%;
+            transition: transform 0.3s ease, width 0.3s ease;
+            text-align: left;
+
+            .serviceItemDesc {
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-line-clamp: 4;
+              /* number of lines to show */
+              line-clamp: 4;
+              -webkit-box-orient: vertical;
+            }
+          }
+
+          .subtitle {
+            color: $color-primary;
+          }
+
+          .title {
+            color: $color-text-light;
+            font-size: 24px;
+            line-height: 36px;
+
+
+          }
+
+          button {
+            justify-content: start;
+            gap: 5px;
+          }
+        }
       }
 
-      .slideWrapper {
+      .customBottomNav {
         position: relative;
         overflow: visible;
         width: 100%;
-        transition: all 0.5s linear;
-        animation-delay: 1000ms;
+        margin-top: 20px;
 
-        .serviceItemDesc {
-          overflow: hidden;
-          display: -webkit-box;
-          -webkit-line-clamp: 4;
-          /* number of lines to show */
-          line-clamp: 4;
-          -webkit-box-orient: vertical;
+
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+        height: 27px;
+
+        .swiper-pagination-bullets.swiper-pagination-horizontal {
+          width: auto;
+          display: flex;
+          gap: 10px;
+
+          .swiper-pagination-bullet {
+            border-radius: 0;
+            height: 10px;
+            width: 10px;
+          }
         }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          font-size: 16px;
+          width: auto;
+          position: relative;
+          right: inherit;
+          left: inherit;
+
+          &:after {
+            display: none;
+          }
+
+          svg {
+            width: 32px;
+            height: 25px;
+          }
+        }
+      }
+
+
+
+      .slideWrapper {
+
+
+
 
         .serviceApend {
           position: absolute;
@@ -868,12 +1000,6 @@ body {
     margin-top: 50px;
     background-repeat: no-repeat;
 
-    @media screen and (max-width: $medium) {
-      background-image: url(/src/assets/img/footer-mobile.jpg);
-      background-size: contain;
-      background-position: bottom;
-    }
-
     .footerTop {
       .fCol3 {
         padding-right: 50px;
@@ -883,10 +1009,6 @@ body {
         display: flex;
         flex-direction: column;
         gap: 25px;
-
-        @media screen and (max-width: $small) {
-          gap: 10px;
-        }
 
         .contactInfoItem {
           display: flex;
@@ -933,10 +1055,6 @@ body {
         padding-bottom: 5px;
         margin-bottom: 25px;
 
-        @media screen and (max-width: $small) {
-          margin-bottom: 15px;
-        }
-
         &::after {
           content: "";
           left: 0;
@@ -952,9 +1070,7 @@ body {
         li {
           padding: 8px 0;
 
-          @media screen and (max-width: $small) {
-            padding: 0;
-          }
+
 
           a {
             color: $color-text-dark;
@@ -984,75 +1100,71 @@ body {
       z-index: 99;
       text-align: center;
       width: 100%;
-      @media screen and (max-width: $small) {
-        bottom: 25px;
-       }
 
       a {
 
         font-size: 18px;
         color: $color-text-light;
-        @media screen and (max-width: $small) {
-         font-size: 16px; 
-        }
-        &:hover{
+
+        &:hover {
           color: $color-primary;
-         }
+        }
       }
     }
 
-    .slideWrapper {
-      display: flex;
-      align-items: start;
-      height: 100%;
-      padding-top: 80px;
-      @media screen and (max-width: $small) {
-        padding-top: 50px;
-      }
-      box-sizing: border-box;
+    .swiper-slide {
+      min-height: 650px;
+      max-height: 750px;
 
-      .slide-content {
-        background: linear-gradient(94.77deg, rgba(40, 160, 207, 0.6) 3.86%, rgba(0, 0, 0, 0.6) 96.9%);
-        padding: 40px 25px 40px 50px;
-        border-left: 5px solid $color-primary;
-        max-width: 700px;
-        
-        .title {
-          color: $color-text-light;
-          font-size: 24px;
-          line-height: 36px;
-          font-weight: bold;
+      .slideWrapper {
+        display: flex;
+        align-items: start;
+        height: 100%;
+        padding-top: 80px;
 
-          @media screen and (max-width: $small) {
-            font-size: 20px;
-            line-height: normal;
+        box-sizing: border-box;
+
+        .slide-content {
+          background: linear-gradient(94.77deg, rgba(40, 160, 207, 0.6) 3.86%, rgba(0, 0, 0, 0.6) 96.9%);
+          padding: 40px 25px 40px 50px;
+          border-left: 5px solid $color-primary;
+          max-width: 700px;
+
+          .title {
+            color: $color-text-light;
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: bold;
+
+
           }
-        }
-        .labelCustom {
-          background-color: $color-text-light;
-          color: $color-primary;
-          font-weight: 500;
-          line-height: 24px;
-          border-radius: 4px;
-          padding: 5px 12px;
+
+          .labelCustom {
+            background-color: $color-text-light;
+            color: $color-primary;
+            font-weight: 500;
+            line-height: 24px;
+            border-radius: 4px;
+            padding: 5px 12px;
+          }
         }
       }
     }
 
     .swiper-pagination {
       display: flex;
-    width: 100%;
-    justify-content: center;
-    bottom: 90px;
-    top: inherit;
-    max-width: 1448px;
-    padding: 0 24px;
-    margin: 0 auto;
-    position: absolute;
-    //margin-top: -121px;
-    z-index: 9999;
-    left: 0;
-    right: 0;
+      width: 100%;
+      justify-content: center;
+      bottom: 90px;
+      top: inherit;
+      max-width: 1448px;
+      padding: 0 24px;
+      margin: 0 auto;
+      position: absolute;
+      //margin-top: -121px;
+      z-index: 9999;
+      left: 0;
+      right: 0;
 
       .swiper-pagination-bullet {
         flex: 1 1 0;
@@ -1096,145 +1208,40 @@ body {
     }
   }
 
-  .mySwiper {
-    height: 100vh !important;
-    width: 100%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 90px;
-
-    @media screen and (max-width: $small) {
-      padding-bottom: 50px;
-    }
-
-    margin-top: 80px;
-
-    @media screen and (max-width: $small) {
-      margin-top: 50px;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      height: calc((100% - 30px) / 2) !important;
-      /* Center slide text vertically */
-      justify-content: center;
-      align-items: center;
-      overflow: visible;
-
-      &:hover {
-        z-index: 999;
-
-        .slide-content {
-          width: calc(200% + 30px);
-          overflow: visible;
-          height: 100%;
-        }
-      }
-
-      .slideWrapper {
-        height: 100%;
-        background-size: cover;
-        padding: 15px 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .slide-content {
-          transition: ease .3s;
-          transform: scaleX(1);
-          width: 100%;
-          transition: transform 0.3s ease, width 0.3s ease;
-          text-align: left;
-        }
-
-        .subtitle {
-          color: $color-primary;
-        }
-
-        .title {
-          color: $color-text-light;
-          font-size: 24px;
-          line-height: 36px;
-
-          @media screen and (max-width: $small) {
-            font-size: 18px;
-            line-height: normal;
-          }
-        }
-
-        button {
-          justify-content: start;
-          gap: 5px;
-        }
-      }
-    }
-
-    .customBottomNav {
-      position: absolute;
-      overflow: visible;
-      width: 100%;
-      left: 0;
-      bottom: 23px;
-      display: flex;
-      gap: 40px;
-      align-items: center;
-      justify-content: center;
-      height: 27px;
-
-      .swiper-pagination-bullets.swiper-pagination-horizontal {
-        width: auto;
-        display: flex;
-        gap: 10px;
-
-        .swiper-pagination-bullet {
-          border-radius: 0;
-          height: 10px;
-          width: 10px;
-        }
-      }
-
-      .swiper-button-prev,
-      .swiper-button-next {
-        font-size: 16px;
-        width: auto;
-        position: relative;
-        right: inherit;
-        left: inherit;
-
-        &:after {
-          display: none;
-        }
-
-        svg {
-          width: 32px;
-          height: 25px;
-        }
-      }
-    }
-  }
+  .mySwiper {}
 
   .insight {
+    .insigtLeftSide {
+      display: flex;
+      flex-direction: column;
+      align-items: self-end;
+
+      .insightBottomNav {
+        max-width: 400px;
+      }
+    }
+
+    .leftSideTitles {
+      max-width: 400px;
+    }
+
     .insigtSwipperRight {
       width: 100%;
       height: 100vh;
       min-height: 100%;
 
-      @media screen and (max-width: $small) {
-        height: 50vh;
-        min-height: auto;
-      }
+
     }
-    .titleBtn{
-      
-      button{
+
+    .titleBtn {
+
+      button {
         @media screen and (max-width: 1280px) {
           width: 100%;
         }
       }
     }
+
     button {
       padding-top: 9px;
       padding-bottom: 9px;
@@ -1242,24 +1249,25 @@ body {
       border-radius: 0;
       font-size: 16px;
       text-transform: none;
+      width: 100%;
       transition: all 0.6s;
-      
+
 
       @media screen and (max-width: 1280px) {
         white-space: nowrap;
-    text-align: center;
-    display: inline-block;
-    overflow: hidden;
+        text-align: center;
+        display: inline-block;
+        overflow: hidden;
 
 
-    font-size: 13px;
-    padding: 5px 10px;
-    
-      width: 100%;
-    }
+        font-size: 13px;
+        padding: 5px 10px;
 
-      
-    
+        width: 100%;
+      }
+
+
+
 
       &:hover {
         background-color: $color-primary;
@@ -1292,14 +1300,6 @@ body {
           font-size: 24px;
           font-weight: bold;
         }
-
-        @media screen and (max-width: $small) {
-          padding: 0 15px;
-
-          .title {
-            font-size: 20px;
-          }
-        }
       }
     }
 
@@ -1328,28 +1328,20 @@ body {
     border-radius: 4px;
     padding: 44px 25px;
 
-    @media screen and (max-width: $small) {
-      margin-bottom: 35px;
-      margin-top: 35px;
-      padding: 20px;
-    }
+
 
     h2 {
       font-weight: bold;
       text-transform: uppercase;
       font-size: 42px;
 
-      @media screen and (max-width: $small) {
-        font-size: 32px;
-      }
+
     }
 
     p {
       font-size: 26px;
 
-      @media screen and (max-width: $small) {
-        font-size: 18px;
-      }
+
     }
 
 
@@ -1366,17 +1358,6 @@ body {
       right: 20px;
       top: 0;
 
-      @media screen and (max-width: $small) {
-        right: 0px;
-        height: 50px;
-        top: 15px;
-
-        svg {
-          top: 0;
-          width: 24px;
-        }
-      }
-
     }
 
     input {
@@ -1388,11 +1369,7 @@ body {
       border-radius: 4px;
       padding: 20px;
 
-      @media screen and (max-width: $small) {
-        height: 50px;
-        margin-top: 15px;
-        padding: 15px;
-      }
+
 
       &::placeholder {
         color: #fff;
@@ -1430,9 +1407,17 @@ body {
       line-height: normal;
     }
 
+    .headerLogo {
+      width: calc(100% - 20px);
+    }
+
     .mainBanner {
       .bannerContent {
+        align-items: center;
+
         .bannerContentInner {
+          margin-bottom: 0;
+          margin-top: 50px;
           padding: 15px;
           background: linear-gradient(90.14deg, rgb(0 0 0 / 54%) 2.37%, rgb(6 168 216 / 23%) 95.12%);
 
@@ -1454,7 +1439,19 @@ body {
       }
     }
 
+
+
     .features {
+
+      .morServicesBtn {
+        bottom: 25px;
+
+        a {
+          font-size: 16px;
+        }
+      }
+
+
       .swiper-pagination {
         height: auto;
         padding: 0 5px;
@@ -1469,9 +1466,349 @@ body {
         }
       }
 
+      .swiper-wrapper {
+        .swiper-slide {
+          max-height: 700px;
+
+
+          .slideWrapper {
+            padding-top: 50px;
+
+            .slide-content {
+              padding: 30px 15px 15px 15px;
+
+              .title {
+
+                font-size: 20px;
+                line-height: normal;
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .caseStudies {
+      .clipPath {
+        position: relative;
+
+        img {
+          object-fit: cover;
+          height: 100%;
+          width: calc(100% + 32px);
+          margin-left: -16px;
+          float: left;
+          z-index: 9999;
+          position: relative;
+        }
+      }
+    }
+
+    .homeServices {
+      .mySwiper {
+
+        padding-bottom: 50px;
+        margin-top: 50px;
+        max-height: 700px;
+
+        .swiper-slide {
+          .slideWrapper {
+            .title {
+
+              font-size: 18px;
+              line-height: normal;
+
+            }
+
+            .serviceExpandBtn {
+              display: none;
+            }
+          }
+        }
+
+        .customBottomNav {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .insight {
+      .insigtSwipperRight {
+
+        height: 50vh;
+        min-height: 400px;
+
+      }
+
       .slideWrapper {
+
+
         .slide-content {
-          padding: 30px 15px 15px 15px;
+
+          padding: 0 15px;
+
+          .title {
+            font-size: 20px;
+          }
+        }
+      }
+
+
+    }
+
+
+
+    .footer {
+      //background-image: url(/src/assets/img/footer-mobile.jpg);
+      background-size: auto 500px;
+      background-position: bottom right;
+
+      .footerTop {
+        .contactInfo {
+          gap: 10px;
+        }
+      }
+
+      .footerCol {
+        h4 {
+          margin-bottom: 15px;
+        }
+
+        ul {
+          li {
+            padding: 0;
+          }
+        }
+      }
+
+
+    }
+
+    .newsletter {
+      margin-bottom: 35px;
+      margin-top: 35px;
+      padding: 15px;
+
+      h2 {
+
+        font-size: 28px;
+
+      }
+
+      p {
+
+        font-size: 16px;
+
+      }
+
+      button {
+        right: 0px;
+        height: 50px;
+        top: 15px;
+
+        svg {
+          top: 0;
+          width: 24px;
+        }
+
+      }
+
+      input {
+        height: 50px;
+        margin-top: 15px;
+        padding: 15px;
+      }
+    }
+
+  }
+}
+
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  /* Styles */
+  body {
+    .mainBanner {
+      max-height: 600px;
+
+      &>div {
+        height: 100%;
+      }
+
+      .bannerContent {
+        height: 100%;
+
+        .bannerContentInner {}
+      }
+    }
+
+    .features {
+      .swiper-slide {
+        min-height: 700px;
+        max-height: 750px;
+      }
+
+      .swiper-pagination {
+        padding: 0 15px;
+      }
+    }
+
+    .homeServices {
+      .mySwiper {
+        margin-top: 50px;
+
+        .slideWrapper {
+          .serviceItemDesc {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+
+          }
+
+          .serviceExpandBtn {
+            display: none;
+          }
+        }
+      }
+    }
+
+
+    .caseStudies {
+      .clipPath {
+        img {
+          width: calc(100% + 48px);
+          margin-left: -24px;
+        }
+      }
+    }
+
+
+  }
+}
+
+@media only screen and (max-width : 900px) {
+  body {
+    .insight {
+      .insigtLeftSide {
+        display: block;
+
+        .leftSideTitles {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width : 600px) and (max-device-width : 991px) {
+  body {
+    .caseStudies {
+      img {
+        width: calc(100% + 48px);
+        //margin-left: -24px;
+      }
+    }
+
+    .insight {
+      .insigtSwipperRight {
+        //min-height: 80vh;
+      }
+    }
+  }
+
+}
+
+/* iPads (landscape) ----------- */
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  /* Styles */
+  .mainBanner {
+    max-height: 600px;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 900px) and (max-width : 1200px) {
+
+  /* Styles */
+  body {
+    .caseStudies {
+      .clipPath {
+        -webkit-clip-path: polygon(75% 0%, 100% 0%, 100% 100%, 45% 100%);
+        clip-path: polygon(75% 0%, 100% 0%, 100% 100%, 45% 100%);
+
+        img {
+          object-position: right;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .newsletter {
+      padding: 20px 25px;
+
+      h2 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      input {
+        height: 55px;
+      }
+
+      button {
+        height: 55px;
+        right: 0;
+
+        svg {
+          width: 28px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width : 1280px) and (max-width : 1450px) {
+  body {
+    .insight {
+      button {
+        font-size: 14px;
+      }
+    }
+
+    .leftSideTitles {
+      max-width: 400px;
+    }
+  }
+}
+
+@media only screen and (min-width : 1201px) and (max-width : 1349px) {
+  body {
+    .headerLogo{
+      img{
+        max-width: 295px;
+      }
+    }
+    .navigationMenu {
+      li {
+        a {
+          padding-left: 5px;
+          padding-right: 5px;
+          font-size: 14px;
         }
       }
     }

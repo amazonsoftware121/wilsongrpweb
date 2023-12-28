@@ -4,6 +4,7 @@ import NavBar from './NavBar';
 import logo from '../assets/img/logo.png'
 import { Box,IconButton } from '@mui/material'
 import MobileNav from './MobileNav';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 
 const sidebarVariants = {
@@ -42,7 +43,11 @@ const CustomLeftSidebar = ({ isOpen, toggleSidebar }) => {
       variants={sidebarVariants}
     >
       <Box className="mobileNavSidebar">
-      <Box className="header" ><img src={logo} alt="Sidebar Logo" style={{width: 'auto'}} /></Box>
+      <Box className="header" >
+      <Box className="mobileLogo"><img src={logo} alt="Sidebar Logo" style={{width: 'auto'}} />
+      </Box>
+      <IconButton disableRipple onClick={toggleSidebar}> <HighlightOffIcon  sx={{ color: 'white' }} fontSize='large'></HighlightOffIcon> </IconButton>
+      </Box>
       <MobileNav />
 </Box>
 

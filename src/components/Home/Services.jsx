@@ -38,7 +38,7 @@ const Services = () => {
         },
         768: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 20,
             grid: {
                 rows: 2,
             },

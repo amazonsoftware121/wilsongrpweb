@@ -58,14 +58,14 @@ const Insight = () => {
 
 
                 <Grid container>
-                    <Grid item sm={12} md={4} xs={12} sx={{
+                    <Grid className='insigtLeftSide' item sm={12} md={4} xs={12} sx={{
                         position: 'relative',
                         padding: {
-                            lg: '70px 40px 40px 70px',
+                            xl: '70px 40px 40px 70px',
                             xs: '40px 15px'
                         }, backgroundColor: '#F1F1F1', color: '#fff'
                     }}>
-
+<Box className="leftSideTitles">
                         <Typography className='colorPrimary'>Insight</Typography>
                         <Typography component={"h2"} variant='h2' color={"black"} className='sectionTitle' mb={3} mt={1}>Discover Innovative Solutions</Typography>
                         <Box sx={{
@@ -79,12 +79,17 @@ const Insight = () => {
                             {slides.map((slide, index) => (
                                 <Box className="titleBtn" key={slide.id} onClick={() => swiper.slideTo(index)} sx={{ cursor: 'pointer', marginBottom: {md: '10px', lg: '20px'} }}>
                                     <Button variant="outlined" sx={{ width: '400px', color: activeTab === index ? '#fff' : '#28A0CF', backgroundColor: activeTab === index ? '#28A0CF' : 'transparent' }}>
-                                        {slide.title.length > 38 ? `${slide.title.slice(0, 38)}...` : slide.title}
+                                    <Box sx={{display: {lg: 'block', sm: 'none', md: 'none'}}} component="span">{slide.title.length > 38 ? `${slide.title.slice(0, 38)}...` : slide.title}</Box>
+
+                                    <Box sx={{display: {lg: 'none', md: 'block'}}} component="span">{slide.title.length > 38 ? `${slide.title.slice(0, 32)}...` : slide.title}</Box>
                                     </Button>
+
+
+
                                 </Box>
                             ))}
                         </Box>
-
+</Box>
                         {/* Navigation Arrows */}
 
 
@@ -94,6 +99,7 @@ const Insight = () => {
                             direction="row"
                             justifyContent="space-between"
                             alignItems="justify"
+                            className='insightBottomNav'
                         >
 
 

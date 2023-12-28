@@ -58,9 +58,9 @@ const CaseStudies = () => {
 
 
 
-                                <Box sx={{
+                                <Box className="clipPath" sx={{
 
-                                    position: {sm: 'relative', md: 'absolute'},
+                                    position: {sm: 'relative'},
                                     right: 0,
                                     height: {sm: '100%',md: 'calc(100%)'},
                                     clipPath: {sm: 'none', md: 'polygon(65% 0, 100% 0%, 100% 100%, 25% 100%)', lg: 'polygon(55% 0, 100% 0%, 100% 100%, 0 100%)' }, backgroundColor: "#fff"

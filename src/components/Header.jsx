@@ -6,7 +6,8 @@ import logo from '../assets/img/logo.png'
 import NavBar from './NavBar';
 import MobileNav from './MobileNav';
 import CustomLeftSidebar from './CustomLeftSidebar';
-
+import SearchIcon from '@mui/icons-material/Search';
+import SearchBar from './SearchBar';
 const HideOnScroll = (props) => {
     const { children, window } = props;
     // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -72,27 +73,33 @@ const Header = (props) => {
                                 </div></Typography>
 
                             <Box sx={{ xs: 'block', sm: 'block', md: 'block', lg: 'none' }}>
-                                <IconButton color="inherit"
+                            <Box className="mobileHeaderIcon" sx={{display: 'flex'}}>
+                            <Box sx={{display: {lg: 'none'}}}><SearchBar /></Box>
+                                <IconButton  color="inherit"
                                     onClick={toggleSidebar}
                                     aria-label="open drawer"
                                     edge="start"
-                                    sx={{ display: { lg: "none" } }}
+                                    sx={{ display: { lg: "none" }, outline: 'none' }}
                                     className='mobileMenu'
 
                                 >
 
-                                    {sidebarOpen ? <HighlightOffIcon sx={{ color: 'white' }} fontSize='large'></HighlightOffIcon> : <MenuIcon sx={{ color: 'white' }} fontSize='large'></MenuIcon>}
+                                     <MenuIcon sx={{ color: 'white' }} fontSize='large'></MenuIcon>
 
 
 
 
                                 </IconButton>
+                                </Box>
 
 
                             </Box>
 
-                            <Box sx={{ display: { xs: "none", sm: "none", md: 'none', lg: 'block' } }}>
+                            <Box className="" sx={{ display: { xs: "none", sm: "none", md: 'none', lg: 'flex' } }}>
                                 <NavBar />
+                                
+                                <SearchBar />
+                               
                             </Box>
 
                         </Toolbar>

@@ -36,13 +36,13 @@ const Footer = () => {
                                 <h4>Quick Links</h4>
                                 <div className='footerMenu'>
                                     <ul>
-                                        <li><Link to="https://wilsoncgrp.com/about-us">About Us</Link></li>
-                                        <li><Link to="https://wilsoncgrp.com/our-services">Our Services</Link></li>
-                                        <li><Link to="https://wilsoncgrp.com/cyber-security-services">Cyber Security</Link></li>
-                                        <li><Link to="https://wilsoncgrp.com/industry-sectors">Industries We Serve</Link></li>
-                                        <li><Link to="https://wilsoncgrp.com/careers">Careers</Link></li>
-                                        <li><Link to="https://wilsoncgrp.com/contact-us">Contact</Link></li>
-                                        <li><Link to="https://wilsoncgrp.com/privacy-policy">Privacy Policy</Link></li>
+                                        <li><a href="https://wilsoncgrp.com/about-us">About Us</a></li>
+                                        <li><a href="https://wilsoncgrp.com/our-services">Our Services</a></li>
+                                        <li><a href="https://wilsoncgrp.com/cyber-security-services">Cyber Security</a></li>
+                                        <li><a href="https://wilsoncgrp.com/industry-sectors">Industries We Serve</a></li>
+                                        <li><a href="https://wilsoncgrp.com/careers">Careers</a></li>
+                                        <li><a href="https://wilsoncgrp.com/contact-us">Contact</a></li>
+                                        <li><a href="https://wilsoncgrp.com/privacy-policy">Privacy Policy</a></li>
                                     </ul>
                                 </div>
                             </Box>
@@ -53,12 +53,12 @@ const Footer = () => {
                                 <h4>Our Services</h4>
                                 <div className='footerMenu'>
                                     <ul>
-                                        <li><Link to="https://wilsoncgrp.com/cybersecurity-assessment">Cyber Security Assessment</Link></li>
-                                        <li><Link to="https://wilsoncgrp.com/risk-management-and-assessment-services">Risk Management and Assessment</Link></li>
-                                        <li><Link to="https://wilsoncgrp.com/cloud-services">Cloud Services</Link></li>
-                                        <li><Link to="https://wilsoncgrp.com/cybersecurity-maturity-model-certification">Cybersecurity Maturity Model Certification (CMMC)</Link></li>
-                                        <li><Link to="https://wilsoncgrp.com/fedramp-consulting">FedRAMP Advisory and Assessment Services</Link></li>
-                                        <li><Link to="https://wilsoncgrp.com/information-technology-governance">IT Governance</Link></li>
+                                        <li><a href="https://wilsoncgrp.com/cybersecurity-assessment">Cyber Security Assessment</a></li>
+                                        <li><a href="https://wilsoncgrp.com/risk-management-and-assessment-services">Risk Management and Assessment</a></li>
+                                        <li><a href="https://wilsoncgrp.com/cloud-services">Cloud Services</a></li>
+                                        <li><a href="https://wilsoncgrp.com/cybersecurity-maturity-model-certification">Cybersecurity Maturity Model Certification (CMMC)</a></li>
+                                        <li><a href="https://wilsoncgrp.com/fedramp-consulting">FedRAMP Advisory and Assessment Services</a></li>
+                                        <li><a href="https://wilsoncgrp.com/information-technology-governance">IT Governance</a></li>
                                     </ul>
                                 </div>
                             </Box>
@@ -73,7 +73,7 @@ const Footer = () => {
 <FaEnvelopeOpen />
                                         </div>
                                         <div className='contactInfoItem__text'>
-                                            sales@wilsoncgrp.com
+                                            <a href="mailto:Sales@wilsoncgrp.com">sales@wilsoncgrp.com</a>
                                         </div>
                                     </div>
 
@@ -93,7 +93,7 @@ const Footer = () => {
                                         <FaPhoneAlt />
                                         </div>
                                         <div className='contactInfoItem__text'>
-                                            1.866.780.1655
+                                        <a href="tel:1.866.780.1655"> 1.866.780.1655</a>
                                         </div>
                                     </div>
                                 </div>

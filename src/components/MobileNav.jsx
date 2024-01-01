@@ -29,12 +29,12 @@ const MobileNav = () => {
                     id="panel1bh-header"
                     sx={{padding: 0 }}
                   >
-                    <NavLink to={menu.link}>{menu.title}</NavLink>
+                    <a href={menu.link}>{menu.title}</a>
                   </AccordionSummary>
                   <AccordionDetails sx={{padding: 0}}>
                     {menu.dropDowns && <ul className='dropDowns'>
                       {menu.dropDowns.map((dropDown, index) => (
-                        <li key={index}><NavLink to={dropDown.link}>{dropDown.title}</NavLink></li>
+                        <li key={index}><a href={dropDown.link}>{dropDown.title}</a></li>
                       ))}
                     </ul>
                     }
@@ -46,14 +46,14 @@ const MobileNav = () => {
                              expandIcon={<ExpandMoreIcon />}
                              sx={{padding: 0}}
                             >
-                              <NavLink to={megaMenu.link}>
+                              <a href={megaMenu.link}>
                                 {megaMenu.title}
-                                </NavLink>
+                                </a>
                             </AccordionSummary>
                             <ul className='dropDownLink'>
                             {megaMenu.menuItems.map((menuItem, index) => (
                               
-                              <li key={index}><NavLink to={menuItem.link}>{menuItem.title}</NavLink></li>
+                              <li key={index}><a href={menuItem.link}>{menuItem.title}</a></li>
                               
                             ))}
                             </ul>
@@ -61,7 +61,7 @@ const MobileNav = () => {
   <ul className='megaOtherTitle'>
     {megaMenu.otherTitles.map((otherTitle, index) => (
       <li key={index}>
-        <NavLink to={otherTitle.link}>{otherTitle.title}</NavLink>
+        <a href={otherTitle.link}>{otherTitle.title}</a>
         </li>
     ))}
   </ul>
@@ -73,7 +73,7 @@ const MobileNav = () => {
                     )}
                   </AccordionDetails>
                 </Accordion>
-              ) : <NavLink to={menu.link}>{menu.title}</NavLink>}
+              ) : <a href={menu.link}>{menu.title}</a>}
             </li>
           ))}
         </ul>

@@ -16,15 +16,15 @@ const NavBar = () => {
                 {Menus.map((menu, i) => (
 
                     <li key={i} className={(menu.dropDowns || menu.megaMenus) && "dropdownParent"}>
-                        <NavLink to={menu.link} >
+                        <a href={menu.link} >
                             {menu.title}
                             {(menu.dropDowns || menu.megaMenus) && <ExpandMoreIcon />}
-                        </NavLink>
+                        </a>
                         {menu.dropDowns && (
                             <ul className="dropdownChild">
-                                <li><Typography variant='h6'><NavLink to={menu.link}> {menu.title}</NavLink></Typography></li>
+                                <li><Typography variant='h6'><a href={menu.link}> {menu.title}</a></Typography></li>
                                 {menu.dropDowns.map((dropDown, index) => (
-                                    <li key={index}><NavLink to={dropDown.link} >{dropDown.title}</NavLink></li>
+                                    <li key={index}><a href={dropDown.link} >{dropDown.title}</a></li>
                                 ))}
                             </ul>
                         )}
@@ -35,16 +35,16 @@ const NavBar = () => {
                                         {menu.megaMenus.map((megaMenu, index) => (
                                             <Grid key={index} item md={i === 1 ? (index === 0 ? 6 : 3) : 4} >
                                                 <Box>
-                                                    <Typography variant='h6' sx={{ fontWeight: 700 }}><NavLink to={megaMenu.link} >{megaMenu.title}</NavLink>
+                                                    <Typography variant='h6' sx={{ fontWeight: 700 }}><a href={megaMenu.link} >{megaMenu.title}</a>
                                                     </Typography>
                                                     <ul className={`dropdownChild ${i === 1 && index == 0 ? 'col2' : ''}`}>
                                                         {megaMenu.menuItems.map((menuItem, index) => (
-                                                            <li key={index}><NavLink to={menuItem.link} >{menuItem.title}</NavLink></li>
+                                                            <li key={index}><a href={menuItem.link} >{menuItem.title}</a></li>
                                                         ))}
                                                     </ul>
                                                 </Box>
                                                 {megaMenu.otherTitles && megaMenu.otherTitles.map((otherTitle, index) => (
-                                                    <Typography key={index} variant='h6' sx={{ fontWeight: 700, }} mt={3}><NavLink to={otherTitle.link} >{otherTitle.title}</NavLink></Typography>
+                                                    <Typography key={index} variant='h6' sx={{ fontWeight: 700, }} mt={3}><a href={otherTitle.link} >{otherTitle.title}</a></Typography>
                                                 ))}
                                             </Grid>
                                         ))}

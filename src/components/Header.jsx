@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { Slide, Box, AppBar, Typography, Toolbar, IconButton, Divider, CssBaseline, useScrollTrigger } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import logo from '../assets/img/logo.png'
 import NavBar from './NavBar';
-import MobileNav from './MobileNav';
 import CustomLeftSidebar from './CustomLeftSidebar';
-import SearchIcon from '@mui/icons-material/Search';
 import SearchBar from './SearchBar';
 const HideOnScroll = (props) => {
     const { children, window } = props;
@@ -65,7 +62,7 @@ const Header = (props) => {
             <Box>
                 <CssBaseline />
                 <HideOnScroll {...props}>
-                    <AppBar component={"nav"} sx={{ bgcolor: navbar ? '#000' : 'transparent', boxShadow: 'none' }}>
+                    <AppBar className={`navHeader ${navbar && 'fixedHeader'}`} component={"nav"} >
                         <Toolbar>
                             <Typography component="div" sx={{ flexGrow: 1 }}>
                                 <div className='headerLogo'>

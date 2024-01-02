@@ -6,9 +6,11 @@ import { FaLocationDot, FaXTwitter  } from "react-icons/fa6";
 import Newsletter from './Newsletter';
 
 
+
 const Footer = () => {
     return (
         <Box className='footer'>
+        
         <Newsletter />
         <Container>
             <Box>

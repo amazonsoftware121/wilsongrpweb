@@ -685,14 +685,10 @@ body {
 
       &.megaOtherTitle {
         border-top: 1px solid #ccc;
-        font-weight: bold;
+        
 
         li {
           padding: 0;
-
-          a {
-            color: $color-primary;
-          }
         }
       }
 

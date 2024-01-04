@@ -24,7 +24,7 @@ const Newsletter = () => {
                                 sm: '0px',
                                 md: '50px'
                                 }, position: 'relative' }}>
-                                <input size="regular" id="filled-basic" placeholder="Enter your mail..." variant="filled" /> <Button variant="text" endIcon={<FaTelegramPlane size={48} />}> </Button>
+                                <input required type='email' size="regular" id="filled-basic" placeholder="Enter your mail..." variant="filled" /> <Button variant="text" endIcon={<FaTelegramPlane size={48} />}> </Button>
 
                             </Box>
                         </Box>

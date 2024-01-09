@@ -48,6 +48,7 @@ const Newsletter = () => {
     
         // Check if the email is valid before submitting
         if (!emailError) {
+            setSuccessMessage('Thanks for joining our newsletter!');
           try {
             // Make a POST request to your API endpoint
             const response = await fetch('https://wilsoncgrp.com/subscribe-newsletter', {
@@ -60,6 +61,7 @@ const Newsletter = () => {
     
             if (response.ok) {
               setSuccessMessage('Thanks for joining our newsletter!');
+              console.log("Email Sent")
             } else {
               console.error('Failed to send email:', response.statusText);
             }

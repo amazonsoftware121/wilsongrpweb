@@ -1,11 +1,15 @@
 import { Grid } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
+import Breadcrumbsaa from '../components/PageBreadcrumbs'
+import PageHeader from '../components/PageHeader';
+import headerBg from '../assets/img/insurance.jpg'
 
 const About = () => {
   return (
     <>
-      <div>About</div>
+    <PageHeader title={"About"} backgroundImage={headerBg} />
+      
       <Grid container my={10} rowSpacing={2} columnSpacing={4}>
         <Grid item xs={6}>
           <Box bgcolor='primary.light'>

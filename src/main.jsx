@@ -9,6 +9,7 @@ import {
 import Root from './routes/Root.jsx';
 import ErrorPage from "./ErrorPage";
 import About from './routes/About.jsx';
+import CloudServices from './routes/CloudServices.jsx';
 import './styles.scss';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
@@ -99,6 +100,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />
+      },
+      {
+        path: "/cloud-services",
+        element: <CloudServices />
       },
     ]
   },

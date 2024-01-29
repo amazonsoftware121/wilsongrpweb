@@ -12,8 +12,7 @@ const Breadcrumbsaa = (props) => {
         console.info('You clicked a breadcrumb.');
       }
       
-    const breadcrumbs = [
-        
+    const breadcrumbs = [ 
         <Link
           underline="hover"
           key="2"
@@ -23,14 +22,14 @@ const Breadcrumbsaa = (props) => {
         >
           Our Services
         </Link>,
-        <Typography key="3" color="text.primary">
+        <Typography key="3" color={'primary.main'}>
           {props.title}
-        </Typography>,
+        </Typography>
       ];
   return (
     <Stack spacing={2}>
     <Breadcrumbs
-      separator={<NavigateNextIcon fontSize="small" />}
+      separator={<NavigateNextIcon fontSize="medium" />}
       aria-label="breadcrumb"
     >
       {breadcrumbs}

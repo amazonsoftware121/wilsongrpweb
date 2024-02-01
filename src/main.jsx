@@ -14,6 +14,7 @@ import './styles.scss';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import DataAndAnalyticsServices from './routes/DataAndAnalyticsServices.jsx';
 
 
 const theme = createTheme({
@@ -55,6 +56,7 @@ const theme = createTheme({
   palette: {
     primary: {
       main: '#28A0CF',
+      light: '#F2F2F2',
       // light: will be calculated from palette.primary.main,
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
@@ -66,6 +68,7 @@ const theme = createTheme({
       contrastText: '#47008F',
     },
   },
+  
 
 });
 
@@ -102,9 +105,13 @@ const router = createBrowserRouter([
         element: <About />
       },
       {
-        path: "/cloud-services",
+        path: "/cloud-services-new",
         element: <CloudServices />
       },
+      {
+        path: "/data-and-analytics-services-new",
+        element: <DataAndAnalyticsServices />
+      }
     ]
   },
 ]);

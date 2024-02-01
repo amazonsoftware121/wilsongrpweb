@@ -141,7 +141,7 @@ const Menus = [
                 otherTitles: [
                     {
                         title: "Cloud Services",
-                        link: 'https://wilsoncgrp.com/cloud-services'
+                        link: '/cloud-services'
                     },
                     {
                         title: "Data and Analytics Services",

@@ -11,6 +11,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import WhyUs from '../components/WhyUs';
+import BlogSlider from '../components/BlogSlider';
+import ContactUs from '../components/ContactUs';
 
 
 
@@ -33,9 +35,9 @@ const CloudServices = () => {
             <Box sx={{ columnCount: { md: 2, xs: 1 } }} mt={{ md: 3 }}>
               <Typography >
                 With the increasing demand for the Internet, consumers have changed the way of conducting commerce through smartphones and gadgets with easier internet access. A 2019 poll by Marist College and National Public Radio (NPR) indicates 76% of all U.S. adults shop online. This provides opportunities for businesses to store existing customer data anywhere and anytime, re-target potential customers, increase revenue, and much more. Cloud Computing Services and Cloud Services companies are getting more attention nowadays.
-                <Typography >  Cloud Services or Cloud Computing Services enable businesses to utilize a network of remote systems to transmit, process, store and access data, applications, and services over the Internet, which boosts their competitiveness in the digital space. Cloud solutions from Cloud Services providers come in various forms and sizes to cater to different organizational needs. According to the Microsoft Trustworthy Computing SME Cloud Trust study, 94% small and medium-sized enterprises (SMEs) have experienced performance benefits from using cloud services provided by Cloud Services companies.</Typography>
+                
               </Typography>
-
+              <Typography >  Cloud Services or Cloud Computing Services enable businesses to utilize a network of remote systems to transmit, process, store and access data, applications, and services over the Internet, which boosts their competitiveness in the digital space. Cloud solutions from Cloud Services providers come in various forms and sizes to cater to different organizational needs. According to the Microsoft Trustworthy Computing SME Cloud Trust study, 94% small and medium-sized enterprises (SMEs) have experienced performance benefits from using cloud services provided by Cloud Services companies.</Typography>
             </Box>
             <Box mt={5}>
               <Typography variant='h4' component='h3' fontSize='24px' fontWeight='500' mb={2}>
@@ -60,7 +62,7 @@ const CloudServices = () => {
             </Box>
           </Box>
         </Box>
-        <Box className="faqSection titleSectionBg" bgcolor='#F2F2F2' py={20}>
+        <Box className="faqSection titleSectionBg" bgcolor={'primary.light'} py={20}>
           <Box className='container'>
             <Grid container rowSpacing={2} columnSpacing={4}>
 
@@ -71,9 +73,9 @@ const CloudServices = () => {
                 </Box>
               </Grid>
               <Grid item xs={12} md={7}>
-                <Box>
+                <Box className='accordionDark'>
 
-                  <Accordion sx={{ background: 'none', boxShadow: 'none', borderBottom: expanded === 'panel1' ? `none` : '2px solid #000' }} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                  <Accordion  sx={{ background: 'none', boxShadow: 'none', borderBottom: expanded === 'panel1' ? `none` : '2px solid #000' }} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                     <AccordionSummary
                       expandIcon={expanded === 'panel1' ? <FaMinus size={26} color='#28A0CF' /> : <FaPlus size={26} />}
                       aria-controls="panel1bh-content"
@@ -125,6 +127,22 @@ const CloudServices = () => {
         <Box my={12}>
 <WhyUs />
         </Box>
+
+<Box py={12} bgcolor={'primary.light'} position='relative' >
+<Box sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px',  backgroundColor: 'rgba(255, 255, 255, 0.5)',
+width: '324px',
+    height: '604px',
+    position: 'absolute',
+    right: 0,
+    bottom: '20px',
+    opacity: 0.3
+ }} ></Box>
+<Typography className='sectionTitle' textAlign='center' mb={7}>Resources</Typography>
+<BlogSlider />
+</Box>
+<Box py={12} >
+<ContactUs />
+</Box>
 
       </Box>
 

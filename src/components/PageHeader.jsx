@@ -19,7 +19,7 @@ addFunction();
       sx={{ height: '550px', backgroundImage: `url(${props.backgroundImage})` }}>
       <Stack spacing={3} direction='column'>
       <Typography variant='h2' fontWeight='500'  className='pageHeaderTitle' component='h1'>{props.title}</Typography>
-      <PageBreadcrumbs title={props.title} />
+      <PageBreadcrumbs title={props.title} parent={props.parent} parentUrl={props.parentUrl} />
       </Stack>
     </Grid>
   )

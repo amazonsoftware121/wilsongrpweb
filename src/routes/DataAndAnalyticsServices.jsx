@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHeader from '../components/PageHeader';
-import headerBg from '../assets/img/cloudbanner.jpg';
+import headerBg from '../assets/img/dataheader.jpg';
 import { Box, Stack, Typography, Grid } from '@mui/material';
 import bgBlue from '../../src/assets/img/bg5.png';
 import bgFaq from '../../src/assets/img/bg8.jpg';
@@ -10,6 +10,9 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
+import WhyUs from '../components/WhyUs';
+import BlogSlider from '../components/BlogSlider';
+import ContactUs from '../components/ContactUs';
 
 const Faqs = [{
     key: 1,
@@ -38,12 +41,54 @@ const Faqs = [{
 }
 ];
 
+const listCards = [{
+    id: '01',
+    title: 'Design and Implement Data-Driven Environment',
+    description: 'WCG assists organizations and government entities to design and develop their data governance, framework while ensuring compliance with regulations. This process makes the corporate data more manageable, accurate, and easy to use, which enables a faster and better decision-making process.'
+},
+{
+    id: '02',
+    title: 'Develop Viable Analytics Solutions',
+    description: 'By leveraging data visualization, machine learning, predictive modeling, risk assessment, system testing, and other advanced models, WCG maps analytics initiatives of organizations or government entities to quantifiable business outcomes, transforming them into actionable business intelligence, and ensuring the protection and confidentiality of the source data and results.'
+},
+{
+    id: '03',
+    title: 'Optimize Productivity & Maximize Profit',
+    description: 'WCG applies the most appropriate techniques to align the data with organizations’ or government entities’ portfolio and economic inputs. We create solutions to identify areas of key risk, fraud, errors, or misuse, set up evaluation metrics like false positives rate, and customer conversion rate to keep track of the customized performance based on the needs of organizations and government entities.'
+},
+{
+    id: '04',
+    title: 'Foster Innovative Solutions',
+    description: 'Experientially and by testing statistically and scientifically, WCG helps organizations and government entities explore feasible growth opportunities, increase return on investments (ROI), and reduce project budgets. We also help them develop customized applications to their preferred cloud-based data infrastructure while increasing processing power, automating reporting process, and achieving real-time analytics for the business with significantly less time.'
+}
+]
+
+
+
 const DataAndAnalyticsServices = () => {
     const [expanded, setExpanded] = React.useState('panel0');
     const [expandIcon, setExpandIcon] = React.useState(false);
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
     };
+
+    const bgHalfAfterStyle = {
+        content: "''",
+        position: 'absolute',
+        top: '0',
+        left: '0',
+        width: '60%',
+        height: '100%',
+        // other styles as needed
+        backgroundImage: `url(${bgFaq})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        zIndex: 0
+
+    };
+
+
+
     return (
         <>
             <PageHeader title={"Data and Analytics Services"} backgroundImage={headerBg} />
@@ -75,38 +120,39 @@ const DataAndAnalyticsServices = () => {
                     </Box>
                 </Box>
 
-                <Box className="faqSection titleSectionBg"  py={20} sx={{backgroundImage: `url(${bgFaq})`, backgroundRepeat: 'no-repeat', backgroundSize: '60%'}}>
+                <Box className="faqSection titleSectionBg" py={20} position='relative'>
+                    <Box style={bgHalfAfterStyle}></Box>
                     <Box className='container'>
                         <Grid container rowSpacing={2} columnSpacing={4}>
 
                             <Grid item xs={12} md={5}>
-                                
+
                             </Grid>
-                            <Grid item xs={12} md={7} bgcolor='primary.main' pb={6}>
+                            <Grid item xs={12} md={7} bgcolor='primary.main' pb={6} sx={{ zIndex: 9 }}>
                                 <Box p={3} >
                                     <Typography color='#fff !important' className='sectionTitle'>Benefits of Data and Analytics</Typography>
-<Box className='accordionLight'>
-                                    {Faqs.map((faq, index) => (
-                                        <Accordion  key={index} sx={{ background: 'none', boxShadow: 'none' }} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
-                                            <AccordionSummary
-                                                expandIcon={expanded === `panel${index}` ? <FaMinus size={26} color='#fff' /> : <FaPlus size={26} color='#fff' />}
-                                                aria-controls="panel1bh-content"
-                                                id="panel1bh-header"
-                                                
-                                                sx={{ borderBottom: expanded === `panel${index}` ? '1px solid #fff' : 'none' }}
-                                            >
-                                                <Typography variant='h3' sx={{ fontSize: '24px', fontWeight: 'bold', lineHeight: 'normal', color: expanded === `panel${index}` ? '#fff' : '#fff' }}>{faq.que}</Typography>
-                                            </AccordionSummary>
-                                            <AccordionDetails sx={{ paddingTop: '30px' }}>
-                                                <Typography color='#fff'>
-                                                    {faq.ans}
-                                                </Typography>
-                                            </AccordionDetails>
-                                        </Accordion>
-                                    ))}
+                                    <Box className='accordionLight'>
+                                        {Faqs.map((faq, index) => (
+                                            <Accordion key={index} sx={{ background: 'none', boxShadow: 'none' }} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
+                                                <AccordionSummary
+                                                    expandIcon={expanded === `panel${index}` ? <FaMinus size={26} color='#fff' /> : <FaPlus size={26} color='#fff' />}
+                                                    aria-controls="panel1bh-content"
+                                                    id="panel1bh-header"
+
+                                                    sx={{ borderBottom: expanded === `panel${index}` ? '1px solid #fff' : 'none' }}
+                                                >
+                                                    <Typography variant='h3' sx={{ fontSize: '24px', fontWeight: 'bold', lineHeight: 'normal', color: expanded === `panel${index}` ? '#fff' : '#fff' }}>{faq.que}</Typography>
+                                                </AccordionSummary>
+                                                <AccordionDetails sx={{ paddingTop: '30px' }}>
+                                                    <Typography color='#fff'>
+                                                        {faq.ans}
+                                                    </Typography>
+                                                </AccordionDetails>
+                                            </Accordion>
+                                        ))}
 
 
-</Box>
+                                    </Box>
 
 
 
@@ -117,6 +163,41 @@ const DataAndAnalyticsServices = () => {
                         </Grid>
                     </Box>
                 </Box>
+
+                <Box py={{ md: 15, xs: 4 }} bgcolor='primary.light'>
+                    <Box className='container'>
+                        <Typography  className='sectionTitle' textAlign='center'>Begin your Data & Analytics journey here</Typography>
+                        <Box mt={12} className="listCard" sx={{ display: 'flex', flexDirection: 'column', gap: '60px'}}>
+                            {listCards.map((card) => (
+                                <Grid alignItems="center" container key={card.id} direction={ card.id % 2 === 0 ? 'row-reverse' : 'row'}>
+                                    <Grid item md={9}>
+                                        <Box py={8} px={5} sx={{boxShadow: '-14px 14px 20px #0000001a', backgroundColor: card.id % 2 === 0 ? '#f7f7f7' : '' }}>
+                                        <Stack spacing={2}>
+                                            <Typography variant='h5' fontWeight='500'>{card.title}</Typography>
+                                            <Typography fontSize='15px'>{card.description}</Typography>
+                                            </Stack>
+                                        </Box>
+                                    </Grid>
+                                    <Grid item md={3}>
+                                        <Typography sx={{ textAlign: card.id % 2 === 0 ? 'left' : 'center'}} lineHeight='200px' fontSize='200px' fontWeight='bold' color='primary.main'>{card.id}</Typography>
+                                    </Grid>
+                                </Grid>
+                            ))}
+                        </Box>
+                    </Box>
+                </Box>
+
+<Box my={12}>
+    <WhyUs />
+</Box>
+
+<Box py={12} bgcolor='primary.light'>
+    <BlogSlider />
+</Box>
+
+<Box py={12}>
+<ContactUs />
+</Box>
 
             </Box>
         </>

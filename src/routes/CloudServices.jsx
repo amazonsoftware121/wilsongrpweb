@@ -35,7 +35,7 @@ const CloudServices = () => {
             <Box sx={{ columnCount: { md: 2, xs: 1 } }} mt={{ md: 3 }}>
               <Typography >
                 With the increasing demand for the Internet, consumers have changed the way of conducting commerce through smartphones and gadgets with easier internet access. A 2019 poll by Marist College and National Public Radio (NPR) indicates 76% of all U.S. adults shop online. This provides opportunities for businesses to store existing customer data anywhere and anytime, re-target potential customers, increase revenue, and much more. Cloud Computing Services and Cloud Services companies are getting more attention nowadays.
-                
+
               </Typography>
               <Typography >  Cloud Services or Cloud Computing Services enable businesses to utilize a network of remote systems to transmit, process, store and access data, applications, and services over the Internet, which boosts their competitiveness in the digital space. Cloud solutions from Cloud Services providers come in various forms and sizes to cater to different organizational needs. According to the Microsoft Trustworthy Computing SME Cloud Trust study, 94% small and medium-sized enterprises (SMEs) have experienced performance benefits from using cloud services provided by Cloud Services companies.</Typography>
             </Box>
@@ -75,9 +75,9 @@ const CloudServices = () => {
               <Grid item xs={12} md={7}>
                 <Box className='accordionDark'>
 
-                  <Accordion  sx={{ background: 'none', boxShadow: 'none', borderBottom: expanded === 'panel1' ? `none` : '2px solid #000' }} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                  <Accordion sx={{ background: 'none', boxShadow: 'none', borderBottom: expanded === 'panel1' ? `none` : '2px solid #000' }} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                     <AccordionSummary
-                      expandIcon={expanded === 'panel1' ? <FaMinus size={26} color='#28A0CF' /> : <FaPlus size={26} />}
+                      expandIcon={expanded === 'panel1' ? <FaMinus size={26} color='#28A0CF' /> : <FaPlus color='#000' size={26} />}
                       aria-controls="panel1bh-content"
                       id="panel1bh-header"
                       sx={{ borderBottom: expanded === 'panel1' ? '1px solid #28A0CF' : 'none' }}
@@ -96,7 +96,7 @@ const CloudServices = () => {
 
                   <Accordion sx={{ background: 'none', border: 'none', boxShadow: 'none', borderRadius: '0 !important', borderBottom: expanded === 'panel2' ? `none` : '2px solid #000' }} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
                     <AccordionSummary
-                      expandIcon={expanded === 'panel2' ? <FaMinus color='#28A0CF' size={26} /> : <FaPlus size={26} />}
+                      expandIcon={expanded === 'panel2' ? <FaMinus color='#28A0CF' size={26} /> : <FaPlus color='#000' size={26} />}
                       aria-controls="panel2bh-content"
                       id="panel2bh-header"
                       sx={{ borderBottom: expanded === 'panel2' ? '1px solid #28A0CF' : 'none' }}
@@ -107,8 +107,8 @@ const CloudServices = () => {
                       <Typography variant='h4' fontWeight='500' fontSize='22px' mb={4}>Securely Implement Cloud Infrastructure</Typography>
                       <Typography>
                         WCG’s cloud strategy services are paired with cloud security. With our Cloud Computing Services, the cloud migration of your company from on premises to the cloud or from one cloud vendor to the other, is always securely protected. As a trustworthy cloud services provider, WCG assures your organization’s cyber security.
-</Typography>
-                                   <Typography mt={2}>          <small> ***Cloud security is a set of control-based technologies and policies designed to maintain data security, adhere to compliance regulations, and provide a data backup plan in the event of a security breach.</small>
+                      </Typography>
+                      <Typography mt={2}>          <small> ***Cloud security is a set of control-based technologies and policies designed to maintain data security, adhere to compliance regulations, and provide a data backup plan in the event of a security breach.</small>
 
 
 
@@ -125,24 +125,25 @@ const CloudServices = () => {
         </Box>
 
         <Box my={12}>
-<WhyUs />
+          <WhyUs />
         </Box>
 
-<Box py={12} bgcolor={'primary.light'} position='relative' >
-<Box sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px',  backgroundColor: 'rgba(255, 255, 255, 0.5)',
-width: '324px',
-    height: '604px',
-    position: 'absolute',
-    right: 0,
-    bottom: '20px',
-    opacity: 0.3
- }} ></Box>
-<Typography className='sectionTitle' textAlign='center' mb={7}>Resources</Typography>
-<BlogSlider />
-</Box>
-<Box py={12} >
-<ContactUs />
-</Box>
+        <Box py={12} bgcolor={'primary.light'} position='relative' >
+          <Box sx={{
+            backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px', backgroundColor: 'rgba(255, 255, 255, 0.5)',
+            width: '324px',
+            height: '604px',
+            position: 'absolute',
+            right: 0,
+            bottom: '20px',
+            opacity: 0.3
+          }} ></Box>
+
+          <BlogSlider />
+        </Box>
+        <Box py={12} >
+          <ContactUs />
+        </Box>
 
       </Box>
 

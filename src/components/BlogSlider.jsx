@@ -58,11 +58,11 @@ const BlogSlider = () => {
 
 
     const slides = [
-        { id: 1, type: 'Blog', img: 'microsoftteams-image-1.jpg', title: 'FedRAMP’s Latest Changes and Expectations', content: 'Everything changes, which means nothing stays the same. The Federal Risk and Authorization Management Program (FedRAMP) has encountered changes, and those changes mean that requirements are not the same for Cloud Service Providers (CSPs) who provide or plan to provide cloud service offerings (CSOs) to U.S. Government agencies.', link: 'https://wilsoncgrp.com/blog/fedramp-latest-changes-and-expectations' },
-        { id: 2, type: 'Blog', img: 'newBaselineSecurityControl.jpg', title: 'FedRAMP Has New Baseline Security Control Requirements', content: 'Beware all cyber threats; you have new challenges to face! The Federal Risk and Authorization Management Program(FedRAMP) has implemented the new National Institute of Standards and Technology (NIST) 800-53 Rev.5 baseline and security control requirements to address cyber threats. Considered a new “threat-based methodology”, the changes provide guidance to assist Cloud Service Providers (CSPs), FedRAMP Third-Party Assessment Organizations (3PAOs), and Federal Agencies to transition to the new FedRAMP requirements. The Rev. 5 baseline is an innovative approach that helps the government to inform risk management decisions. Additionally, this approach provides CSPs, 3PAOs and Federal Agencies with an opportunity to expedite the authorization process by prioritizing controls that mitigate threats and vulnerabilities posing the most risks to federal systems and data.', link: 'https://wilsoncgrp.com/blog/fedramp-has-new-baseline-security-control-requirements' },
-        { id: 3, type: 'Blog', img: 'cloudservices.jpg', title: 'FedRAMP: Mandatory Protection for Your Cloud Services with Federal Businesses', content: 'These days, many questions arise surrounding the security of data and cloud posture: “How did this happen, why did this happen, and can this happen again?” Fortunately, the Federal Risk and Authorization Management Program (FedRAMP) exists for non-federal organizations that handle sensitive, confidential government data.', link: 'https://wilsoncgrp.com/blog/mandatory-protection-for-your-cloud-services' },
-        { id: 4, type: 'Data Sheet', img: 'resources.jpg', title: 'FedRAMP Datasheet', content: 'FedRAMP is a U.S. government-wide program that delivers a standard approach to the security assessment, authorization, and continuous monitoring of cloud products and services. Compliance is mandatory for all Cloud Service Providers (CSPs) that hold federal data and are providing or seeking to provide services to federal agencies.', link: 'https://wilsoncgrp.com/uploads/WCG-FedRAMP-Datasheet-20220815-2.pdf' },
-
+        { id: 1, cat: 'Data Sheet', img: 'cloud-serv.png', title: 'Cloud Services', content: 'Cloud Services enable businesses to utilize a network of remote systems to transmit, process, store and access data, applications, and services over the Internet, which boosts their competitiveness in the digital space. Cloud solutions come in various forms and sizes to cater to different organizational needs. ', link: 'https://wilsoncgrp.com/uploads/1597586929593_Cloud%20Services.pdf' },
+        { id: 2, cat: 'Blog', img: 'network-2402637_960_720.webp', title: 'Combatting the Security Risks of Cloud Computing', content: 'Small and large enterprises continue to benefit from increased digitization and greater use of cloud-based application and storage facilities.', link: 'https://wilsoncgrp.com/blog/combatting-the-security-risks-of-cloud-computing' },
+        { id: 3, cat: 'Blog', img: 'cloud-3406627_960_720.webp', title: 'The Risks of Using Cloud Services', content: 'When J. C. R. “Lick” Licklider developed ARPAnet in 1962, he had the vision of creating a device that could receive and send data simultaneously amongst a large group of people. He called this idea the  “Intergalactic Computer Network”.', link: 'https://wilsoncgrp.com/blog/the-risks-of-using-cloud-services' },
+        { id: 4, cat: 'Blog', img: 'Cracking-the-Enigma-of-Cloud-Computing-1200x450-1.webp', title: 'Cracking the Enigma of Cloud Computing', content: 'One of the most frequent questions tech industry insiders get from those working outside of the industry is “What is the cloud?” ', link: 'https://wilsoncgrp.com/blog/cracking-the-enigma-of-cloud-computing' },
+        {id: 5, cat: 'Blog', img: 'cloud-computing-101.webp', title: 'Cloud Computing 101', content: 'Visionary Steve Jobs once spoke of a dream in which data could be uploaded and accessed anywhere. Before there was the cloud, there were floppy disks, CD ROMs and very large immobile hardware. Fast forward to 2015 – now we are able to access and store information without physical limitations.', link: 'https://wilsoncgrp.com/blog/cloud-computing-101'}
 
 
         // Add more slides as needed
@@ -70,6 +70,7 @@ const BlogSlider = () => {
 
     return (
         <>
+        <Typography className='sectionTitle' textAlign='center' mb={7}>Resources</Typography>
             <Container className='blogSlider'>
                 <Box>
                     <Swiper
@@ -108,7 +109,7 @@ const BlogSlider = () => {
                                             />
                                             <CardContent sx={{ padding: '10px 10px 0 10px', position: 'relative' }}>
                                                 
-                                            <Typography sx={{padding: '4px 29px', position: 'absolute', top: '-65px', right: '20px', textTransform: 'uppercase', color: '#fff', fontWeight: 500 }}  bgcolor='primary.main' className='subtitle' gutterBottom>{slide.type}</Typography>
+                                            <Typography sx={{padding: '4px 29px', position: 'absolute', top: '-65px', right: '20px', textTransform: 'uppercase', color: '#fff', fontWeight: 500 }}  bgcolor='primary.main' className='subtitle' gutterBottom>{slide.cat}</Typography>
                                                 <Typography sx={{ color: "#000", fontSize: "20px", fontWeight: "600", lineHeight: 'normal' }} className='title' variant='h4' color="text.secondary" mb={2}>
                                                     {slide.title}
                                                 </Typography>
@@ -117,7 +118,7 @@ const BlogSlider = () => {
                                                 </Typography>
                                             </CardContent>
                                             <CardActions sx={{padding: '0 10px'}}>
-                                                <Button sx={{paddingLeft: 0,  fontWeight: 'bold', fontSize: '16px'}} className='textBtn-sky'  varient='text' size="large" href={slide.link}  >Read More</Button>
+                                                <Button sx={{paddingLeft: 0,  fontWeight: 'bold', fontSize: '16px'}} className='textBtn-sky' target={slide.cat === "Data Sheet" && '_blank'}  varient='text' size="large" href={slide.link}  >{slide.cat === "Data Sheet" ? 'Download' : "Read More"}</Button>
                                             </CardActions>
                                         </Card>
                                     

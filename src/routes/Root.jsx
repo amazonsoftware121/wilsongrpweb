@@ -8,6 +8,7 @@ import { Opacity } from '@mui/icons-material'
 import CaseStudies from '../components/Home/CaseStudies'
 import Insight from '../components/Home/Insight'
 import HorizontalWrapper from '../components/HorizontalWrapper'
+import Newsletter from '../components/Newsletter'
 
 
 const Root = () => {
@@ -31,6 +32,7 @@ const Root = () => {
                 </div>
                 </HorizontalWrapper>
                 <Insight />
+                <Newsletter />
             </div>
         </>
     )

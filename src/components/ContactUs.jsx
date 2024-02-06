@@ -8,7 +8,7 @@ const ContactUs = () => {
         <>
             <Box className="container">
                 <Grid container spacing={2} alignItems="center">
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={7} pr={{md: 15}}>
                         <Box sx={{ backgroundImage: `url(${contactBg})`, backgroundRepeat: 'no-repeat', padding: {md: '150px 15px 0 205px'}}} >
                             <Typography variant='h2' fontWeight='200' fontSize='68px'>
                             Want to contact us?
@@ -18,7 +18,7 @@ const ContactUs = () => {
 will reach out to you.</Typography>
                         </Box>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={5}>
                         <Box
                             component="form"
                            

@@ -34,11 +34,16 @@ $color-text-light: #fff;
 #root {
   overflow-x: hidden;
 }
-
+html{
+  body{
+    color: $color-text-dark;  
+  }
+}
 body {
   margin: 0;
   padding: 0;
   background-color: transparent;
+  color: $color-text-dark;
 
   h1 {
     font-size: 3.2em;
@@ -58,6 +63,13 @@ body {
       padding: 0;
       margin: 0;
       list-style: none;
+    }
+    &.listDisc{
+      padding-left: 30px;
+      li{
+        list-style-type: disc;
+        margin: 7px 0px;
+      }
     }
   }
 
@@ -1532,6 +1544,24 @@ body {
   .MuiAccordion-root {
     border-bottom: 1px solid $color-text-dark !important;
     border-radius: 0 !important;
+    color: $color-text-dark;
+    &.Mui-expanded{
+      margin: 0;
+    }
+    .MuiAccordionSummary-root{
+      padding: 0 10px;
+    }
+    .MuiAccordionSummary-content{
+      margin-bottom: 15px;
+      
+        &.Mui-expanded{
+          margin: 12px 0 15px 0;
+        }
+      
+    }
+    .MuiAccordionDetails-root{
+      padding: 20px 10px 10px;
+    }
 
     &::before {
       display: none;

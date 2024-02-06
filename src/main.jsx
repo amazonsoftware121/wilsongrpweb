@@ -15,7 +15,8 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import DataAndAnalyticsServices from './routes/DataAndAnalyticsServices.jsx';
-
+import ComprehensiveSecurityAssessment from './routes/ComprehensiveSecurityAssessment.jsx';
+import ApplicationSecurityAssessment from './routes/ApplicationSecurityAssessment.jsx';
 
 const theme = createTheme({
 
@@ -56,7 +57,7 @@ const theme = createTheme({
   palette: {
     primary: {
       main: '#28A0CF',
-      light: '#F2F2F2',
+      light: '#f5f5f5',
       // light: will be calculated from palette.primary.main,
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
@@ -111,6 +112,14 @@ const router = createBrowserRouter([
       {
         path: "/data-and-analytics-services-new",
         element: <DataAndAnalyticsServices />
+      },
+      {
+        path: "/web-application-security-assessment-services-new",
+        element: <ApplicationSecurityAssessment />
+      },
+      {
+        path: "/comprehensive-security-assessment-new",
+        element: <ComprehensiveSecurityAssessment />
       }
     ]
   },

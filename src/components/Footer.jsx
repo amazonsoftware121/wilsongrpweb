@@ -11,7 +11,7 @@ const Footer = () => {
     return (
         <Box className='footer'>
         
-        <Newsletter />
+
         <Container>
             <Box>
                 <Box className='footerTop'>
@@ -105,7 +105,7 @@ const Footer = () => {
                     </Grid>
                 </Box>
                 <div className='footerBottom'>
-                <p className='copyright text-center'>© 2023 Wilson Consulting Group. All Rights Reserved.</p>
+                <p className='copyright text-center'>© 2024 Wilson Consulting Group. All Rights Reserved.</p>
                 </div>
             </Box>
             </Container>

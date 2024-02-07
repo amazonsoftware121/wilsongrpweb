@@ -17,7 +17,7 @@ const WhyUs = () => {
             <Box className="container">
                 <Typography pt={4} mb={12} variant='h2' className='sectionTitle' textAlign='center'>Why us</Typography>
                 <Grid container mt={5} className='contentBox'>
-                    <Grid item sx={12} md={4}>
+                    <Grid item xs={12} md={4}>
                         <Box textAlign='center'>
                         <img src={whyus1} />
                         <Typography fontSize='20px' pt={1} pb={2} fontWeight='500'>Experienced <Typography fontSize='20px' fontWeight='500' component='span' color={'primary.main'} >Team</Typography></Typography>
@@ -25,7 +25,7 @@ const WhyUs = () => {
                         </Box>
                     </Grid>
 
-                    <Grid item sx={12} md={4}>
+                    <Grid item xs={12} md={4}>
                         <Box textAlign='center'>
                         <img src={whyus2} />
                         <Typography fontSize='20px' pt={1} pb={2} fontWeight='500'>Practical <Typography fontSize='20px' fontWeight='500' component='span' color={'primary.main'} >Guidance</Typography></Typography>
@@ -33,7 +33,7 @@ const WhyUs = () => {
                         </Box>
                     </Grid>
 
-                    <Grid item sx={12} md={4}>
+                    <Grid item xs={12} md={4}>
                         <Box textAlign='center'>
                         <img src={whyus3} />
                         <Typography fontSize='20px' pt={1} pb={2} fontWeight='500'>Reasonable <Typography fontSize='20px' fontWeight='500' component='span' color={'primary.main'} >Pricing</Typography></Typography>
@@ -42,7 +42,7 @@ const WhyUs = () => {
                     </Grid>
 
 
-                    <Grid item sx={12} md={4}>
+                    <Grid item xs={12} md={4}>
                         <Box textAlign='center'>
                         <img src={whyus4} />
                         <Typography fontSize='20px' pt={1} pb={2} fontWeight='500'>Personalized Customer <Typography fontSize='20px' fontWeight='500' component='span' color={'primary.main'} >Service</Typography></Typography>
@@ -50,7 +50,7 @@ const WhyUs = () => {
                         </Box>
                     </Grid>
 
-                    <Grid item sx={12} md={4}>
+                    <Grid item xs={12} md={4}>
                         <Box textAlign='center'>
                         <img src={whyus5} />
                         <Typography fontSize='20px' pt={1} pb={2} fontWeight='500'>Proven Track <Typography fontSize='20px' fontWeight='500' component='span' color={'primary.main'} >Records</Typography></Typography>
@@ -58,7 +58,7 @@ const WhyUs = () => {
                         </Box>
                     </Grid>
 
-                    <Grid item sx={12} md={4}>
+                    <Grid item xs={12} md={4}>
                         <Box textAlign='center'>
                         <img src={whyus6} />
                         <Typography fontSize='20px' pt={1} pb={2} fontWeight='500'>Adopting to Your <Typography fontSize='20px' fontWeight='500' component='span' color={'primary.main'} >Needs</Typography></Typography>

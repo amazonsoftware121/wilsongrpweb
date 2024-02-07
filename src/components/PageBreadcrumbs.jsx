@@ -13,16 +13,17 @@ const Breadcrumbsaa = (props) => {
   }
 
   const breadcrumbs = [
-    <a style={{ color: '#fff' }}
-      underline="hover"
+    <a
+style={{ color: '#fff' }}
+//      underline="hover"
       key="2"
-      color="inherit"
+  //    color="inherit"*/
       href="https://wilsoncgrp.com/our-services"
       //onClick={handleClick}
     >
       Our Services
     </a>,
-    props.parent && <Link
+      props.parent && <Link
       underline="hover"
       key="2"
       color="inherit"
@@ -30,7 +31,7 @@ const Breadcrumbsaa = (props) => {
       //onClick={handleClick}
     >{props.parent}</Link>,
     <Typography key="3" color={'primary.main'}>
-      {props.title}
+       {props.title}
     </Typography>,
 
   ];

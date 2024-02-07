@@ -107,7 +107,7 @@ const BlogSlider = () => {
                                                 image={`assets/img/${slide.img}`}
                                                 title="green iguana"
                                             />
-                                            <CardContent sx={{ padding: '10px 10px 0 10px', position: 'relative' }}>
+                                            <CardContent sx={{ height: {md: '150px'}, overflow: 'hidden', padding: '10px 10px 0 10px', position: 'relative' }}>
                                                 
                                             <Typography sx={{padding: '4px 29px', position: 'absolute', top: '-65px', right: '20px', textTransform: 'uppercase', color: '#fff', fontWeight: 500 }}  bgcolor='primary.main' className='subtitle' gutterBottom>{slide.cat}</Typography>
                                                 <Typography sx={{ color: "#000", fontSize: "20px", fontWeight: "600", lineHeight: 'normal' }} className='title' variant='h4' color="text.secondary" mb={2}>

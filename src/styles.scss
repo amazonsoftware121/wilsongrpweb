@@ -1469,6 +1469,11 @@ body {
   li {
     color: $color-text-light;
     font-size: 20px;
+    a{
+      &:hover{
+        text-decoration: underline;
+      }
+    }
 
     p {
       font-size: 20px;

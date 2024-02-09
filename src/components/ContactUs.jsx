@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Grid, Box, Typography, Divider } from '@mui/material'
 import TextField from '@mui/material/TextField';
 import contactBg from '../assets/img/contactusbg.png';
 
 const ContactUs = () => {
+    const [enteredValues, setEnteredValues] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+    });
+
+    const handleInputChange = (identifier, value) => {
+        setEnteredValues(prevValues => ({
+            ...prevValues,
+            [identifier]: value
+        }))
+    }
     const handleSubmit = (event) => {
-        console.log("Submited");
+        event.preventDefault();
+        console.log(enteredValues);
     }
     return (
         <>
@@ -27,41 +43,58 @@ const ContactUs = () => {
 
                             noValidate
                             autoComplete="off"
+                            onSubmit={handleSubmit}
                         >
 
                             <Grid container spacing={2}>
                                 <Grid item sm={6} md={6}>
-                                    <TextField fullWidth id="stan22dard-basic" label="First Name *" variant="standard" />
+                                    <TextField fullWidth id="stan22dard-basic" label="First Name *" variant="standard"
+                                        onChange={(event) => handleInputChange('firstName', event.target.value)}
+                                        value={enteredValues.firstName}
+                                    />
                                 </Grid>
 
                                 <Grid item sm={6} md={6}>
-                                    <TextField fullWidth id="standar22d-basic" label="Last Name *" variant="standard" />
+                                    <TextField fullWidth id="standar22d-basic" label="Last Name *" variant="standard"
+                                        onChange={(event) => handleInputChange('lastName', event.target.value)}
+                                        value={enteredValues.lastName}
+                                    />
                                 </Grid>
 
 
                                 <Grid item sm={6} md={6}>
-                                    <TextField fullWidth id="standard-basic" label="Email Address *" variant="standard" />
+                                    <TextField fullWidth id="standard-basic" label="Email Address *" variant="standard"
+                                        onChange={(event) => handleInputChange('email', event.target.value)}
+                                        value={enteredValues.email}
+                                    />
                                 </Grid>
 
                                 <Grid item sm={6} md={6}>
-                                    <TextField fullWidth id="standard-basic" label="Phone Number" variant="standard" />
+                                    <TextField fullWidth id="standard-basic" label="Phone Number" variant="standard"
+                                        onChange={(event) => handleInputChange('phone', event.target.value)}
+                                        value={enteredValues.phone} />
                                 </Grid>
 
 
                                 <Grid item xs={12}>
-                                    <TextField fullWidth id="standard-basic" label="Subject *" variant="standard" />
+                                    <TextField fullWidth id="standard-basic" label="Subject *" variant="standard"
+                                        onChange={(event) => handleInputChange('subject', event.target.value)}
+                                        value={enteredValues.subject}
+                                    />
                                 </Grid>
 
 
                                 <Grid item xs={12}>
-                                    <TextField fullWidth id="standard-basic" label="Message*" variant="standard" multiline rows={5} />
+                                    <TextField fullWidth id="standard-basic" label="Message*" variant="standard" multiline rows={5}
+                                        onChange={(event) => handleInputChange('message', event.target.value)}
+                                    />
                                 </Grid>
 
 
                             </Grid>
                             <Typography fontSize='12px' my={2}>By submitting this form, you are agreeing to Wilson Consulting Group ’s <a href='https://wilsoncgrp.com/privacy-policy'>Privacy Policy</a>.</Typography>
 
-                            <Button onClick={handleSubmit} size="large" variant="outlined" sx={{ textTransform: 'uppercase', fontSize: '12px', fontWeight: 'bold', padding: '14px 32px' }} >Send Message</Button>
+                            <Button type='submit' size="large" variant="outlined" sx={{ textTransform: 'uppercase', fontSize: '12px', fontWeight: 'bold', padding: '14px 32px' }} >Send Message</Button>
                         </Box>
 
                     </Grid>

@@ -15,7 +15,7 @@ const Helpyou = () => {
                         <Grid item xs={12} md={6}>
                             <Box>
                                 <Stack spacing={3}>
-                                    <Typography fontWeight='500' color='#fff'>
+                                    <Typography  color='#fff'>
                                         WCG’s application security assessment services help organizations determine whether your off-the-shelf or custom application software contains vulnerabilities that can be exploited. WCG’s Application Security Assessment Services evaluate your application’s security in these ways:
                                     </Typography>
                                     <ul className='listDisc' style={{ fontWeight: 500, color: '#fff' }}>
@@ -24,12 +24,12 @@ const Helpyou = () => {
                                         <li>Tests passwords policies, rules, and other critical settings for injection vulnerabilities</li>
                                         <li>Evaluates secure protocols, encryption, and configuration management</li>
                                     </ul>
-                                    <Typography fontWeight='500' color='#fff'>
+                                    <Typography  color='#fff'>
                                         We evaluate applications to minimize the risk of information leakage, authentication and session management breaches, spoofing, impersonation, command injections and denial of service attacks. The web application security assessment also determines whether the software behaves and interacts securely with its users, databases, and other applications.
                                     </Typography>
                                     
                                 </Stack>
-                                <Button sx={{marginTop: '20px', fontWeight: 'bold'}} variant='text' textAlign='left' href='https://wilsoncgrp.com/track-record' className='textBtn-sky' >Connect with Our Expert &nbsp; <span><FaArrowRight size={14} /> </span></Button>
+                                <Button sx={{marginTop: '20px',marginBottom: '50px', fontWeight: 'bold', }} style={{backgroundImage: 'linear-gradient(to right, #fff, #fff 50%, #28A0CF 50%)'}} variant='text' textAlign='left' href='https://wilsoncgrp.com/track-record' className='textBtn-sky skyHoverWhite' >Connect with Our Expert &nbsp; <span><FaArrowRight size={14} /> </span></Button>
 
                             </Box>
                         </Grid>

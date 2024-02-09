@@ -60,7 +60,7 @@ const ApplicationSecurityAssessment = () => {
 
                 <Box className="faqSection titleSectionBg" bgcolor={'primary.light'} py={20}>
                     <Box className='container'>
-                        <Grid container rowSpacing={2} columnSpacing={4}>
+                        <Grid container columnSpacing={4}>
 
                             <Grid item xs={12} md={5}>
                                 <Box pr={{ md: 6 }}>
@@ -68,10 +68,10 @@ const ApplicationSecurityAssessment = () => {
                                     <Typography mt={3} variant='h2' className='sectionTitle'>What are some of your application-related challenges?</Typography>
                                 </Box>
                             </Grid>
-                            <Grid item xs={12} md={7}>
-                                <Box className='accordionDark'>
+                            <Grid item xs={12} md={7} py={0}>
+                                <Box className='accordionDark' mt={-5} >
 
-                                    <Accordion sx={{ background: 'none', boxShadow: 'none', borderBottom: expanded === 'panel1' ? `none` : '2px solid #000' }} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                                    <Accordion sx={{paddingTop: '0 !important', background: 'none', boxShadow: 'none', borderBottom: expanded === 'panel1' ? `none` : '2px solid #000' }} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                                         <AccordionSummary
                                             expandIcon={expanded === 'panel1' ? <FaMinus size={26} color='#28A0CF' /> : <FaPlus size={26} />}
                                             aria-controls="panel1bh-content"
@@ -90,12 +90,12 @@ const ApplicationSecurityAssessment = () => {
                                     </Accordion>
 
 
-                                    <Accordion sx={{ background: 'none', border: 'none', boxShadow: 'none', borderRadius: '0 !important', borderBottom: expanded === 'panel2' ? `none` : '2px solid #000' }} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                                    <Accordion sx={{  background: 'none', border: 'none', boxShadow: 'none', borderRadius: '0 !important', borderBottom: expanded === 'panel2' ? `none` : '2px solid #000' }} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
                                         <AccordionSummary
                                             expandIcon={expanded === 'panel2' ? <FaMinus color='#28A0CF' size={26} /> : <FaPlus size={26} />}
                                             aria-controls="panel2bh-content"
                                             id="panel2bh-header"
-                                            sx={{ borderBottom: expanded === 'panel2' ? '1px solid #28A0CF' : 'none' }}
+                                            sx={{ borderBottom: expanded === 'panel2' ? '1px solid #28A0CF' : 'none'  }}
                                         >
                                             <Typography variant='h3' sx={{ fontSize: '24px', fontWeight: 'bold', lineHeight: 'normal', color: expanded === 'panel2' ? '#28A0CF' : '#000' }}> My organization’s web application failed a PCI DSS compliance standard audit. How can you help?</Typography>
                                         </AccordionSummary>

@@ -236,7 +236,13 @@ body {
         left: 5px;
       }
     }
-
+&.skyHoverWhite{
+  &:hover{
+    span{
+      color: $color-text-light;
+    }
+  }
+}
 
   }
 
@@ -1586,6 +1592,19 @@ body {
   }
 }
 
+
+
+.MuiCard-root{
+  .MuiCardMedia-root{
+    transition: all 0.3s;
+  }
+  &:hover{
+    box-shadow: 0px 0px 17px 5px #acacac;
+    .MuiCardMedia-root{
+      transform: scale(1.1444);
+    }
+  }
+}
 
 // Body Closing
 

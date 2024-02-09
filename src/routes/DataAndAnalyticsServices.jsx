@@ -3,7 +3,7 @@ import PageHeader from '../components/PageHeader';
 import headerBg from '../assets/img/dataheader.jpg';
 import { Box, Stack, Typography, Grid } from '@mui/material';
 import bgBlue from '../../src/assets/img/bg5.png';
-import bgFaq from '../../src/assets/img/bg8.jpg';
+import bgFaq from '../../src/assets/img/medium-shot-people-working-together-office.jpg';
 
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -78,7 +78,7 @@ const DataAndAnalyticsServices = () => {
         top: '0',
         left: '0',
         width: '60%',
-        height: '100%',
+        height: '1135px',
         // other styles as needed
         backgroundImage: `url(${bgFaq})`,
         backgroundRepeat: 'no-repeat',
@@ -120,7 +120,7 @@ const DataAndAnalyticsServices = () => {
                     </Box>
                 </Box>
 
-                <Box className="faqSection titleSectionBg" py={20} position='relative'>
+                <Box className="faqSection titleSectionBg" py={20} position='relative' sx={{overflow: 'hidden'}}>
                     <Box style={bgHalfAfterStyle}></Box>
                     <Box className='container'>
                         <Grid container rowSpacing={2} columnSpacing={4}>
@@ -133,7 +133,7 @@ const DataAndAnalyticsServices = () => {
                                     <Typography color='#fff !important' className='sectionTitle'>Benefits of Data and Analytics</Typography>
                                     <Box className='accordionLight'>
                                         {Faqs.map((faq, index) => (
-                                            <Accordion key={index} sx={{ background: 'none', boxShadow: 'none' }} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
+                                            <Accordion key={index} sx={{margin: '0 !important', background: 'none', boxShadow: 'none' }} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
                                                 <AccordionSummary
                                                     expandIcon={expanded === `panel${index}` ? <FaMinus size={26} color='#fff' /> : <FaPlus size={26} color='#fff' />}
                                                     aria-controls="panel1bh-content"

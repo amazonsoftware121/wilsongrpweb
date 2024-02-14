@@ -1606,6 +1606,21 @@ body {
   }
 }
 
+/*Card*/
+
+.cardHalfLightBg{
+  position: relative;
+  &::after{
+    content: '';
+    height: 375px;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+  }
+}
+
 // Body Closing
 
 /*Animation*/

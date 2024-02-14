@@ -14,9 +14,20 @@ import WhyUs from '../components/WhyUs';
 import BlogSlider from '../components/BlogSlider';
 import ContactUs from '../components/ContactUs';
 
+
+const slides = [
+    { id: 1, cat: 'Blog', img: '010.webp', title: 'Best Practices for Securing Educational Resources in the Age of Distance Learning', content: 'According to Microsoft’s Global Threat Activity Tracker, more than 4.7 million malicious software (or “malware”) incidents were detected in the education industry worldwide in June 2020', link: 'https://wilsoncgrp.com/blog/best-practices-for-securing-educational-resources-in-the-age-of-distance-learning' },
+    { id: 2, cat: 'Blog', img: 'AdobeStock_210329674-1-1024x493-1.webp', title: 'The Reason why Application Leaders should care about Privacy and Data Protection', content: 'As of July 2018, downloadable apps on the Apple App Store reached 3.2 million. Data shows that social media applications are the most frequently used, allowing people to connect — and download other supporting apps.', link: 'https://wilsoncgrp.com/blog/the-reason-why-application-leaders-should-care-about-privacy-and-data-protection' },
+    { id: 3, cat: 'Blog', img: 'mobileapp.webp', title: 'Keeping Applications Secure from Malware', content: 'Application security needs more attention as there is an increasing usage of applications on smart devices. While security has seen improvements over the years, applications still have vulnerabilities that can expose them to spyware, keyloggers, viruses, worms, and other harmful scripts.', link: 'https://wilsoncgrp.com/blog/keeping-applications-secure-from-malware' },
+    { id: 4, cat: 'Blog', img: 'How-to-Minimize-Risks-with-Open-source-Solutions-1024x384-1.webp', title: 'How to Minimize Risks with Open-source Solutions', content: 'Many organizations in various industries across the globe have invested in open-source solutions to reduce costs. These solutions are also attractive to commercial vendors since the use of open-source components reduces development costs and improve the time to market. These situations have resulted in approximately 3 in 4 organizations adopting open-source solutions.', link: 'https://wilsoncgrp.com/blog/how-to-minimize-risks-with-open-source-solutions' },
+    { id: 5, cat: 'Blog', img: 'Is-Your-Web-Application-Secure-1200x450-1.webp', title: 'Is Your Web Application Secure?', content: 'It is imperative that organizations and government entities are knowledgeable in securing web applications. Mis-configurations and lack of security controls can lead to information leakage, cross-site scripting, and many more vulnerabilities.', link: 'https://wilsoncgrp.com/blog/is-your-web-application-secure' },
+    // Add more slides as needed
+];
+
 const ApplicationSecurityAssessment = () => {
     const [expanded, setExpanded] = React.useState('panel1');
     const [expandIcon, setExpandIcon] = React.useState(false);
+    
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
     };
@@ -121,7 +132,7 @@ const ApplicationSecurityAssessment = () => {
                 </Box>
 
                 <Box py={12} bgcolor='primary.light'>
-                    <BlogSlider />
+                    <BlogSlider resourcesSlide={slides} />
                 </Box>
 
                 <Box py={14}>

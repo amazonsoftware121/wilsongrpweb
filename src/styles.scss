@@ -1601,7 +1601,17 @@ body {
   &:hover{
     box-shadow: 0px 0px 17px 5px #acacac;
     .MuiCardMedia-root{
-      transform: scale(1.1444);
+      //transform: scale(1.1444);
+    }
+  }
+}
+
+.resouBlogTitle{
+  a{
+    color:#000;
+    transition: color 0.3 ease;
+    &:hover{
+      color: $color-primary;
     }
   }
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, Grid, Box, Typography, Divider } from '@mui/material'
 import TextField from '@mui/material/TextField';
 import contactBg from '../assets/img/contactusbg.png';
+import Test from './test';
 
 const ContactUs = () => {
     const [enteredValues, setEnteredValues] = useState({
@@ -101,19 +102,19 @@ const ContactUs = () => {
                         >
                             <Grid container spacing={2}>
                                 <Grid item sm={6} md={6}>
-                                    <TextField fullWidth required id="standard-basic" label="First Name *" variant="standard"
+                                    <TextField fullWidth required id="standard-basic" label="First Name" variant="standard"
                                         onChange={(event) => handleInputChange('firstName', event.target.value)}
                                         value={enteredValues.firstName}
                                     />
                                 </Grid>
                                 <Grid item sm={6} md={6}>
-                                    <TextField fullWidth required id="standard-basic" label="Last Name *" variant="standard"
+                                    <TextField fullWidth required id="standard-basic" label="Last Name" variant="standard"
                                         onChange={(event) => handleInputChange('lastName', event.target.value)}
                                         value={enteredValues.lastName}
                                     />
                                 </Grid>
                                 <Grid item sm={6} md={6}>
-                                    <TextField type='email' required fullWidth id="standard-basic" label="Email Address *" variant="standard"
+                                    <TextField type='email' required fullWidth id="standard-basic" label="Email Address" variant="standard"
                                         onChange={(event) => handleInputChange('email', event.target.value)}
                                         value={enteredValues.email}
                                         error={!validateEmail(enteredValues.email) && enteredValues.email !== ''}
@@ -121,7 +122,7 @@ const ContactUs = () => {
                                     />
                                 </Grid>
                                 <Grid item sm={6} md={6}>
-                                    <TextField fullWidth required id="standard-basic" label="Phone Number *" variant="standard"
+                                    <TextField fullWidth required id="standard-basic" label="Phone Number" variant="standard"
                                         onChange={(event) => handleInputChange('phone', event.target.value)}
                                         value={enteredValues.phone} />
                                 </Grid>
@@ -153,6 +154,8 @@ const ContactUs = () => {
                     </Grid>
                 </Grid>
             </Box>
+
+            
         </>
     )
 }

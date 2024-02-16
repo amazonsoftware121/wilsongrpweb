@@ -71,8 +71,6 @@ const slides = [
     // Add more slides as needed
 ];
 
-
-
 const DataAndAnalyticsServices = () => {
     const [expanded, setExpanded] = React.useState('panel0');
     const [expandIcon, setExpandIcon] = React.useState(false);
@@ -99,7 +97,7 @@ const DataAndAnalyticsServices = () => {
 
     return (
         <>
-            <PageHeader title={"Data and Analytics Services"} backgroundImage={headerBg} />
+            <PageHeader headTitle="Data and Analytics Services | Data Analytics Solutions" metaDesc="Glean valuable business insights, unlock new revenue streams, power your organization toward a data-driven future with WCG's Data and Analytics Services." title={"Data and Analytics Services"} backgroundImage={headerBg} />
             <Box className="mainContent">
                 <Box className="pageInfoSection" py={{ md: 12, xs: 4 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>
                     <Box className="container">

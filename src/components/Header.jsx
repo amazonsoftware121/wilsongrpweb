@@ -5,6 +5,7 @@ import logo from '../assets/img/logo.png'
 import NavBar from './NavBar';
 import CustomLeftSidebar from './CustomLeftSidebar';
 import SearchBar from './SearchBar';
+
 const HideOnScroll = (props) => {
     const { children, window } = props;
     // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -48,7 +49,7 @@ const Header = (props) => {
         <Box sx={{ textAlign: 'center' }} >
             <Typography component="div" sx={{ flexGrow: 1, my: 2 }}>
                 <div className='headerLogoMobile'>
-                   <a href='https://wilsoncgrp.com'> <img src={logo} alt="Logo" /></a>
+                    <a href='https://wilsoncgrp.com'> <img src={logo} alt="Logo" /></a>
                 </div></Typography>
             <Divider />
 
@@ -59,6 +60,8 @@ const Header = (props) => {
 
     return (
         <>
+            
+
             <Box>
                 <CssBaseline />
                 <HideOnScroll {...props}>
@@ -70,23 +73,23 @@ const Header = (props) => {
                                 </div></Typography>
 
                             <Box sx={{ xs: 'block', sm: 'block', md: 'block', lg: 'none' }}>
-                            <Box className="mobileHeaderIcon" sx={{display: 'flex'}}>
-                            <Box sx={{display: {lg: 'none'}}}><SearchBar /></Box>
-                                <IconButton  color="inherit"
-                                    onClick={toggleSidebar}
-                                    aria-label="open drawer"
-                                    edge="start"
-                                    sx={{ display: { lg: "none" }, outline: 'none' }}
-                                    className='mobileMenu'
+                                <Box className="mobileHeaderIcon" sx={{ display: 'flex' }}>
+                                    <Box sx={{ display: { lg: 'none' } }}><SearchBar /></Box>
+                                    <IconButton color="inherit"
+                                        onClick={toggleSidebar}
+                                        aria-label="open drawer"
+                                        edge="start"
+                                        sx={{ display: { lg: "none" }, outline: 'none' }}
+                                        className='mobileMenu'
 
-                                >
+                                    >
 
-                                     <MenuIcon sx={{ color: 'white' }} fontSize='large'></MenuIcon>
-
-
+                                        <MenuIcon sx={{ color: 'white' }} fontSize='large'></MenuIcon>
 
 
-                                </IconButton>
+
+
+                                    </IconButton>
                                 </Box>
 
 
@@ -94,9 +97,9 @@ const Header = (props) => {
 
                             <Box className="" sx={{ display: { xs: "none", sm: "none", md: 'none', lg: 'flex' } }}>
                                 <NavBar />
-                                
+
                                 <SearchBar />
-                               
+
                             </Box>
 
                         </Toolbar>

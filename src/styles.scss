@@ -1633,6 +1633,11 @@ body {
 
 // Body Closing
 
+.modal_video{
+  transform: translate(-50%, -50%) !important;
+}
+
+
 /*Animation*/
 @keyframes animateArrow {
   0% {

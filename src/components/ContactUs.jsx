@@ -36,7 +36,7 @@ const ContactUs = () => {
         event.preventDefault();
     
         // Validation
-        if (!enteredValues.firstName || !enteredValues.lastName || !enteredValues.email || !enteredValues.phone) {
+        if (!enteredValues.firstName || !enteredValues.lastName || !enteredValues.email || !enteredValues.subject || !enteredValues.message) {
             setErrorMsg('Please fill in all required fields.');
             return;
         } else {
@@ -122,18 +122,18 @@ const ContactUs = () => {
                                     />
                                 </Grid>
                                 <Grid item sm={6} md={6}>
-                                    <TextField fullWidth required id="standard-basic" label="Phone Number" variant="standard"
+                                    <TextField fullWidth  id="standard-basic" label="Phone Number" variant="standard"
                                         onChange={(event) => handleInputChange('phone', event.target.value)}
                                         value={enteredValues.phone} />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <TextField fullWidth id="standard-basic" label="Subject" variant="standard"
+                                    <TextField fullWidth required id="standard-basic" label="Subject" variant="standard"
                                         onChange={(event) => handleInputChange('subject', event.target.value)}
                                         value={enteredValues.subject}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <TextField fullWidth id="standard-basic" label="Message" variant="standard" multiline rows={5}
+                                    <TextField fullWidth required id="standard-basic" label="Message" variant="standard" multiline rows={5}
                                         onChange={(event) => handleInputChange('message', event.target.value)}
                                         value={enteredValues.message}
                                     />

@@ -26,6 +26,7 @@ const slides = [
 const CloudServices = () => {
   const [expanded, setExpanded] = React.useState('panel1');
   const [expandIcon, setExpandIcon] = React.useState(false);
+  const iframeElement = <iframe width="100%" height="480" src="https://www.youtube.com/embed/NuVbhuNrrcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
@@ -33,7 +34,7 @@ const CloudServices = () => {
   console.log(expandIcon);
   return (
     <>
-      <PageHeader metaDesc="WCG's Cloud Services provide a holistic assessment of your current cloud approach, illuminating the threats to cloud security and advantages of implementation." headTitle={"Cloud Computing Services | Cloud Security Solutions"} title={"Cloud Services"} backgroundImage={headerBg} />
+      <PageHeader requestConBtn="https://wilsoncgrp.com/contact-us" videoUrl={iframeElement}  metaDesc="WCG's Cloud Services provide a holistic assessment of your current cloud approach, illuminating the threats to cloud security and advantages of implementation." headTitle={"Cloud Computing Services | Cloud Security Solutions"} title={"Cloud Services"} backgroundImage={headerBg} />
       <Box className="mainContent">
 
         <Box className="pageInfoSection" py={{ md: 12, xs: 4 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>

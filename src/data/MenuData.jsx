@@ -141,11 +141,13 @@ const Menus = [
                 otherTitles: [
                     {
                         title: "Cloud Services",
-                        link: '/cloud-services'
+                        link: '/cloud-services',
+                        live: true
                     },
                     {
                         title: "Data and Analytics Services",
-                        link: 'https://wilsoncgrp.com/data-and-analytics-Services'
+                        link: '/data-and-analytics-services',
+                        live: true
                     }
 
                 ]
@@ -156,11 +158,13 @@ const Menus = [
                 menuItems: [
                     {
                         title: 'Application Security Assessment',
-                        link: 'https://wilsoncgrp.com/application-security-assessment'
+                        link: '/web-application-security-assessment-services',
+                        live: true
                     },
                     {
                         title: 'Comprehensive Security Assessment',
-                        link: 'https://wilsoncgrp.com/comprehensive-security-assessment'
+                        link: '/comprehensive-security-assessment',
+                        live: true
                     },
                     {
                         title: 'Penetration Testing',

@@ -38,7 +38,7 @@ const ApplicationSecurityAssessment = () => {
                 <Box className="pageInfoSection" py={{ md: 12, xs: 4 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>
                     <Box className="container">
                         <Typography variant='h2' className='sectionTitle'>What is an Application Security Assessment?</Typography>
-                        <Box mt={{ md: 3 }}>
+                        <Box mt={{xs: 2, md: 3 }}>
                             <Stack spacing={3}>
                                 <Typography >
                                     As cyber-attacks increasingly focus on application-layer disruptions, the importance of application security has never been more vital. Weak application security represents significant control deficiencies that can potentially compromise sensitive data, reporting, and regulatory compliance.
@@ -69,7 +69,7 @@ const ApplicationSecurityAssessment = () => {
                 </Box>
 
 
-                <Box className="faqSection titleSectionBg" bgcolor={'primary.light'} py={20}>
+                <Box className="faqSection titleSectionBg" bgcolor={'primary.light'} py={{md:20, xs: 10}} >
                     <Box className='container'>
                         <Grid container columnSpacing={4}>
 
@@ -80,7 +80,7 @@ const ApplicationSecurityAssessment = () => {
                                 </Box>
                             </Grid>
                             <Grid item xs={12} md={7} py={0}>
-                                <Box className='accordionDark' mt={-5} >
+                                <Box className='accordionDark' mt={{md:-5, xs: 3}} >
 
                                     <Accordion sx={{paddingTop: '0 !important', background: 'none', boxShadow: 'none', borderBottom: expanded === 'panel1' ? `none` : '2px solid #000' }} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                                         <AccordionSummary
@@ -127,15 +127,15 @@ const ApplicationSecurityAssessment = () => {
                     </Box>
                 </Box>
                 <Helpyou />
-                <Box py={12}>
+                <Box py={{md: 12, xs: 6}}>
                     <WhyUs />
                 </Box>
 
-                <Box py={12} bgcolor='primary.light'>
+                <Box py={{md: 12, xs: 6}} bgcolor='primary.light'>
                     <BlogSlider resourcesSlide={slides} />
                 </Box>
 
-                <Box py={14}>
+                <Box py={{md: 14, xs: 6}} >
                     <ContactUs />
                 </Box>
 

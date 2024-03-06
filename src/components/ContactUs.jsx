@@ -84,12 +84,12 @@ const ContactUs = () => {
             <Box className="container">
                 <Grid container spacing={2} alignItems="center">
                     <Grid item xs={12} md={7} pr={{ md: 15 }}>
-                        <Box sx={{ backgroundImage: `url(${contactBg})`, backgroundRepeat: 'no-repeat', padding: { md: '150px 15px 0 205px' } }} >
-                            <Typography variant='h2' fontWeight='200' fontSize='68px'>
+                        <Box sx={{ backgroundSize: {xs: '143px', md: 'auto'}, backgroundImage: `url(${contactBg})`, backgroundRepeat: 'no-repeat', padding: { md: '150px 15px 0 205px', xs: '50px 0 0 70px'  } }} >
+                            <Typography variant='h2' fontWeight='200' sx={{fontSize: {xs: '34px', md: '68px'}}}>
                                 Want to contact us?
                             </Typography>
                             <Divider sx={{ margin: '10px 0 25px 0', width: '70px', border: '2px solid #CFCFCD' }} />
-                            <Typography fontSize='20px' color='#000'>Need help with FedRAMP, cybersecurity, risk assessment, and/or compliance consulting services? Send us a message, and our team
+                            <Typography fontSize={{md: '20px', xs: '16px'}} color='#000'>Need help with FedRAMP, cybersecurity, risk assessment, and/or compliance consulting services? Send us a message, and our team
                                 will reach out to you.</Typography>
                         </Box>
                     </Grid>
@@ -101,19 +101,19 @@ const ContactUs = () => {
                             onSubmit={handleSubmit}
                         >
                             <Grid container spacing={2}>
-                                <Grid item sm={6} md={6}>
+                                <Grid item sm={6} md={6} xs={12}>
                                     <TextField fullWidth required id="standard-basic" label="First Name" variant="standard"
                                         onChange={(event) => handleInputChange('firstName', event.target.value)}
                                         value={enteredValues.firstName}
                                     />
                                 </Grid>
-                                <Grid item sm={6} md={6}>
+                                <Grid item sm={6} md={6} xs={12}>
                                     <TextField fullWidth required id="standard-basic" label="Last Name" variant="standard"
                                         onChange={(event) => handleInputChange('lastName', event.target.value)}
                                         value={enteredValues.lastName}
                                     />
                                 </Grid>
-                                <Grid item sm={6} md={6}>
+                                <Grid item sm={6} md={6} xs={12}>
                                     <TextField type='email' required fullWidth id="standard-basic" label="Email Address" variant="standard"
                                         onChange={(event) => handleInputChange('email', event.target.value)}
                                         value={enteredValues.email}
@@ -121,7 +121,7 @@ const ContactUs = () => {
                                         helperText={!validateEmail(enteredValues.email) && enteredValues.email !== '' ? 'Please enter a valid email address.' : ''}
                                     />
                                 </Grid>
-                                <Grid item sm={6} md={6}>
+                                <Grid item sm={6} md={6} xs={12}>
                                     <TextField fullWidth  id="standard-basic" label="Phone Number" variant="standard"
                                         onChange={(event) => handleInputChange('phone', event.target.value)}
                                         value={enteredValues.phone} />

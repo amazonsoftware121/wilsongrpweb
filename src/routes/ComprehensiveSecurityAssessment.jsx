@@ -49,11 +49,10 @@ const ComprehensiveSecurityAssessment = () => {
 
   const bgHalfAfterStyle = {
     content: "''",
-    position: 'absolute',
+    
     top: '0',
     left: '0',
-    width: '60%',
-    height: '960px',
+    
     // other styles as needed
     backgroundImage: `url(${bgFaq})`,
     backgroundRepeat: 'no-repeat',
@@ -147,8 +146,8 @@ const ComprehensiveSecurityAssessment = () => {
         </Box>
 
 
-        <Box className="faqSection titleSectionBg" py={15} position='relative' sx={{ overflow: 'hidden' }}>
-          <Box style={bgHalfAfterStyle}></Box>
+        <Box className="faqSection titleSectionBg" py={{md:15, xs: 6}} position='relative' sx={{ overflow: 'hidden' }}>
+          <Box style={bgHalfAfterStyle} sx={{ width: {md: '60%', xs: '100%'}, height: {md: '960px', xs: '350px'}, position: {md: 'absolute', xs: 'relative'}}}></Box>
           <Box className='container'>
             <Grid container rowSpacing={2} columnSpacing={4}>
 
@@ -156,7 +155,7 @@ const ComprehensiveSecurityAssessment = () => {
 
               </Grid>
               <Grid item xs={12} md={7} bgcolor='primary.main' pb={6} sx={{ zIndex: 9 }}>
-                <Box p={3} >
+                <Box p={3} px={{xs: 0, md: 3}} >
                   <Typography color='#fff !important' className='sectionTitle'>Benefits of our services</Typography>
                   <Typography mt={1} color='primary.light'>WCG’s security consultants will identify risks and outline specific, actionable steps to improve your overall security posture.</Typography>
                   <Box className='accordionLight'>
@@ -192,18 +191,18 @@ const ComprehensiveSecurityAssessment = () => {
           </Box>
         </Box>
 
-        <Box py={12}>
+        <Box py={{md: 12, xs: 6}}>
           <WhyUs />
         </Box>
 
-        <Box py={12} bgcolor={'primary.light'} position='relative' >
+        <Box py={{md:12, xs: 6}} bgcolor={'primary.light'} position='relative' >
           <Box sx={{
 
           }} ></Box>
 
           <BlogSlider resourcesSlide={slides} />
         </Box>
-        <Box py={12} >
+        <Box py={{md: 12, xs: 6}} >
           <ContactUs />
         </Box>
 

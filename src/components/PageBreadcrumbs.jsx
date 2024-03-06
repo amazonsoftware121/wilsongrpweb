@@ -36,10 +36,11 @@ style={{ color: '#fff' }}
 
   ];
   return (
-    <Stack spacing={2}>
+    <Stack spacing={2} textAlign='center'>
       <Breadcrumbs
         separator={<NavigateNextIcon fontSize="medium" />}
         aria-label="breadcrumb"
+        
       >
         {breadcrumbs}
       </Breadcrumbs>

@@ -106,19 +106,19 @@ const router = createBrowserRouter([
         element: <About />
       },
       {
-        path: "/cloud-services-new",
+        path: "/cloud-services",
         element: <CloudServices />
       },
       {
-        path: "/data-and-analytics-services-new",
+        path: "/data-and-analytics-services",
         element: <DataAndAnalyticsServices />
       },
       {
-        path: "/web-application-security-assessment-services-new",
+        path: "/web-application-security-assessment-services",
         element: <ApplicationSecurityAssessment />
       },
       {
-        path: "/comprehensive-security-assessment-new",
+        path: "/comprehensive-security-assessment",
         element: <ComprehensiveSecurityAssessment />
       }
     ]

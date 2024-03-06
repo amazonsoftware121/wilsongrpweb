@@ -37,12 +37,12 @@ const PageHeader = (props) => {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        sx={{ height: '550px', backgroundImage: `url(${props.backgroundImage})` }}>
-        <Stack spacing={3} direction='column'>
-          <Typography variant='h2' fontWeight='500' className='pageHeaderTitle' component='h1'>{props.title}</Typography>
+        sx={{ padding: '0 15px', height: '550px', backgroundImage: `url(${props.backgroundImage})` }}>
+        <Stack spacing={3} direction='column' >
+          <Typography variant='h2' fontWeight='500' fontSize={{xs: '42px', md: '3.75rem'}} className='pageHeaderTitle' component='h1'>{props.title}</Typography>
           <PageBreadcrumbs title={props.title} parent={props.parent} parentUrl={props.parentUrl} />
-          <Stack justifyContent='center' spacing={3} direction='row' mt={3}>
-            {props.requestConBtn && <Button  size="large" endIcon={<FaArrowRight size={14} />} variant="contained"  href="https://wilsoncgrp.com/fedramp-consulting">Request Consultation</Button>}
+          <Stack justifyContent='center' columnGap={3} direction='row' mt={3} sx={{flexWrap: 'wrap'}} rowGap={2} >
+            {props.requestConBtn && <Button  size="large" endIcon={<FaArrowRight size={14} />} variant="contained"  href={props.requestConBtn}>Request Consultation</Button>}
             { props.videoUrl && <Button size="large" endIcon={<FaPlay size={14} />} variant="outlined" onClick={handleOpen}>Watch Video </Button>} 
           </Stack>
 
@@ -60,11 +60,11 @@ const PageHeader = (props) => {
             position: 'absolute',
             top: '50%',
             left: '50%',
-            width: '50%',
-            minWidth: '300px',
-            backgroundColor: 'white',
+            width: '80%',
+            maxWidth: '768px',
+           
             padding: '0px',
-            boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)',
+          
             borderRadius: '0px',
           }}
         >

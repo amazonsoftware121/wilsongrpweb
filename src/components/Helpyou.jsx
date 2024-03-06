@@ -6,7 +6,7 @@ import { FaArrowRight } from 'react-icons/fa';
 const Helpyou = () => {
     return (
         <>
-            <Box py={9} sx={{ backgroundImage: `url(${videBg})` }} >
+            <Box py={{md:9, xs: 4}} sx={{ backgroundImage: `url(${videBg})` }} >
                 <Box className="container">
                     <Typography textAlign='center' pt={4} mb={6} className='sectionTitle' sx={{ color: '#fff !important' }} >
                         How will WCG help you?
@@ -29,12 +29,12 @@ const Helpyou = () => {
                                     </Typography>
                                     
                                 </Stack>
-                                <Button sx={{marginTop: '20px',marginBottom: '50px', fontWeight: 'bold', }} style={{backgroundImage: 'linear-gradient(to right, #fff, #fff 50%, #28A0CF 50%)'}} variant='text' textAlign='left' href='https://wilsoncgrp.com/track-record' className='textBtn-sky skyHoverWhite' >Connect with Our Expert &nbsp; <span><FaArrowRight size={14} /> </span></Button>
+                                <Button sx={{marginTop: '20px',marginBottom: {md:'50px', xs: '20px'}, fontWeight: 'bold', }} style={{backgroundImage: 'linear-gradient(to right, #fff, #fff 50%, #28A0CF 50%)'}} variant='text' textAlign='left' href='https://wilsoncgrp.com/track-record' className='textBtn-sky skyHoverWhite' >Connect with Our Expert &nbsp; <span><FaArrowRight size={14} /> </span></Button>
 
                             </Box>
                         </Grid>
-                        <Grid item md={6}>
-                            <iframe src="https://www.youtube.com/embed/2oV31BQXhs0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="100%" height="415" frameborder="0"></iframe>
+                        <Grid item md={6} xs={12}>
+                            <iframe src="https://www.youtube.com/embed/2oV31BQXhs0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="100%" height="415" frameBorder="0"></iframe>
                         </Grid>
                     </Grid>
                 </Box>

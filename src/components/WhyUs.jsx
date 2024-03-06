@@ -15,7 +15,7 @@ const WhyUs = () => {
     return (
         <>
             <Box className="container">
-                <Typography pt={4} mb={12} variant='h2' className='sectionTitle' textAlign='center'>Why us</Typography>
+                <Typography pt={4} mb={{md: 12, xs: 4}} variant='h2' className='sectionTitle' textAlign='center'>Why us</Typography>
                 <Grid container mt={5} className='contentBox'>
                     <Grid item xs={12} md={4}>
                         <Box textAlign='center'>

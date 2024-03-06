@@ -26,7 +26,7 @@ const slides = [
 const CloudServices = () => {
   const [expanded, setExpanded] = React.useState('panel1');
   const [expandIcon, setExpandIcon] = React.useState(false);
-  const iframeElement = <iframe width="100%" height="480" src="https://www.youtube.com/embed/NuVbhuNrrcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+  const iframeElement = <iframe width="100%" height="480" src="https://www.youtube.com/embed/NuVbhuNrrcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen=""></iframe>
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
@@ -34,24 +34,24 @@ const CloudServices = () => {
   console.log(expandIcon);
   return (
     <>
-      <PageHeader requestConBtn="https://wilsoncgrp.com/contact-us" videoUrl={iframeElement}  metaDesc="WCG's Cloud Services provide a holistic assessment of your current cloud approach, illuminating the threats to cloud security and advantages of implementation." headTitle={"Cloud Computing Services | Cloud Security Solutions"} title={"Cloud Services"} backgroundImage={headerBg} />
+      <PageHeader requestConBtn="#contactUs" videoUrl={iframeElement}  metaDesc="WCG's Cloud Services provide a holistic assessment of your current cloud approach, illuminating the threats to cloud security and advantages of implementation." headTitle={"Cloud Computing Services | Cloud Security Solutions"} title={"Cloud Services"} backgroundImage={headerBg} />
       <Box className="mainContent">
 
         <Box className="pageInfoSection" py={{ md: 12, xs: 4 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>
           <Box className="container">
             <Typography variant='h2' className='sectionTitle'>What is Cloud Service?</Typography>
-            <Box sx={{ columnCount: { md: 2, xs: 1 } }} mt={{ md: 3 }}>
+            <Box sx={{ columnCount: { md: 2, xs: 1 } }} mt={{xs: 2, md: 3 }}>
               <Typography >
                 With the increasing demand for the Internet, consumers have changed the way of conducting commerce through smartphones and gadgets with easier internet access. A 2019 poll by Marist College and National Public Radio (NPR) indicates 76% of all U.S. adults shop online. This provides opportunities for businesses to store existing customer data anywhere and anytime, re-target potential customers, increase revenue, and much more. Cloud Computing Services and Cloud Services companies are getting more attention nowadays.
 
               </Typography>
-              <Typography >  Cloud Services or Cloud Computing Services enable businesses to utilize a network of remote systems to transmit, process, store and access data, applications, and services over the Internet, which boosts their competitiveness in the digital space. Cloud solutions from Cloud Services providers come in various forms and sizes to cater to different organizational needs. According to the Microsoft Trustworthy Computing SME Cloud Trust study, 94% small and medium-sized enterprises (SMEs) have experienced performance benefits from using cloud services provided by Cloud Services companies.</Typography>
+              <Typography pt={{xs: 3, md: 0}} >  Cloud Services or Cloud Computing Services enable businesses to utilize a network of remote systems to transmit, process, store and access data, applications, and services over the Internet, which boosts their competitiveness in the digital space. Cloud solutions from Cloud Services providers come in various forms and sizes to cater to different organizational needs. According to the Microsoft Trustworthy Computing SME Cloud Trust study, 94% small and medium-sized enterprises (SMEs) have experienced performance benefits from using cloud services provided by Cloud Services companies.</Typography>
             </Box>
             <Box mt={5}>
               <Typography variant='h4' component='h3' fontSize='24px' fontWeight='500' mb={2}>
                 Key benefits include, but are not limited to:
               </Typography>
-              <Stack direction='row' columnGap={3} >
+              <Stack direction='row' columnGap={3} sx={{flexWrap:'wrap'}} rowGap={2} >
                 <Stack direction='row' columnGap={2}>
                   <FaCloudUploadAlt color='#28A0CF' size='25px' /> Business continuity
                 </Stack>
@@ -70,7 +70,7 @@ const CloudServices = () => {
             </Box>
           </Box>
         </Box>
-        <Box className="faqSection titleSectionBg" bgcolor={'primary.light'} py={20}>
+        <Box className="faqSection titleSectionBg" bgcolor={'primary.light'} py={{md: 20, xs: 6,}} >
           <Box className='container'>
             <Grid container rowSpacing={2} columnSpacing={4}>
 
@@ -132,11 +132,11 @@ const CloudServices = () => {
           </Box>
         </Box>
 
-        <Box my={12}>
+        <Box my={{md: 12, xs: 4}}>
           <WhyUs />
         </Box>
 
-        <Box py={12} bgcolor={'primary.light'} position='relative' >
+        <Box py={{md: 12, xs: 4}} bgcolor={'primary.light'} position='relative' >
           <Box sx={{
             backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px', backgroundColor: 'rgba(255, 255, 255, 0.5)',
             width: '324px',
@@ -149,7 +149,7 @@ const CloudServices = () => {
 
           <BlogSlider resourcesSlide={slides} />
         </Box>
-        <Box py={12} >
+        <Box py={{md: 12, xs: 6}} id="contactUs" >
           <ContactUs />
         </Box>
 

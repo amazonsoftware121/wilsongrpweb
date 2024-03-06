@@ -15,7 +15,7 @@ const WCGApproach = () => {
                         <Typography variant='h2' className='sectionTitle'>The WCG approach</Typography>
                         <Typography>Our assessment and security penetration test will:</Typography>
                     </Box>
-                    <Grid container spacing={4} pt={15}>
+                    <Grid container spacing={4} pt={{md: 15, xs: 5}}>
                         <Grid item md={4} gap={2}>
                             <Card sx={{ minHeight: '360px', boxShadow: 'none', borderRadius: '12px', borderBottom: '2px solid #28A0CF' }}>
                                 <CardMedia
@@ -39,7 +39,7 @@ const WCGApproach = () => {
                         </Grid>
 
 
-                        <Grid item md={4} mt={-8}>
+                        <Grid item md={4} mt={{md: -8, xs: 0}}>
                         <Card sx={{ minHeight: '360px', boxShadow: 'none', borderRadius: '12px', borderBottom: '2px solid #28A0CF' }}>
                                 <CardMedia
                                     component="img"

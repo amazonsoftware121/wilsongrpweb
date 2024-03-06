@@ -70,7 +70,7 @@ const MobileNav = () => {
                           </Accordion>
 
                           {megaMenu.otherTitles && (
-                              <ul className='megaOtherTitle'>
+                              <ul className='megaOtherTitle' key={1}>
                                 {megaMenu.otherTitles.map((otherTitle, index) => (
                                   <li key={index}>
                                     <a href={otherTitle.link}>{otherTitle.title}</a>

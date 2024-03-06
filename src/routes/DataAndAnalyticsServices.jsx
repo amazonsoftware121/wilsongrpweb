@@ -80,29 +80,27 @@ const DataAndAnalyticsServices = () => {
 
     const bgHalfAfterStyle = {
         content: "''",
-        position: 'absolute',
         top: '0',
         left: '0',
-        width: '60%',
-        height: '1135px',
         // other styles as needed
         backgroundImage: `url(${bgFaq})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
+        backgroundPosition: 'center',
         zIndex: 0
 
     };
 
-
+const iframeElement = <iframe width="100%" height="480" src="https://www.youtube.com/embed/WCX0S2ivZz0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen=""></iframe>;
 
     return (
         <>
-            <PageHeader headTitle="Data and Analytics Services | Data Analytics Solutions" metaDesc="Glean valuable business insights, unlock new revenue streams, power your organization toward a data-driven future with WCG's Data and Analytics Services." title={"Data and Analytics Services"} backgroundImage={headerBg} />
+            <PageHeader requestConBtn="#contactUs" videoUrl={iframeElement} headTitle="Data and Analytics Services | Data Analytics Solutions" metaDesc="Glean valuable business insights, unlock new revenue streams, power your organization toward a data-driven future with WCG's Data and Analytics Services." title={"Data and Analytics Services"} backgroundImage={headerBg} />
             <Box className="mainContent">
                 <Box className="pageInfoSection" py={{ md: 12, xs: 4 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>
                     <Box className="container">
                         <Typography variant='h2' className='sectionTitle'>What is Data and Analytics?</Typography>
-                        <Box mt={{ md: 3 }}>
+                        <Box mt={{ md: 3,xs: 2 }}>
                             <Stack spacing={3}>
                                 <Typography >
                                     <strong>Data analytics (DA)</strong> involves processes and activities designed to obtain and evaluate data to extract useful information. The results of DA may be used to identify areas of key risk, fraud, errors, or misuse; improve business efficiency, verify process effectiveness, and make more-informed business decisions.
@@ -116,7 +114,7 @@ const DataAndAnalyticsServices = () => {
                         <Typography variant='h2' className='sectionTitle' mt={8} >
                             Why you need Data and Analytics?
                         </Typography>
-                        <Box mt={{ md: 3 }}>
+                        <Box mt={{ md: 3, xs: 2 }}>
                             <Stack spacing={3}>
                                 <Typography>Data and Analytics aid an organization to utilize data to find new opportunities. Once you adopt data analysis method in your business, you can analyze the causes of particular events based on the data, understand the objectives and directives for your business, and you will have technical insights of the business using an easy to understand language. This leads to smarter business decisions, higher profits, efficient operations, and satisfied customers.</Typography>
                                 <Typography>The increasing importance of Data Analytics for business has created significant impact in the world. Key Benefits of Data and Analytics include, but are not limited to:</Typography>
@@ -126,16 +124,16 @@ const DataAndAnalyticsServices = () => {
                     </Box>
                 </Box>
 
-                <Box className="faqSection titleSectionBg" py={20} position='relative' sx={{overflow: 'hidden'}}>
-                    <Box style={bgHalfAfterStyle}></Box>
-                    <Box className='container'>
-                        <Grid container rowSpacing={2} columnSpacing={4}>
+                <Box className="faqSection titleSectionBg" py={{md: 20, xs: 4}} position='relative' sx={{overflow: 'hidden'}}>
+                    <Box style={bgHalfAfterStyle} sx={{ width: {md: '60%', xs: '100%'}, height: {md: '1135px', xs: '350px'}, position: {md: 'absolute', xs: 'relative'}}}></Box>
+                    <Box className='container' sx={{backgroundColor: {xs: '#28A0CF', md: 'transparent'}}}>
+                        <Grid container rowSpacing={2} columnSpacing={4}  >
 
                             <Grid item xs={12} md={5}>
 
                             </Grid>
                             <Grid item xs={12} md={7} bgcolor='primary.main' pb={6} sx={{ zIndex: 9 }}>
-                                <Box p={3} >
+                                <Box p={{md:3}} py={3} >
                                     <Typography color='#fff !important' className='sectionTitle'>Benefits of Data and Analytics</Typography>
                                     <Box className='accordionLight'>
                                         {Faqs.map((faq, index) => (
@@ -173,11 +171,11 @@ const DataAndAnalyticsServices = () => {
                 <Box py={{ md: 15, xs: 4 }} bgcolor='primary.light'>
                     <Box className='container'>
                         <Typography  className='sectionTitle' textAlign='center'>Begin your Data & Analytics journey here</Typography>
-                        <Box mt={12} className="listCard" sx={{ display: 'flex', flexDirection: 'column', gap: '60px'}}>
+                        <Box mt={{md:12, xs: 6}} className="listCard" sx={{ display: 'flex', flexDirection: 'column', gap: '60px'}}>
                             {listCards.map((card) => (
-                                <Grid alignItems="center" container key={card.id} direction={ card.id % 2 === 0 ? 'row-reverse' : 'row'}>
+                                <Grid alignItems="center" container key={card.id} direction={ {md: card.id % 2 === 0 ? 'row-reverse' : 'row', xs: 'column-reverse'}}>
                                     <Grid item md={9}>
-                                        <Box py={8} px={5} sx={{boxShadow: '-14px 14px 20px #0000001a', backgroundColor: card.id % 2 === 0 ? '#f7f7f7' : '' }}>
+                                        <Box py={{md: 8, xs: 3}} px={{md:5, xs: 3}} sx={{boxShadow: '-14px 14px 20px #0000001a', backgroundColor: card.id % 2 === 0 ? '#f7f7f7' : '' }}>
                                         <Stack spacing={2}>
                                             <Typography variant='h5' fontWeight='500'>{card.title}</Typography>
                                             <Typography fontSize='15px'>{card.description}</Typography>
@@ -185,7 +183,7 @@ const DataAndAnalyticsServices = () => {
                                         </Box>
                                     </Grid>
                                     <Grid item md={3}>
-                                        <Typography sx={{ textAlign: card.id % 2 === 0 ? 'left' : 'center'}} lineHeight='200px' fontSize='200px' fontWeight='bold' color='primary.main'>{card.id}</Typography>
+                                        <Typography sx={{ textAlign: card.id % 2 === 0 ? 'left' : 'center'}} lineHeight={{md:'200px', xs: '160px'}} fontSize={{md: '150px', lg:'200px',xs: '100px'}} fontWeight='bold' color='primary.main'>{card.id}</Typography>
                                     </Grid>
                                 </Grid>
                             ))}
@@ -201,7 +199,7 @@ const DataAndAnalyticsServices = () => {
     <BlogSlider resourcesSlide={slides} />
 </Box>
 
-<Box py={12}>
+<Box py={{md:12, xs: 6}} id="contactUs">
 <ContactUs />
 </Box>
 

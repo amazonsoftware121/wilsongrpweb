@@ -16,6 +16,7 @@ import CardMedia from '@mui/material/CardMedia';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import { Stack } from '@mui/system';
+import bgBlue from '../../src/assets/img/bg5.png'
 
 
 const BlogSlider = (props) => {
@@ -54,6 +55,16 @@ const BlogSlider = (props) => {
     };
     return (
         <>
+         <Box py={{md: 12, xs: 4}} bgcolor={'primary.light'} position='relative' >
+          <Box sx={{
+            backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px', backgroundColor: 'rgba(255, 255, 255, 0.5)',
+            width: '324px',
+            height: '604px',
+            position: 'absolute',
+            right: 0,
+            bottom: '20px',
+            opacity: 0.3
+          }} ></Box>
             <Typography className='sectionTitle' textAlign='center' mb={5}>Resources</Typography>
             <Container className='blogSlider'>
                 <Box mx={-2}>
@@ -116,6 +127,7 @@ const BlogSlider = (props) => {
 
                 </Box>
             </Container>
+            </Box>
         </>
     )
 }

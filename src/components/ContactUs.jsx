@@ -81,6 +81,7 @@ const ContactUs = () => {
 
     return (
         <>
+        <Box py={{md:12, xs: 6}} id="contactUs">
             <Box className="container">
                 <Grid container spacing={2} alignItems="center">
                     <Grid item xs={12} md={7} pr={{ md: 15 }}>
@@ -155,7 +156,7 @@ const ContactUs = () => {
                 </Grid>
             </Box>
 
-            
+            </Box>
         </>
     )
 }

@@ -14,6 +14,7 @@ import whyus6 from '../assets/img/adopting.png';
 const WhyUs = () => {
     return (
         <>
+        <Box py={{md: 12, xs: 6}}>
             <Box className="container">
                 <Typography pt={4} mb={{md: 12, xs: 4}} variant='h2' className='sectionTitle' textAlign='center'>Why us</Typography>
                 <Grid container mt={5} className='contentBox'>
@@ -67,6 +68,7 @@ const WhyUs = () => {
                     </Grid>
                    
                 </Grid>
+            </Box>
             </Box>
         </>
     )

@@ -17,7 +17,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import DataAndAnalyticsServices from './routes/DataAndAnalyticsServices.jsx';
 import ComprehensiveSecurityAssessment from './routes/ComprehensiveSecurityAssessment.jsx';
 import ApplicationSecurityAssessment from './routes/ApplicationSecurityAssessment.jsx';
-
+import VulnerabilityAssessment from './routes/VulnerabilityAssessment.jsx';
 const theme = createTheme({
 
   components: {
@@ -120,6 +120,10 @@ const router = createBrowserRouter([
       {
         path: "/comprehensive-security-assessment",
         element: <ComprehensiveSecurityAssessment />
+      },
+      {
+        path: "/vulnerability-assessment-new",
+        element: <VulnerabilityAssessment />
       }
     ]
   },

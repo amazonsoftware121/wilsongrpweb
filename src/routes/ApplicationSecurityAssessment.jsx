@@ -127,17 +127,15 @@ const ApplicationSecurityAssessment = () => {
                     </Box>
                 </Box>
                 <Helpyou />
-                <Box py={{md: 12, xs: 6}}>
+                
                     <WhyUs />
-                </Box>
+                
 
-                <Box py={{md: 12, xs: 6}} bgcolor='primary.light'>
+                
                     <BlogSlider resourcesSlide={slides} />
-                </Box>
+                
 
-                <Box py={{md: 14, xs: 6}} >
                     <ContactUs />
-                </Box>
 
 
 

@@ -132,27 +132,15 @@ const CloudServices = () => {
           </Box>
         </Box>
 
-        <Box my={{md: 12, xs: 4}}>
+        
           <WhyUs />
-        </Box>
+        
 
-        <Box py={{md: 12, xs: 4}} bgcolor={'primary.light'} position='relative' >
-          <Box sx={{
-            backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px', backgroundColor: 'rgba(255, 255, 255, 0.5)',
-            width: '324px',
-            height: '604px',
-            position: 'absolute',
-            right: 0,
-            bottom: '20px',
-            opacity: 0.3
-          }} ></Box>
+       
 
           <BlogSlider resourcesSlide={slides} />
-        </Box>
-        <Box py={{md: 12, xs: 6}} id="contactUs" >
+        
           <ContactUs />
-        </Box>
-
       </Box>
 
     </>

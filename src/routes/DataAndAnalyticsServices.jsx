@@ -67,7 +67,7 @@ const slides = [
     { id: 1, cat: 'Data Sheet', img: 'data-serv.png', title: 'Data and Analytics Services', content: 'The increasing importance of Data Analytics for business has created significant impact in the world.', link: 'https://wilsoncgrp.com/uploads/1597587043639_DATA%20AND%20ANALYTICS%20SERVICES%20INFO%20SHEET%20-%20updated.pdf' },
     { id: 2, cat: 'Blog', img: 'Wilson-2.webp', title: 'Do You Need A Data Analytics System?', content: 'Data analytics (DA) involves processes and activities designed to obtain and evaluate data to extract useful information. The results of DA may be used to identify areas of key risk, fraud, errors, or misuse; improve business efficiency, verify process effectiveness, and make more-informed business decisions.', link: 'https://wilsoncgrp.com/blog/do-you-need-a-data-analytics-system' },
     { id: 3, cat: 'Blog', img: 'Progressing-IoT-Technology-Brings-Ever-Expanding-Security-Concerns-1024x384-1%20(1).webp', title: 'Boosting Your Security Posture with Security Analytics', content: 'With the rise of cyberincidents, organizations continue to search for effective tools and strategies to fight against cybercrimes and to build resilience in their environment.', link: 'https://wilsoncgrp.com/blog/boosting-your-security-posture-with-security-analytics' },
-    
+
     // Add more slides as needed
 ];
 
@@ -91,7 +91,7 @@ const DataAndAnalyticsServices = () => {
 
     };
 
-const iframeElement = <iframe width="100%" height="480" src="https://www.youtube.com/embed/WCX0S2ivZz0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen=""></iframe>;
+    const iframeElement = <iframe width="100%" height="480" src="https://www.youtube.com/embed/WCX0S2ivZz0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen=""></iframe>;
 
     return (
         <>
@@ -100,7 +100,7 @@ const iframeElement = <iframe width="100%" height="480" src="https://www.youtube
                 <Box className="pageInfoSection" py={{ md: 12, xs: 4 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>
                     <Box className="container">
                         <Typography variant='h2' className='sectionTitle'>What is Data and Analytics?</Typography>
-                        <Box mt={{ md: 3,xs: 2 }}>
+                        <Box mt={{ md: 3, xs: 2 }}>
                             <Stack spacing={3}>
                                 <Typography >
                                     <strong>Data analytics (DA)</strong> involves processes and activities designed to obtain and evaluate data to extract useful information. The results of DA may be used to identify areas of key risk, fraud, errors, or misuse; improve business efficiency, verify process effectiveness, and make more-informed business decisions.
@@ -124,20 +124,20 @@ const iframeElement = <iframe width="100%" height="480" src="https://www.youtube
                     </Box>
                 </Box>
 
-                <Box className="faqSection titleSectionBg" py={{md: 20, xs: 4}} position='relative' sx={{overflow: 'hidden'}}>
-                    <Box style={bgHalfAfterStyle} sx={{ width: {md: '60%', xs: '100%'}, height: {md: '1135px', xs: '350px'}, position: {md: 'absolute', xs: 'relative'}}}></Box>
-                    <Box className='container' sx={{backgroundColor: {xs: '#28A0CF', md: 'transparent'}}}>
+                <Box className="faqSection titleSectionBg" py={{ md: 20, xs: 4 }} position='relative' sx={{ overflow: 'hidden' }}>
+                    <Box style={bgHalfAfterStyle} sx={{ width: { md: '60%', xs: '100%' }, height: { md: '1135px', xs: '350px' }, position: { md: 'absolute', xs: 'relative' } }}></Box>
+                    <Box className='container' sx={{ backgroundColor: { xs: '#28A0CF', md: 'transparent' } }}>
                         <Grid container rowSpacing={2} columnSpacing={4}  >
 
                             <Grid item xs={12} md={5}>
 
                             </Grid>
                             <Grid item xs={12} md={7} bgcolor='primary.main' pb={6} sx={{ zIndex: 9 }}>
-                                <Box p={{md:3}} py={3} >
+                                <Box p={{ md: 3 }} py={3} >
                                     <Typography color='#fff !important' className='sectionTitle'>Benefits of Data and Analytics</Typography>
                                     <Box className='accordionLight'>
                                         {Faqs.map((faq, index) => (
-                                            <Accordion key={index} sx={{margin: '0 !important', background: 'none', boxShadow: 'none' }} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
+                                            <Accordion key={index} sx={{ margin: '0 !important', background: 'none', boxShadow: 'none' }} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
                                                 <AccordionSummary
                                                     expandIcon={expanded === `panel${index}` ? <FaMinus size={26} color='#fff' /> : <FaPlus size={26} color='#fff' />}
                                                     aria-controls="panel1bh-content"
@@ -170,20 +170,20 @@ const iframeElement = <iframe width="100%" height="480" src="https://www.youtube
 
                 <Box py={{ md: 15, xs: 4 }} bgcolor='primary.light'>
                     <Box className='container'>
-                        <Typography  className='sectionTitle' textAlign='center'>Begin your Data & Analytics journey here</Typography>
-                        <Box mt={{md:12, xs: 6}} className="listCard" sx={{ display: 'flex', flexDirection: 'column', gap: '60px'}}>
+                        <Typography className='sectionTitle' textAlign='center'>Begin your Data & Analytics journey here</Typography>
+                        <Box mt={{ md: 12, xs: 6 }} className="listCard" sx={{ display: 'flex', flexDirection: 'column', gap: '60px' }}>
                             {listCards.map((card) => (
-                                <Grid alignItems="center" container key={card.id} direction={ {md: card.id % 2 === 0 ? 'row-reverse' : 'row', xs: 'column-reverse'}}>
+                                <Grid alignItems="center" container key={card.id} direction={{ md: card.id % 2 === 0 ? 'row-reverse' : 'row', xs: 'column-reverse' }}>
                                     <Grid item md={9}>
-                                        <Box py={{md: 8, xs: 3}} px={{md:5, xs: 3}} sx={{boxShadow: '-14px 14px 20px #0000001a', backgroundColor: card.id % 2 === 0 ? '#f7f7f7' : '' }}>
-                                        <Stack spacing={2}>
-                                            <Typography variant='h5' fontWeight='500'>{card.title}</Typography>
-                                            <Typography fontSize='15px'>{card.description}</Typography>
+                                        <Box py={{ md: 8, xs: 3 }} px={{ md: 5, xs: 3 }} sx={{ boxShadow: '-14px 14px 20px #0000001a', backgroundColor: card.id % 2 === 0 ? '#f7f7f7' : '' }}>
+                                            <Stack spacing={2}>
+                                                <Typography variant='h5' fontWeight='500'>{card.title}</Typography>
+                                                <Typography fontSize='15px'>{card.description}</Typography>
                                             </Stack>
                                         </Box>
                                     </Grid>
                                     <Grid item md={3}>
-                                        <Typography sx={{ textAlign: card.id % 2 === 0 ? 'left' : 'center'}} lineHeight={{md:'200px', xs: '160px'}} fontSize={{md: '150px', lg:'200px',xs: '100px'}} fontWeight='bold' color='primary.main'>{card.id}</Typography>
+                                        <Typography sx={{ textAlign: card.id % 2 === 0 ? 'left' : 'center' }} lineHeight={{ md: '200px', xs: '160px' }} fontSize={{ md: '150px', lg: '200px', xs: '100px' }} fontWeight='bold' color='primary.main'>{card.id}</Typography>
                                     </Grid>
                                 </Grid>
                             ))}
@@ -191,18 +191,10 @@ const iframeElement = <iframe width="100%" height="480" src="https://www.youtube
                     </Box>
                 </Box>
 
-<Box my={12}>
-    <WhyUs />
-</Box>
 
-<Box py={12} bgcolor='primary.light'>
-    <BlogSlider resourcesSlide={slides} />
-</Box>
-
-<Box py={{md:12, xs: 6}} id="contactUs">
-<ContactUs />
-</Box>
-
+                <WhyUs />
+                <BlogSlider resourcesSlide={slides} />
+                <ContactUs />
             </Box>
         </>
     )

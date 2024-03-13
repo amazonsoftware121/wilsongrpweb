@@ -191,20 +191,17 @@ const ComprehensiveSecurityAssessment = () => {
           </Box>
         </Box>
 
-        <Box py={{md: 12, xs: 6}}>
+       
           <WhyUs />
-        </Box>
+       
 
-        <Box py={{md:12, xs: 6}} bgcolor={'primary.light'} position='relative' >
-          <Box sx={{
-
-          }} ></Box>
+        
 
           <BlogSlider resourcesSlide={slides} />
-        </Box>
-        <Box py={{md: 12, xs: 6}} >
+        
+        
           <ContactUs />
-        </Box>
+        
 
 
       </Box>

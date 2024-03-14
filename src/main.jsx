@@ -18,6 +18,8 @@ import DataAndAnalyticsServices from './routes/DataAndAnalyticsServices.jsx';
 import ComprehensiveSecurityAssessment from './routes/ComprehensiveSecurityAssessment.jsx';
 import ApplicationSecurityAssessment from './routes/ApplicationSecurityAssessment.jsx';
 import VulnerabilityAssessment from './routes/VulnerabilityAssessment.jsx';
+import SecurityAssessmentAndAuthorization from './routes/SecurityAssessmentAndAuthorization.jsx';
+
 const theme = createTheme({
 
   components: {
@@ -124,6 +126,10 @@ const router = createBrowserRouter([
       {
         path: "/vulnerability-assessment-new",
         element: <VulnerabilityAssessment />
+      },
+      {
+        path: '/security-assessment-and-authorization-saa-new',
+        element: <SecurityAssessmentAndAuthorization />
       }
     ]
   },

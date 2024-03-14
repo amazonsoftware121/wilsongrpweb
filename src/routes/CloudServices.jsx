@@ -14,13 +14,19 @@ import WhyUs from '../components/WhyUs';
 import BlogSlider from '../components/BlogSlider';
 import ContactUs from '../components/ContactUs';
 
+import PostImg1 from '../assets/img/cloud-serv.png';
+import PostImg2 from '../assets/img/network-2402637_960_720.webp';
+import PostImg3 from '../assets/img/cloud-3406627_960_720.webp';
+import PostImg4 from '../assets/img/Cracking-the-Enigma-of-Cloud-Computing-1200x450-1.webp';
+import PostImg5 from '../assets/img/cloud-computing-101.webp';
+
 
 const slides = [
-  { id: 1, cat: 'Data Sheet', img: 'cloud-serv.png', title: 'Cloud Services', content: 'Cloud Services enable businesses to utilize a network of remote systems to transmit, process, store and access data, applications, and services over the Internet, which boosts their competitiveness in the digital space. Cloud solutions come in various forms and sizes to cater to different organizational needs. ', link: 'https://wilsoncgrp.com/uploads/1597586929593_Cloud%20Services.pdf' },
-  { id: 2, cat: 'Blog', img: 'network-2402637_960_720.webp', title: 'Combatting the Security Risks of Cloud Computing', content: 'Small and large enterprises continue to benefit from increased digitization and greater use of cloud-based application and storage facilities.', link: 'https://wilsoncgrp.com/blog/combatting-the-security-risks-of-cloud-computing' },
-  { id: 3, cat: 'Blog', img: 'cloud-3406627_960_720.webp', title: 'The Risks of Using Cloud Services', content: 'When J. C. R. “Lick” Licklider developed ARPAnet in 1962, he had the vision of creating a device that could receive and send data simultaneously amongst a large group of people. He called this idea the  “Intergalactic Computer Network”.', link: 'https://wilsoncgrp.com/blog/the-risks-of-using-cloud-services' },
-  { id: 4, cat: 'Blog', img: 'Cracking-the-Enigma-of-Cloud-Computing-1200x450-1.webp', title: 'Cracking the Enigma of Cloud Computing', content: 'One of the most frequent questions tech industry insiders get from those working outside of the industry is “What is the cloud?” ', link: 'https://wilsoncgrp.com/blog/cracking-the-enigma-of-cloud-computing' },
-  { id: 5, cat: 'Blog', img: 'cloud-computing-101.webp', title: 'Cloud Computing 101', content: 'Visionary Steve Jobs once spoke of a dream in which data could be uploaded and accessed anywhere. Before there was the cloud, there were floppy disks, CD ROMs and very large immobile hardware. Fast forward to 2015 – now we are able to access and store information without physical limitations.', link: 'https://wilsoncgrp.com/blog/cloud-computing-101' }
+  { id: 1, cat: 'Data Sheet', img: PostImg1, title: 'Cloud Services', content: 'Cloud Services enable businesses to utilize a network of remote systems to transmit, process, store and access data, applications, and services over the Internet, which boosts their competitiveness in the digital space. Cloud solutions come in various forms and sizes to cater to different organizational needs. ', link: 'https://wilsoncgrp.com/uploads/1597586929593_Cloud%20Services.pdf' },
+  { id: 2, cat: 'Blog', img: PostImg2, title: 'Combatting the Security Risks of Cloud Computing', content: 'Small and large enterprises continue to benefit from increased digitization and greater use of cloud-based application and storage facilities.', link: 'https://wilsoncgrp.com/blog/combatting-the-security-risks-of-cloud-computing' },
+  { id: 3, cat: 'Blog', img: PostImg3, title: 'The Risks of Using Cloud Services', content: 'When J. C. R. “Lick” Licklider developed ARPAnet in 1962, he had the vision of creating a device that could receive and send data simultaneously amongst a large group of people. He called this idea the  “Intergalactic Computer Network”.', link: 'https://wilsoncgrp.com/blog/the-risks-of-using-cloud-services' },
+  { id: 4, cat: 'Blog', img: PostImg4, title: 'Cracking the Enigma of Cloud Computing', content: 'One of the most frequent questions tech industry insiders get from those working outside of the industry is “What is the cloud?” ', link: 'https://wilsoncgrp.com/blog/cracking-the-enigma-of-cloud-computing' },
+  { id: 5, cat: 'Blog', img: PostImg5, title: 'Cloud Computing 101', content: 'Visionary Steve Jobs once spoke of a dream in which data could be uploaded and accessed anywhere. Before there was the cloud, there were floppy disks, CD ROMs and very large immobile hardware. Fast forward to 2015 – now we are able to access and store information without physical limitations.', link: 'https://wilsoncgrp.com/blog/cloud-computing-101' }
   // Add more slides as needed
 ];
 const CloudServices = () => {

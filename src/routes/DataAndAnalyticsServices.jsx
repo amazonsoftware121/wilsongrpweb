@@ -14,6 +14,10 @@ import WhyUs from '../components/WhyUs';
 import BlogSlider from '../components/BlogSlider';
 import ContactUs from '../components/ContactUs';
 
+import PostImg1 from '../assets/img/data-serv.png';
+import PostImg2 from '../assets/img/Wilson-2.webp';
+import PostImg3 from '../assets/img/Progressing-IoT-Technology-Brings-Ever-Expanding-Security-Concerns-1024x384-1_1.webp';
+
 const Faqs = [{
     key: 1,
     que: 'Proactivity and Anticipation',
@@ -64,9 +68,9 @@ const listCards = [{
 ];
 
 const slides = [
-    { id: 1, cat: 'Data Sheet', img: 'data-serv.png', title: 'Data and Analytics Services', content: 'The increasing importance of Data Analytics for business has created significant impact in the world.', link: 'https://wilsoncgrp.com/uploads/1597587043639_DATA%20AND%20ANALYTICS%20SERVICES%20INFO%20SHEET%20-%20updated.pdf' },
-    { id: 2, cat: 'Blog', img: 'Wilson-2.webp', title: 'Do You Need A Data Analytics System?', content: 'Data analytics (DA) involves processes and activities designed to obtain and evaluate data to extract useful information. The results of DA may be used to identify areas of key risk, fraud, errors, or misuse; improve business efficiency, verify process effectiveness, and make more-informed business decisions.', link: 'https://wilsoncgrp.com/blog/do-you-need-a-data-analytics-system' },
-    { id: 3, cat: 'Blog', img: 'Progressing-IoT-Technology-Brings-Ever-Expanding-Security-Concerns-1024x384-1%20(1).webp', title: 'Boosting Your Security Posture with Security Analytics', content: 'With the rise of cyberincidents, organizations continue to search for effective tools and strategies to fight against cybercrimes and to build resilience in their environment.', link: 'https://wilsoncgrp.com/blog/boosting-your-security-posture-with-security-analytics' },
+    { id: 1, cat: 'Data Sheet', img: PostImg1, title: 'Data and Analytics Services', content: 'The increasing importance of Data Analytics for business has created significant impact in the world.', link: 'https://wilsoncgrp.com/uploads/1597587043639_DATA%20AND%20ANALYTICS%20SERVICES%20INFO%20SHEET%20-%20updated.pdf' },
+    { id: 2, cat: 'Blog', img: PostImg2, title: 'Do You Need A Data Analytics System?', content: 'Data analytics (DA) involves processes and activities designed to obtain and evaluate data to extract useful information. The results of DA may be used to identify areas of key risk, fraud, errors, or misuse; improve business efficiency, verify process effectiveness, and make more-informed business decisions.', link: 'https://wilsoncgrp.com/blog/do-you-need-a-data-analytics-system' },
+    { id: 3, cat: 'Blog', img: PostImg3, title: 'Boosting Your Security Posture with Security Analytics', content: 'With the rise of cyberincidents, organizations continue to search for effective tools and strategies to fight against cybercrimes and to build resilience in their environment.', link: 'https://wilsoncgrp.com/blog/boosting-your-security-posture-with-security-analytics' },
 
     // Add more slides as needed
 ];

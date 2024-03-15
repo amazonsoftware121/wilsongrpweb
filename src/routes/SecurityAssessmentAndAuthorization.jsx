@@ -13,6 +13,11 @@ import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import bgFaq from '../../src/assets/img/faq_saa.jpg';
 
+import { FaUserLock } from "react-icons/fa";
+import { FaPencilRuler } from "react-icons/fa";
+import { FaUsersCog } from "react-icons/fa";
+
+
 const Faqs = [{
     key: 1,
     que: ' Identify true risks and provide ATO recommendations ',
@@ -24,6 +29,15 @@ const Faqs = [{
     ans: 'WCG provides SA&A services that will help your organization get and remain compliant through a proven methodology that ensures customer readiness and efficient delivery with minimal impact on your support teams.'
 }
 ];
+
+const slides = [
+    { id: 1, cat: 'Blog', img: PostImg1, title: '', content: '' },
+    { id: 2, cat: 'Blog', img: PostImg2, title: '', content: '' },
+    { id: 3, cat: 'Blog', img: PostImg3, title: '', content: '' },
+    { id: 4, cat: 'Blog', img: PostImg4, title: '', content: '' },
+    { id: 5, cat: 'Blog', img: PostImg5, title: '', content: '' }
+    // Add more slides as needed
+  ];
 
 const SecurityAssessmentAndAuthorization = () => {
     const [expanded, setExpanded] = React.useState('panel1');
@@ -113,38 +127,104 @@ const SecurityAssessmentAndAuthorization = () => {
                     </Box>
                 </Box>
 
-                <Box py={{ md: 9, xs: 4 }} bgcolor='primary.light'>
+                <Box className="helpWcg" py={{ md: 9, xs: 4 }} bgcolor='primary.light'>
                     <Box className="container">
-                        <Typography textAlign='center' pt={4} mb={2} className='sectionTitle' >
-                            How will WCG help you?
-                        </Typography>
-                        <Typography textAlign='center'>
-                            Our Security Assessment and Authorization Services include:
-                        </Typography>
+                        <Box>
+                            <Typography textAlign='center' pt={4} mb={2} className='sectionTitle' >
+                                How will WCG help you?
+                            </Typography>
+                            <Typography textAlign='center'>
+                                Our Security Assessment and Authorization Services include:
+                            </Typography>
+                        </Box>
 
 
-                        <Box className="helpWcg">
-                            <Grid container spacing={6}>
+
+
+                        <Box className="helpStepSaa" mt={4} py={6}>
+                            <Grid container >
+
                                 <Grid item xs={12} md={6}>
-                                    <Box>
-                                        <Stack spacing={3}>
-
-                                        </Stack>
-
-
+                                    <Box sx={{display: {md: 'flex', xs: 'block'}, flexWrap: {md: 'nowrap'}, gap: {md: '30px'} }}>
+                                        <Box className="iconBox">
+                                            <FaUserLock fontSize='64px' />
+                                        </Box>
+                                        <Box className="textContent">
+                                            <Typography variant='h4'>
+                                                Security Control Assessment:
+                                            </Typography>
+                                            <Typography>
+                                                We’ll perform security control assessment (security risk assessment) which follows SP 800-53A to evaluate your current information security posture. Tailored to your needs and business goal, we also determine if your security program is implemented properly, operated as intended and producing the desired outcome.
+                                            </Typography>
+                                        </Box>
                                     </Box>
                                 </Grid>
-                                <Grid item md={6} xs={12}>
 
+                                <Grid item md={6} xs={12}>
                                 </Grid>
+
                             </Grid>
+
+                            <Grid container spacing={6}>
+                                <Grid item md={6} xs={12}>
+                                </Grid>
+
+                                <Grid item xs={12} md={6}>
+                                    <Box>
+                                        <Box className="iconBox">
+                                            <FaPencilRuler />
+
+                                        </Box>
+                                        <Box className="textContent">
+                                            <Typography variant='h4'>
+                                                Design of Strategies:
+                                            </Typography>
+                                            <Typography>
+                                                Our risk management experts identify risks through the security risk assessment and outline specific, actionable steps to improve your organization’s overall security posture. We’ll provide proof of concepts and deployment recommendations in the security risk assessment report for mitigating identified vulnerabilities based on the globally recognized recommendations of the NIST Risk Management Framework (SP 800-37, SP 800-137, SP 800-53 etc.) and industry best practices.
+                                            </Typography>
+                                        </Box>
+                                    </Box>
+                                </Grid>
+
+
+
+                            </Grid>
+
+
+                            <Grid container spacing={6}>
+
+                                <Grid item xs={12} md={6}>
+                                    <Box>
+                                        <Box className="iconBox">
+                                            <FaUsersCog />
+                                        </Box>
+                                        <Box className="textContent">
+                                            <Typography variant='h4'>
+                                                Management:
+                                            </Typography>
+                                            <Typography>
+                                                WCG supports efforts to comply with government and industry regulations such as FISMA, GLBA, HIPAA and other compliances with our security risk assessment. Securing Federal systems against cyber-attack is one of the nation’s highest priorities. Thus, we also assist with cloud migration or provide a hybrid cloud strategy to ensure your cloud security through the cyber security assessment.  A complete cyber security assessment report will also be provided.
+                                            </Typography>
+                                        </Box>
+                                    </Box>
+                                </Grid>
+
+                                <Grid item md={6} xs={12}>
+                                </Grid>
+
+                            </Grid>
+
                         </Box>
+
+
+
 
 
                     </Box>
                 </Box>
 
                 <WhyUs />
+                <BlogSlider />
                 <ContactUs />
             </Box>
         </>

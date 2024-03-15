@@ -34,11 +34,13 @@ $color-text-light: #fff;
 #root {
   overflow-x: hidden;
 }
-html{
-  body{
-    color: $color-text-dark;  
+
+html {
+  body {
+    color: $color-text-dark;
   }
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -64,9 +66,11 @@ body {
       margin: 0;
       list-style: none;
     }
-    &.listDisc{
+
+    &.listDisc {
       padding-left: 30px;
-      li{
+
+      li {
         list-style-type: disc;
         margin: 7px 0px;
       }
@@ -236,13 +240,14 @@ body {
         left: 5px;
       }
     }
-&.skyHoverWhite{
-  &:hover{
-    span{
-      color: $color-text-light;
+
+    &.skyHoverWhite {
+      &:hover {
+        span {
+          color: $color-text-light;
+        }
+      }
     }
-  }
-}
 
   }
 
@@ -1475,8 +1480,9 @@ body {
   li {
     color: $color-text-light;
     font-size: 20px;
-    a{
-      &:hover{
+
+    a {
+      &:hover {
         text-decoration: underline;
       }
     }
@@ -1516,6 +1522,7 @@ body {
 
     &>div {
       padding: 0px 25px 45px 25px;
+
       @media only screen and (max-width: $medium) {
         padding: 0 0 45px 0;
       }
@@ -1537,9 +1544,11 @@ body {
   &>div:nth-child(5)>div,
   &>div:nth-child(6)>div {
     padding-top: 45px;
+
     @media only screen and (max-width: $medium) {
-    padding-top: 0px;
+      padding-top: 0px;
     }
+
     padding-bottom: 30px;
   }
 }
@@ -1562,21 +1571,25 @@ body {
     border-bottom: 1px solid $color-text-dark !important;
     border-radius: 0 !important;
     color: $color-text-dark;
-    &.Mui-expanded{
+
+    &.Mui-expanded {
       margin: 0;
     }
-    .MuiAccordionSummary-root{
+
+    .MuiAccordionSummary-root {
       padding: 0 10px;
     }
-    .MuiAccordionSummary-content{
+
+    .MuiAccordionSummary-content {
       margin-bottom: 15px;
-      
-        &.Mui-expanded{
-          margin: 12px 0 15px 0;
-        }
-      
+
+      &.Mui-expanded {
+        margin: 12px 0 15px 0;
+      }
+
     }
-    .MuiAccordionDetails-root{
+
+    .MuiAccordionDetails-root {
       padding: 20px 10px 10px;
     }
 
@@ -1600,23 +1613,26 @@ body {
 
 
 
-.MuiCard-root{
-  .MuiCardMedia-root{
+.MuiCard-root {
+  .MuiCardMedia-root {
     transition: all 0.3s;
   }
-  &:hover{
+
+  &:hover {
     box-shadow: 0px 0px 17px 5px #acacac;
-    .MuiCardMedia-root{
+
+    .MuiCardMedia-root {
       //transform: scale(1.1444);
     }
   }
 }
 
-.resouBlogTitle{
-  a{
-    color:#000;
+.resouBlogTitle {
+  a {
+    color: #000;
     transition: color 0.3 ease;
-    &:hover{
+
+    &:hover {
       color: $color-primary;
     }
   }
@@ -1624,9 +1640,10 @@ body {
 
 /*Card*/
 
-.cardHalfLightBg{
+.cardHalfLightBg {
   position: relative;
-  &::after{
+
+  &::after {
     content: '';
     height: 375px;
     background-color: #fff;
@@ -1637,14 +1654,70 @@ body {
   }
 }
 
+
+/* Help Steps */
+.helpStepSaa {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 10px;
+    top: 0;
+    background: linear-gradient(rgba(217, 217, 217, 1), rgba(40, 160, 207, 1), rgba(0, 0, 0, 1));
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 12px;
+  }
+
+  .iconBox {
+    position: relative;
+    width: 150px;
+    background: rgb(11, 124, 168);
+    clip-path: polygon(0 0, 100% 0, 83% 93%, 11% 100%);
+    box-shadow: 0 0px 4px 8px #000;
+   
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: -65px;
+      width: 0;
+      height: 0;
+      border-bottom: 24px solid rgb(11, 124, 168);
+      border-right: 50px solid transparent;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: -65px;
+      border-bottom: 100px solid red;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      height: 0;
+      width: 100px;
+//      transform: skew(20deg);
+     
+     
+
+    }
+  }
+}
+
+
+
+
 // Body Closing
 
-.modal_video{
+.modal_video {
   transform: translate(-50%, -50%) !important;
 }
 
-.lgListSpace{
-  li{
+.lgListSpace {
+  li {
     padding: 8px 0px;
   }
 }

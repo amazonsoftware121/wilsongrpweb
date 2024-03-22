@@ -19,6 +19,10 @@ import ComprehensiveSecurityAssessment from './routes/ComprehensiveSecurityAsses
 import ApplicationSecurityAssessment from './routes/ApplicationSecurityAssessment.jsx';
 import VulnerabilityAssessment from './routes/VulnerabilityAssessment.jsx';
 import SecurityAssessmentAndAuthorization from './routes/SecurityAssessmentAndAuthorization.jsx';
+import PenetrationTesting from './routes/PenetrationTesting.jsx';
+import NetworkSecurityAwareness from './routes/NetworkSecurityAwareness.jsx';
+import SecurityPoliciesAndProceduresDevelopment from './routes/SecurityPoliciesAndProceduresDevelopment.jsx';
+import FismaAssessmentServices from './routes/FismaAssessmentServices.jsx';
 
 const theme = createTheme({
 
@@ -130,6 +134,22 @@ const router = createBrowserRouter([
       {
         path: '/security-assessment-and-authorization-saa-new',
         element: <SecurityAssessmentAndAuthorization />
+      },
+      {
+        path: '/penetration-testing-new',
+        element: <PenetrationTesting />
+      },
+      {
+        path: '/network-security-awareness-training-and-development-new',
+        element: <NetworkSecurityAwareness />
+      },
+      {
+        path: '/security-plans-policies-and-procedures-development-new',
+        element: <SecurityPoliciesAndProceduresDevelopment />
+      },
+      {
+        path: '/federal-information-security-management-act-fisma-assessment-new',
+        element: <FismaAssessmentServices />
       }
     ]
   },

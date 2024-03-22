@@ -37,7 +37,7 @@ const PageHeader = (props) => {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        sx={{ padding: '0 15px', height: '550px', backgroundImage: `url(${props.backgroundImage})` }}>
+        sx={{ padding: '0 15px', height: '550px', backgroundImage: `url(${props.backgroundImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
         <Stack spacing={3} direction='column' >
           <Typography variant='h2' fontWeight='500' fontSize={{xs: '42px', md: '3.75rem'}} className='pageHeaderTitle' component='h1'>{props.title}</Typography>
           <PageBreadcrumbs title={props.title} parent={props.parent} parentUrl={props.parentUrl} />

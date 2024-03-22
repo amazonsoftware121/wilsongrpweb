@@ -49,7 +49,7 @@ const Header = (props) => {
         <Box sx={{ textAlign: 'center' }} >
             <Typography component="div" sx={{ flexGrow: 1, my: 2 }}>
                 <div className='headerLogoMobile'>
-                    <a href='https://wilsoncgrp.com'> <img src={logo} alt="Logo" /></a>
+                    <a href='https://wilsoncgrp.com'> <img src={logo} alt="Logo" width='326px' /></a>
                 </div></Typography>
             <Divider />
 
@@ -69,7 +69,7 @@ const Header = (props) => {
                         <Toolbar>
                             <Typography component="div" sx={{ flexGrow: 1 }}>
                                 <div className='headerLogo'>
-                                    <a href='https://wilsoncgrp.com'><img src={logo} alt="Logo" /></a>
+                                    <a href='https://wilsoncgrp.com'><img src={logo} alt="Logo" width='326px' /></a>
                                 </div></Typography>
 
                             <Box sx={{ xs: 'block', sm: 'block', md: 'block', lg: 'none' }}>

@@ -4,7 +4,7 @@ import ContactUs from "../components/ContactUs"
 import PageHeader from "../components/PageHeader"
 import WhyUs from "../components/WhyUs"
 import bgBlue from '../../src/assets/img/bg5.png'
-import headerBg from "../assets/img/security-assessment-and-authorization-banner.jpg"
+import headerBg from "../assets/img/security-assessment-and-authorization-banner-new.jpg"
 import { Box, Grid, Stack, Typography } from '@mui/material';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -13,10 +13,14 @@ import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import bgFaq from '../../src/assets/img/faq_saa.jpg';
 
-import { FaUserLock } from "react-icons/fa";
-import { FaPencilRuler } from "react-icons/fa";
-import { FaUsersCog } from "react-icons/fa";
+import PostImg1 from '../assets/img/roleImpact.jpg'
+import PostImg2 from '../assets/img/covid.jpg'
+import PostImg3 from '../assets/img/securityrisk.jpg';
 
+import BoxIcon1 from '../assets/img/icon_box_bb1.svg';
+import BoxIcon2 from '../assets/img/icon_box_bb2.svg';
+import BoxIcon3 from '../assets/img/icon_box_bb3.svg';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Faqs = [{
     key: 1,
@@ -31,13 +35,11 @@ const Faqs = [{
 ];
 
 const slides = [
-    { id: 1, cat: 'Blog', img: PostImg1, title: '', content: '' },
-    { id: 2, cat: 'Blog', img: PostImg2, title: '', content: '' },
-    { id: 3, cat: 'Blog', img: PostImg3, title: '', content: '' },
-    { id: 4, cat: 'Blog', img: PostImg4, title: '', content: '' },
-    { id: 5, cat: 'Blog', img: PostImg5, title: '', content: '' }
+    { id: 1, cat: 'Blog', img: PostImg1, title: 'ROLE AND IMPACT OF WOMEN IN TECHNOLOGY', content: 'Even with the underrepresentation of women in the technology industry, many women have taken leadership roles in the industry and are recognized globally.', link: 'https://wilsoncgrp.com/blog/role-and-impact-of-women-in-technology' },
+    { id: 2, cat: 'Blog', img: PostImg2, title: 'COVID-19 FACTS: HOW BUSINESS LEADERS SHOULD TAKE ACTION', content: 'At the current time, much is unknown about the COVID-19 pandemic that has swept the globe. However, there is an undeniable threat to local and international health and economic status.', link: 'https://wilsoncgrp.com/blog/covid-19-facts-how-business-leaders-should-take-action' },
+    { id: 3, cat: 'Blog', img: PostImg3, title: 'SURVIVING SECURITY RISKS EXISTENT IN THIRD-PARTY SOFTWARE', content: 'Third-Party Software is comprised of software libraries, modules and other components that are either purchased from a third-party vendor or made freely available.', link: 'https://wilsoncgrp.com/blog/surviving-security-risks-existent-in-third-party-software' }
     // Add more slides as needed
-  ];
+];
 
 const SecurityAssessmentAndAuthorization = () => {
     const [expanded, setExpanded] = React.useState('panel1');
@@ -127,7 +129,7 @@ const SecurityAssessmentAndAuthorization = () => {
                     </Box>
                 </Box>
 
-                <Box className="helpWcg" py={{ md: 9, xs: 4 }} bgcolor='primary.light'>
+                <Box className="helpWcg" py={{ md: 9, xs: 4 }} bgcolor='#F3F3F399'>
                     <Box className="container">
                         <Box>
                             <Typography textAlign='center' pt={4} mb={2} className='sectionTitle' >
@@ -142,21 +144,29 @@ const SecurityAssessmentAndAuthorization = () => {
 
 
                         <Box className="helpStepSaa" mt={4} py={6}>
-                            <Grid container >
+                            <Grid container pt={5}>
 
-                                <Grid item xs={12} md={6}>
-                                    <Box sx={{display: {md: 'flex', xs: 'block'}, flexWrap: {md: 'nowrap'}, gap: {md: '30px'} }}>
-                                        <Box className="iconBox">
-                                            <FaUserLock fontSize='64px' />
-                                        </Box>
-                                        <Box className="textContent">
-                                            <Typography variant='h4'>
-                                                Security Control Assessment:
-                                            </Typography>
-                                            <Typography>
-                                                We’ll perform security control assessment (security risk assessment) which follows SP 800-53A to evaluate your current information security posture. Tailored to your needs and business goal, we also determine if your security program is implemented properly, operated as intended and producing the desired outcome.
-                                            </Typography>
-                                        </Box>
+                                <Grid item xs={12} md={6} className='saaContentBox' px={2}>
+                                    <Box sx={{ padding: { md: '20px 35px 35px 0px', xs: '20px 15px 35px 0px' }, display: 'flex', borderBottom: '2px solid #DDDDDD', backgroundColor: "#FFFFFF99", flexWrap: { md: 'nowrap' } }}>
+                                        <motion.div initial={{ x: -200, opacity: 0 }}
+                                            whileInView={{ x: 0, opacity: 1 }}
+                                            transition={{ duration: 1 }}>
+                                            <Box className="iconBox">
+                                                <img src={BoxIcon2} alt='Security Control Assessment' />
+                                            </Box>
+                                        </motion.div>
+                                        <motion.div initial={{ x: 200, opacity: 0 }}
+                                            whileInView={{ x: 0, opacity: 1 }}
+                                            transition={{ duration: 1 }}>
+                                            <Box className="textContent">
+                                                <Typography variant='h4' fontSize='20px' fontWeight='500' color='primary.main'>
+                                                    Security Control Assessment:
+                                                </Typography>
+                                                <Typography fontSize='14px'>
+                                                    We’ll perform security control assessment (security risk assessment) which follows SP 800-53A to evaluate your current information security posture. Tailored to your needs and business goal, we also determine if your security program is implemented properly, operated as intended and producing the desired outcome.
+                                                </Typography>
+                                            </Box>
+                                        </motion.div>
                                     </Box>
                                 </Grid>
 
@@ -165,24 +175,32 @@ const SecurityAssessmentAndAuthorization = () => {
 
                             </Grid>
 
-                            <Grid container spacing={6}>
+                            <Grid container pt={5}>
                                 <Grid item md={6} xs={12}>
                                 </Grid>
 
-                                <Grid item xs={12} md={6}>
-                                    <Box>
-                                        <Box className="iconBox">
-                                            <FaPencilRuler />
+                                <Grid item xs={12} md={6} className='saaContentBox right' px={2}>
+                                    <Box sx={{ padding: { md: '20px 35px 35px 35px', xs: '20px 15px 35px 0px' }, display: 'flex', borderBottom: '2px solid #DDDDDD', backgroundColor: "#FFFFFF99", flexWrap: { md: 'nowrap' } }}>
+                                        <motion.div initial={{ x: -200, opacity: 0 }}
+                                            whileInView={{ x: 0, opacity: 1 }}
+                                            transition={{ duration: 1 }}>
+                                            <Box className="textContent">
+                                                <Typography variant='h4' fontSize='20px' fontWeight='500' color='#7128CF'>
+                                                    Design of Strategies:
+                                                </Typography>
+                                                <Typography fontSize='14px'>
+                                                    Our risk management experts identify risks through the security risk assessment and outline specific, actionable steps to improve your organization’s overall security posture. We’ll provide proof of concepts and deployment recommendations in the security risk assessment report for mitigating identified vulnerabilities based on the globally recognized recommendations of the NIST Risk Management Framework (SP 800-37, SP 800-137, SP 800-53 etc.) and industry best practices.
+                                                </Typography>
+                                            </Box>
+                                        </motion.div>
+                                        <motion.div initial={{ x: 200, opacity: 0 }}
+                                            whileInView={{ x: 0, opacity: 1 }}
+                                            transition={{ duration: 1 }}>
+                                            <Box className="iconBox">
+                                                <img src={BoxIcon3} alt='Design of Strategies' />
 
-                                        </Box>
-                                        <Box className="textContent">
-                                            <Typography variant='h4'>
-                                                Design of Strategies:
-                                            </Typography>
-                                            <Typography>
-                                                Our risk management experts identify risks through the security risk assessment and outline specific, actionable steps to improve your organization’s overall security posture. We’ll provide proof of concepts and deployment recommendations in the security risk assessment report for mitigating identified vulnerabilities based on the globally recognized recommendations of the NIST Risk Management Framework (SP 800-37, SP 800-137, SP 800-53 etc.) and industry best practices.
-                                            </Typography>
-                                        </Box>
+                                            </Box>
+                                        </motion.div>
                                     </Box>
                                 </Grid>
 
@@ -191,21 +209,29 @@ const SecurityAssessmentAndAuthorization = () => {
                             </Grid>
 
 
-                            <Grid container spacing={6}>
+                            <Grid container pt={5}>
 
-                                <Grid item xs={12} md={6}>
-                                    <Box>
-                                        <Box className="iconBox">
-                                            <FaUsersCog />
-                                        </Box>
-                                        <Box className="textContent">
-                                            <Typography variant='h4'>
-                                                Management:
-                                            </Typography>
-                                            <Typography>
-                                                WCG supports efforts to comply with government and industry regulations such as FISMA, GLBA, HIPAA and other compliances with our security risk assessment. Securing Federal systems against cyber-attack is one of the nation’s highest priorities. Thus, we also assist with cloud migration or provide a hybrid cloud strategy to ensure your cloud security through the cyber security assessment.  A complete cyber security assessment report will also be provided.
-                                            </Typography>
-                                        </Box>
+                                <Grid item xs={12} md={6} className='saaContentBox' px={2}>
+                                    <Box sx={{ padding: { md: '20px 35px 35px 0px', xs: '20px 15px 35px 0px' }, display: 'flex', borderBottom: '2px solid #DDDDDD', backgroundColor: "#FFFFFF99", flexWrap: { md: 'nowrap' } }}>
+                                        <motion.div initial={{ x: -200, opacity: 0 }}
+                                            whileInView={{ x: 0, opacity: 1 }}
+                                            transition={{ duration: 1 }}>
+                                            <Box className="iconBox">
+                                                <img src={BoxIcon1} alt='Management' />
+                                            </Box>
+                                        </motion.div>
+                                        <motion.div initial={{ x: 200, opacity: 0 }}
+                                            whileInView={{ x: 0, opacity: 1 }}
+                                            transition={{ duration: 1 }}>
+                                            <Box className="textContent">
+                                                <Typography variant='h4' fontSize='20px' fontWeight='500' color='#039A49'>
+                                                    Management:
+                                                </Typography>
+                                                <Typography fontSize='14px'>
+                                                    WCG supports efforts to comply with government and industry regulations such as FISMA, GLBA, HIPAA and other compliances with our security risk assessment. Securing Federal systems against cyber-attack is one of the nation’s highest priorities. Thus, we also assist with cloud migration or provide a hybrid cloud strategy to ensure your cloud security through the cyber security assessment.  A complete cyber security assessment report will also be provided.
+                                                </Typography>
+                                            </Box>
+                                        </motion.div>
                                     </Box>
                                 </Grid>
 
@@ -224,7 +250,7 @@ const SecurityAssessmentAndAuthorization = () => {
                 </Box>
 
                 <WhyUs />
-                <BlogSlider />
+                <BlogSlider resourcesSlide={slides} />
                 <ContactUs />
             </Box>
         </>

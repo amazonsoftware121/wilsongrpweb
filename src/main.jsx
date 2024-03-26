@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {lazy, Suspense} from 'react'
 import ReactDOM from 'react-dom/client'
 import {
   createBrowserRouter,
@@ -6,23 +6,16 @@ import {
   Outlet
 } from "react-router-dom";
 
-import Root from './routes/Root.jsx';
+//import Root from './routes/Root.jsx';
 import ErrorPage from "./ErrorPage";
-import About from './routes/About.jsx';
-import CloudServices from './routes/CloudServices.jsx';
 import './styles.scss';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import DataAndAnalyticsServices from './routes/DataAndAnalyticsServices.jsx';
-import ComprehensiveSecurityAssessment from './routes/ComprehensiveSecurityAssessment.jsx';
-import ApplicationSecurityAssessment from './routes/ApplicationSecurityAssessment.jsx';
-import VulnerabilityAssessment from './routes/VulnerabilityAssessment.jsx';
-import SecurityAssessmentAndAuthorization from './routes/SecurityAssessmentAndAuthorization.jsx';
-import PenetrationTesting from './routes/PenetrationTesting.jsx';
-import NetworkSecurityAwareness from './routes/NetworkSecurityAwareness.jsx';
-import SecurityPoliciesAndProceduresDevelopment from './routes/SecurityPoliciesAndProceduresDevelopment.jsx';
-import FismaAssessmentServices from './routes/FismaAssessmentServices.jsx';
+
+
+
+//const Root = lazy(()=>import("./routes/Root.jsx"));
 
 const theme = createTheme({
 
@@ -86,13 +79,17 @@ const theme = createTheme({
 const Layout = () => {
   return (
     <ThemeProvider theme={theme}>
+    
       <div className='wrapper'>
         <Header />
         <div className='mainContent'>
+        <Suspense>
           <Outlet />
+          </Suspense>
         </div>
         <Footer />
       </div>
+
     </ThemeProvider>
   )
 }
@@ -105,51 +102,88 @@ const router = createBrowserRouter([
     children: [
       {
         index: true, // Use index: true for the root path
-        element: <Root />,
+        async lazy() {
+          let Root = await import("./routes/Root.jsx");
+          return { Component: Root.default };
+        },
       },
       {
         path: "/about",
-        element: <About />
+        async lazy() {
+          let About = await import("./routes/About.jsx");
+          return { Component: About.default };
+        }
       },
       {
         path: "/cloud-services",
-        element: <CloudServices />
+        async lazy() {
+          let CloudServices = await import("./routes/CloudServices.jsx");
+          return { Component: CloudServices.default };
+        }
       },
       {
         path: "/data-and-analytics-services",
-        element: <DataAndAnalyticsServices />
+        async lazy() {
+          let DataAndAnalyticsServices = await import("./routes/DataAndAnalyticsServices.jsx");
+          return { Component: DataAndAnalyticsServices.default };
+        }
       },
       {
         path: "/web-application-security-assessment-services",
-        element: <ApplicationSecurityAssessment />
+        async lazy() {
+          let ApplicationSecurityAssessment = await import("./routes/ApplicationSecurityAssessment.jsx");
+          return { Component: ApplicationSecurityAssessment.default };
+        }
       },
       {
         path: "/comprehensive-security-assessment",
-        element: <ComprehensiveSecurityAssessment />
+        async lazy() {
+          let ComprehensiveSecurityAssessment = await import("./routes/ComprehensiveSecurityAssessment.jsx");
+          return { Component: ComprehensiveSecurityAssessment.default };
+        }
       },
       {
         path: "/vulnerability-assessment-new",
-        element: <VulnerabilityAssessment />
+        async lazy() {
+          let VulnerabilityAssessment = await import("./routes/VulnerabilityAssessment.jsx");
+          return { Component: VulnerabilityAssessment.default };
+        }
       },
       {
         path: '/security-assessment-and-authorization-saa-new',
-        element: <SecurityAssessmentAndAuthorization />
+        async lazy() {
+          let SecurityAssessmentAndAuthorization = await import("./routes/SecurityAssessmentAndAuthorization.jsx");
+          return { Component: SecurityAssessmentAndAuthorization.default };
+        }
       },
       {
         path: '/penetration-testing-new',
-        element: <PenetrationTesting />
+        async lazy() {
+          let PenetrationTesting = await import("./routes/PenetrationTesting.jsx");
+          return { Component: PenetrationTesting.default };
+        }
       },
       {
         path: '/network-security-awareness-training-and-development-new',
-        element: <NetworkSecurityAwareness />
+        async lazy() {
+          let NetworkSecurityAwareness = await import("./routes/NetworkSecurityAwareness.jsx");
+          return { Component: NetworkSecurityAwareness.default };
+        }
       },
       {
         path: '/security-plans-policies-and-procedures-development-new',
-        element: <SecurityPoliciesAndProceduresDevelopment />
+        
+        async lazy() {
+          let SecurityPoliciesAndProceduresDevelopment = await import("./routes/SecurityPoliciesAndProceduresDevelopment.jsx");
+          return { Component: SecurityPoliciesAndProceduresDevelopment.default };
+        }
       },
       {
         path: '/federal-information-security-management-act-fisma-assessment-new',
-        element: <FismaAssessmentServices />
+        async lazy() {
+          let FismaAssessmentServices = await import("./routes/FismaAssessmentServices.jsx");
+          return { Component: FismaAssessmentServices.default };
+        }
       }
     ]
   },
@@ -162,3 +196,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
   </React.StrictMode>,
 )
+
+
+
+

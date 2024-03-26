@@ -19,10 +19,14 @@ import PostImg2 from '../assets/img/network-2402637_960_720.webp';
 import PostImg3 from '../assets/img/cloud-3406627_960_720.webp';
 import PostImg4 from '../assets/img/Cracking-the-Enigma-of-Cloud-Computing-1200x450-1.webp';
 import PostImg5 from '../assets/img/cloud-computing-101.webp';
+import PostImg6 from '../assets/img/com_pst_06.jpg';
+import PostImg7 from '../assets/img/Cyber-Net-Over-City-1024x530-1.webp';
 
 
 const slides = [
   { id: 1, cat: 'Data Sheet', img: PostImg1, title: 'Cloud Services', content: 'Cloud Services enable businesses to utilize a network of remote systems to transmit, process, store and access data, applications, and services over the Internet, which boosts their competitiveness in the digital space. Cloud solutions come in various forms and sizes to cater to different organizational needs. ', link: 'https://wilsoncgrp.com/uploads/1597586929593_Cloud%20Services.pdf' },
+  { id: 6, cat: 'Blog', img: PostImg6, title: 'Remote Work Security Challenges Amidst COVID-19', content: 'Since the COVID-19 outbreak in January 2020 and pandemic declaration in late March, organizations and federal agencies have been scrambling to secure their systems and create remote work contingency plans to keep continuity for their business matters.', link: 'https://wilsoncgrp.com/blog/covid-19-and-remote-work-security-challenges' },
+  { id: 7, cat: 'Blog', img: PostImg7, title: 'An Imminent Connection: 5G and Its Cybersecurity Implications', content: 'Over the past few years, businesses have increasingly shifted towards digital customer communication and records. As efficiency and connectivity of this digitization of business has increased, so have the likelihood and potential damage of cyberattacks.', link: 'https://wilsoncgrp.com/blog/an-imminent-connection-5g-and-its-cybersecurity-implications' },
   { id: 2, cat: 'Blog', img: PostImg2, title: 'Combatting the Security Risks of Cloud Computing', content: 'Small and large enterprises continue to benefit from increased digitization and greater use of cloud-based application and storage facilities.', link: 'https://wilsoncgrp.com/blog/combatting-the-security-risks-of-cloud-computing' },
   { id: 3, cat: 'Blog', img: PostImg3, title: 'The Risks of Using Cloud Services', content: 'When J. C. R. “Lick” Licklider developed ARPAnet in 1962, he had the vision of creating a device that could receive and send data simultaneously amongst a large group of people. He called this idea the  “Intergalactic Computer Network”.', link: 'https://wilsoncgrp.com/blog/the-risks-of-using-cloud-services' },
   { id: 4, cat: 'Blog', img: PostImg4, title: 'Cracking the Enigma of Cloud Computing', content: 'One of the most frequent questions tech industry insiders get from those working outside of the industry is “What is the cloud?” ', link: 'https://wilsoncgrp.com/blog/cracking-the-enigma-of-cloud-computing' },

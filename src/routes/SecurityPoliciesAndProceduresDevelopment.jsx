@@ -6,14 +6,25 @@ import BlogSlider from '../components/BlogSlider';
 import PostImg1 from '../assets/img/roleImpact.jpg'
 import PostImg2 from '../assets/img/covid.jpg'
 import PostImg3 from '../assets/img/securityrisk.jpg';
+
+import PostImg4 from '../assets/img/AdobeStock_109748812-1024x683-1.webp';
+import PostImg5 from '../assets/img/Security.webp';
+import PostImg6 from '../assets/img/Secure-Your-Trade-Secrets-from-Cyber-Espionage.webp';
+
+
+
 import ContactUs from '../components/ContactUs';
 import headerBg from '../assets/img/security_policy_banner-new.jpg'
 import PageHeader from '../components/PageHeader';
 
 const slides = [
-    { id: 1, cat: 'Blog', img: PostImg1, title: 'ROLE AND IMPACT OF WOMEN IN TECHNOLOGY', content: 'Even with the underrepresentation of women in the technology industry, many women have taken leadership roles in the industry and are recognized globally.', link: 'https://wilsoncgrp.com/blog/role-and-impact-of-women-in-technology' },
+    { id: 4, cat: 'Blog', img: PostImg4, title: 'Shielding the Organization in the Fight Against Malware', content: "Malware continues to be one of the top factors contributing to network compromise which may eventually lead to data breach. Malware attack has the costliest impact on organizations with an average total cost amounting to$2.4 million. This means close to $7,000 per day or $200,000 per month is incurred by victims across the globe. Moreover, these attacks cause significant damage to an organization infrastructure by compromising data, preventing or slowing down the running of computers and resulting in the loss of vital information.", link: 'https://wilsoncgrp.com/blog/shielding-the-organization-in-the-fight-against-malware' },
+    { id: 5, cat: 'Blog', img: PostImg5, title: 'Combat Cybercrime in Your Business', content: "Conducting business online opens several opportunities but also poses risks. Earlier this year, hundreds of companies had data breaches, exposing sensitive information of clients and employees.", link: 'https://wilsoncgrp.com/blog/combat-cybercrime-in-your-business' },
+    { id: 6, cat: 'Blog', img: PostImg6, title: 'Secure Your Trade Secrets from Cyber Espionage', content: "Trend Micro Incorporated, a global leader in security software, stated that cyber espionage is the most serious threat concern to global businesses in 2017. Twenty percent of global organizations rank cyber espionage as the most serious threat to their business, with 26% struggling to keep up with the rapidly evolving threat landscape. In addition, one in five U.S. organizations have suffered a cyber espionage-related attack in the last year. Trend Micro’s research covered over 2,400 organizations across the U.S. and Europe.", link: 'https://wilsoncgrp.com/blog/secure-your-trade-secrets-from-cyber-espionage' },
+/*    { id: 1, cat: 'Blog', img: PostImg1, title: 'ROLE AND IMPACT OF WOMEN IN TECHNOLOGY', content: 'Even with the underrepresentation of women in the technology industry, many women have taken leadership roles in the industry and are recognized globally.', link: 'https://wilsoncgrp.com/blog/role-and-impact-of-women-in-technology' },
     { id: 2, cat: 'Blog', img: PostImg2, title: 'COVID-19 FACTS: HOW BUSINESS LEADERS SHOULD TAKE ACTION', content: 'At the current time, much is unknown about the COVID-19 pandemic that has swept the globe. However, there is an undeniable threat to local and international health and economic status.', link: 'https://wilsoncgrp.com/blog/covid-19-facts-how-business-leaders-should-take-action' },
     { id: 3, cat: 'Blog', img: PostImg3, title: 'SURVIVING SECURITY RISKS EXISTENT IN THIRD-PARTY SOFTWARE', content: 'Third-Party Software is comprised of software libraries, modules and other components that are either purchased from a third-party vendor or made freely available.', link: 'https://wilsoncgrp.com/blog/surviving-security-risks-existent-in-third-party-software' }
+    */
     // Add more slides as needed
 ];
 

@@ -6,6 +6,10 @@ import BlogSlider from '../components/BlogSlider';
 import PostImg1 from '../assets/img/roleImpact.jpg'
 import PostImg2 from '../assets/img/covid.jpg'
 import PostImg3 from '../assets/img/securityrisk.jpg';
+
+import PostImg4 from '../assets/img/what-nist.webp';
+import PostImg5 from '../assets/img/Compliance-Consulting-Saves-Businesses-1024x384-1.webp';
+
 import ContactUs from '../components/ContactUs';
 import PageHeader from '../components/PageHeader';
 
@@ -16,6 +20,8 @@ import bgHalf from '../assets/img/fisma_half.jpg';
 import { motion } from 'framer-motion';
 
 const slides = [
+    {id: 4, cat: "Blog", img: PostImg4, title: "What NIST 800-53 Revision 5 Means to Cybersecurity?", content: "NIST Special Publication (SP) 800-53, Revision 5, Security and Privacy Controls for Information Systems and Organizations, represents a multi-year effort to develop the next generation of security and privacy controls needed to strengthen and support the federal government and every sector of critical infrastructure. These next-generation controls offer a proactive and systematic approach to ensuring that critical systems, components, and services are sufficiently trustworthy and have the necessary resilience to defend the economic and national security interests of the United States.", link: "https://wilsoncgrp.com/blog/what-nist-800-53-revision-5-means-to-cybersecurity"},
+    {id: 5, cat: "Blog", img: PostImg5, title: "Compliance Consulting Saves Businesses", content: "Many firms that suffer from cyber-breaches not only struggle financially, but their credibility within their industry may also be jeopardized. This can lead to customers losing trust in the company, resulting in loss of potential sales and a struggle to regain customer trust. For these reasons, compliance with federal, industry, and/or cyber regulations is mandatory for businesses and organizations to save themselves from devastating consequences of becoming non-compliant.", link: "https://wilsoncgrp.com/blog/compliance-consulting-saves-businesses"},
     { id: 1, cat: 'Blog', img: PostImg1, title: 'ROLE AND IMPACT OF WOMEN IN TECHNOLOGY', content: 'Even with the underrepresentation of women in the technology industry, many women have taken leadership roles in the industry and are recognized globally.', link: 'https://wilsoncgrp.com/blog/role-and-impact-of-women-in-technology' },
     { id: 2, cat: 'Blog', img: PostImg2, title: 'COVID-19 FACTS: HOW BUSINESS LEADERS SHOULD TAKE ACTION', content: 'At the current time, much is unknown about the COVID-19 pandemic that has swept the globe. However, there is an undeniable threat to local and international health and economic status.', link: 'https://wilsoncgrp.com/blog/covid-19-facts-how-business-leaders-should-take-action' },
     { id: 3, cat: 'Blog', img: PostImg3, title: 'SURVIVING SECURITY RISKS EXISTENT IN THIRD-PARTY SOFTWARE', content: 'Third-Party Software is comprised of software libraries, modules and other components that are either purchased from a third-party vendor or made freely available.', link: 'https://wilsoncgrp.com/blog/surviving-security-risks-existent-in-third-party-software' }

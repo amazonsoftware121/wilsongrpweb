@@ -1,10 +1,8 @@
 import React, { useEffect, useRef } from 'react'
-import Header from '../components/Header'
 import MainBanner from '../components/Home/MainBanner'
 import Services from '../components/Home/Services'
 import Features from '../components/Home/Features'
 import { motion } from 'framer-motion';
-import { Opacity } from '@mui/icons-material'
 import CaseStudies from '../components/Home/CaseStudies'
 import Insight from '../components/Home/Insight'
 import HorizontalWrapper from '../components/HorizontalWrapper'

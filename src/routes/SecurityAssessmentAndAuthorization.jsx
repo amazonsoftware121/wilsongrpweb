@@ -16,7 +16,8 @@ import bgFaq from '../../src/assets/img/faq_saa.jpg';
 import PostImg1 from '../assets/img/roleImpact.jpg'
 import PostImg2 from '../assets/img/covid.jpg'
 import PostImg3 from '../assets/img/securityrisk.jpg';
-
+import PostImg4 from '../assets/img/federal-agency-bg.webp'
+import PostImg5 from '../assets/img/federal-agency-case-history-2-bg.webp'
 import BoxIcon1 from '../assets/img/icon_box_bb1.svg';
 import BoxIcon2 from '../assets/img/icon_box_bb2.svg';
 import BoxIcon3 from '../assets/img/icon_box_bb3.svg';
@@ -35,9 +36,12 @@ const Faqs = [{
 ];
 
 const slides = [
+    { id: 4, cat: 'Blog', img: PostImg4, title: 'Case History: Compliance Services for Federal Agency', content: 'WCG performed a variety of services, including system documentation assessment, security certification and accreditation, and other tests to assess the effectiveness of the DSTM security controls.', link: 'https://wilsoncgrp.com/federal-agency-case-history' },
+    { id: 5, cat: 'Blog', img: PostImg5, title: 'Case History: Certification and Accreditation for Federal Agency', content: "Wilson Consulting Group (WCG) reviewed, updated, and developed information security guidelines. These guidelines are required as part of the agency’s Integrated IT Investment & System Life Cycle Framework and the agency's C&A program.", link: 'https://wilsoncgrp.com/federal-agency-case-history-2' },
     { id: 1, cat: 'Blog', img: PostImg1, title: 'ROLE AND IMPACT OF WOMEN IN TECHNOLOGY', content: 'Even with the underrepresentation of women in the technology industry, many women have taken leadership roles in the industry and are recognized globally.', link: 'https://wilsoncgrp.com/blog/role-and-impact-of-women-in-technology' },
     { id: 2, cat: 'Blog', img: PostImg2, title: 'COVID-19 FACTS: HOW BUSINESS LEADERS SHOULD TAKE ACTION', content: 'At the current time, much is unknown about the COVID-19 pandemic that has swept the globe. However, there is an undeniable threat to local and international health and economic status.', link: 'https://wilsoncgrp.com/blog/covid-19-facts-how-business-leaders-should-take-action' },
     { id: 3, cat: 'Blog', img: PostImg3, title: 'SURVIVING SECURITY RISKS EXISTENT IN THIRD-PARTY SOFTWARE', content: 'Third-Party Software is comprised of software libraries, modules and other components that are either purchased from a third-party vendor or made freely available.', link: 'https://wilsoncgrp.com/blog/surviving-security-risks-existent-in-third-party-software' }
+    
     // Add more slides as needed
 ];
 

@@ -6,17 +6,20 @@ import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import WhyUs from '../components/WhyUs';
 import BlogSlider from '../components/BlogSlider';
 
-import PostImg1 from '../assets/img/roleImpact.jpg'
-import PostImg2 from '../assets/img/covid.jpg'
-import PostImg3 from '../assets/img/securityrisk.jpg';
+import PostImg1 from '../assets/img/Frame-1.webp'
+import PostImg2 from '../assets/img/cyber_security.jpg'
+import PostImg3 from '../assets/img/AdobeStock_124587776-1024x576-1.jpg';
+import PostImg4 from '../assets/img/The-Need-for-Ongoing-Security-Awareness-Training-1024x384-1.webp';
 import ContactUs from '../components/ContactUs';
 import bgNeed from '../assets/img/wcgofferBg.jpg';
 import { FaThumbsUp } from 'react-icons/fa';
 
 const slides = [
-    { id: 1, cat: 'Blog', img: PostImg1, title: 'ROLE AND IMPACT OF WOMEN IN TECHNOLOGY', content: 'Even with the underrepresentation of women in the technology industry, many women have taken leadership roles in the industry and are recognized globally.', link: 'https://wilsoncgrp.com/blog/role-and-impact-of-women-in-technology' },
-    { id: 2, cat: 'Blog', img: PostImg2, title: 'COVID-19 FACTS: HOW BUSINESS LEADERS SHOULD TAKE ACTION', content: 'At the current time, much is unknown about the COVID-19 pandemic that has swept the globe. However, there is an undeniable threat to local and international health and economic status.', link: 'https://wilsoncgrp.com/blog/covid-19-facts-how-business-leaders-should-take-action' },
-    { id: 3, cat: 'Blog', img: PostImg3, title: 'SURVIVING SECURITY RISKS EXISTENT IN THIRD-PARTY SOFTWARE', content: 'Third-Party Software is comprised of software libraries, modules and other components that are either purchased from a third-party vendor or made freely available.', link: 'https://wilsoncgrp.com/blog/surviving-security-risks-existent-in-third-party-software' }
+    { id: 1, cat: 'Blog', img: PostImg1, title: 'Improving Cybersecurity Awareness in Healthcare', content: "Many cyberattacks succeed due to mistakes by employees and a lack of awareness of basic aspects of cybersecurity. According to the 2022 Verizon Data Breach Investigations Report, 82% of data breaches in 2021 involved the human element. Improving security awareness of the workforce by focusing on key behaviors will go a long way toward improving security and preventing data breaches.", link: 'https://wilsoncgrp.com/blog/improving-cybersecurity-awareness-in-healthcare' },
+    { id: 2, cat: 'Blog', img: PostImg2, title: "Ways to Mitigate Social Engineering-based Cyber Attacks", content: "Social engineering is an attack mechanism majorly aimed at misleading employees or individuals to hand over relevant information for the attacker's financial gain. Social engineering attacks are launched mostly via email, social media, and over the phone.", link: 'https://wilsoncgrp.com/blog/ways-to-mitigate-social-engineering-based-cyber-attacks' },
+    { id: 3, cat: 'Blog', img: PostImg3, title: 'Insider Threat in Financial Sector', content: "According to CA Technologies, 53% of the organizations they surveyed experienced an insider threat in the past 12 months and it is only growing in frequency. How can a company combat a threat when it's coming from their own people?", link: 'https://wilsoncgrp.com/blog/insider-threat-in-financial-sector' },
+    { id: 4, cat: 'Blog', img: PostImg4, title: 'The Need for Ongoing Security Awareness Training', content: "Humans are often regarded as the weakest link in a security breach. According to a study from CompTIA conducted in 2015, which surveyed people from several organizations in the United States, human error represents 52 percent of the cause of security breaches.[1] Businesses spend large amounts of money annually on security solutions but fail to properly address the human element of information security.  Human error, whether accidental or malicious, can cause serious security risks or breaches.", link: 'https://wilsoncgrp.com/blog/the-need-for-ongoing-security-awareness-training' },
+    
     // Add more slides as needed
 ];
 

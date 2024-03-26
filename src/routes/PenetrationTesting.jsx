@@ -14,16 +14,23 @@ import WhyUs from "../components/WhyUs";
 import BlogSlider from "../components/BlogSlider";
 import ContactUs from "../components/ContactUs";
 
-import PostImg1 from '../assets/img/roleImpact.jpg'
-import PostImg2 from '../assets/img/covid.jpg'
-import PostImg3 from '../assets/img/securityrisk.jpg';
+import PostImg1 from '../assets/img/penetration-test.png'
+import PostImg2 from '../assets/img/colonial-pipeline.webp'
+import PostImg3 from '../assets/img/com_pst_06.jpg';
+import PostImg4 from '../assets/img/cyber_security.jpg';
+import PostImg5 from '../assets/img/The-Real-Benefits-of-Conducting-Vulnerability-Assessment-and-Penetration-Testing-VPAT-1024x384-1.webp';
+import PostImg6 from '../assets/img/Ahead-of-the-Curb-Security-measures-to-take-before-potential-IoT-boom-1-1200x450-1.webp';
 
 import { motion } from 'framer-motion';
 
 const slides = [
-    { id: 1, cat: 'Blog', img: PostImg1, title: 'ROLE AND IMPACT OF WOMEN IN TECHNOLOGY', content: 'Even with the underrepresentation of women in the technology industry, many women have taken leadership roles in the industry and are recognized globally.', link: 'https://wilsoncgrp.com/blog/role-and-impact-of-women-in-technology' },
-    { id: 2, cat: 'Blog', img: PostImg2, title: 'COVID-19 FACTS: HOW BUSINESS LEADERS SHOULD TAKE ACTION', content: 'At the current time, much is unknown about the COVID-19 pandemic that has swept the globe. However, there is an undeniable threat to local and international health and economic status.', link: 'https://wilsoncgrp.com/blog/covid-19-facts-how-business-leaders-should-take-action' },
-    { id: 3, cat: 'Blog', img: PostImg3, title: 'SURVIVING SECURITY RISKS EXISTENT IN THIRD-PARTY SOFTWARE', content: 'Third-Party Software is comprised of software libraries, modules and other components that are either purchased from a third-party vendor or made freely available.', link: 'https://wilsoncgrp.com/blog/surviving-security-risks-existent-in-third-party-software' }
+    { id: 1, cat: 'Data Sheet', img: PostImg1, title: 'Penetration Testing', content: '', link: 'https://wilsoncgrp.com/uploads/1579856794726_Penetration-Testing.pdf' },
+    { id: 2, cat: 'Blog', img: PostImg2, title: 'Urgency of Cyber Security After Colonial Pipeline Hack', content: "On May 7, 2021, Colonial Pipeline, Co. was forced to close operations after a ransomware hack was confirmed to have breached their systems. This attack hindered services to the East-coast of the United States and sparked fears of a massive gas shortage to American motorists. This hack greatly compromised Colonial Pipeline's system integrity and put private data at risk.  This fear is one which average Americans saw immediately at the pump as prices soared and many gas stations were even forced to close due to depleted supply. Colonial Pipeline CEO Joseph Blount authorized payment of the more than four-million-dollar ransom to regain control of the computer system. Ransomware is becoming an ever more prominent concern across the technology sector and this hack is just one of the latest examples of that fact.", link: 'https://wilsoncgrp.com/blog/urgency-of-cyber-security-after-colonial-pipeline' },
+    { id: 3, cat: 'Blog', img: PostImg3, title: 'Remote Work Security Challenges Amidst COVID-19', content: 'Since the COVID-19 outbreak in January 2020 and pandemic declaration in late March, organizations and federal agencies have been scrambling to secure their systems and create remote work contingency plans to keep continuity for their business matters.', link: 'https://wilsoncgrp.com/blog/covid-19-and-remote-work-security-challenges' },
+    { id: 4, cat: 'Blog', img: PostImg4, title: 'Ways to Mitigate Social Engineering-based Cyber Attacks', content: "Social engineering is an attack mechanism majorly aimed at misleading employees or individuals to hand over relevant information for the attacker's financial gain. Social engineering attacks are launched mostly via email, social media, and over the phone.", link: 'https://wilsoncgrp.com/blog/ways-to-mitigate-social-engineering-based-cyber-attacks' },
+    { id: 5, cat: 'Blog', img: PostImg5, title: 'The Real Benefits of Conducting Vulnerability Assessment and Penetration Testing (VAPT)', content: 'An organization, regardless of its size, purpose and location is susceptible to cybersecurity threats. This is so, once an organization has data and operates in a networked environment.', link: 'https://wilsoncgrp.com/blog/the-real-benefits-of-conducting-vulnerability-assessment-and-penetration-testing-vapt' },
+    { id: 6, cat: 'Blog', img: PostImg6, title: 'Ahead of the Curb: Security measures to take before potential IoT boom', content: "The emergence of large-scale use of Internet of Things (IoT) – a digital network of devices that may be used to record and transmit data – may extend the horizons of internet technology indefinitely. Social networks currently allow people to connect and interact with one another digitally. When the IoT becomes commercially available, it will give individuals the opportunity to interact with devices, and devices the ability to interact with each other on a network that would dwarf the magnitude of today’s cloud. Due to its projected pervasiveness in the global market, it is not surprising that this is – and will continue to be – a hot topic beyond IT.", link: 'https://wilsoncgrp.com/blog/ahead-of-the-curb-security-measures-to-take-before-potential-iot-boom' },
+    
     // Add more slides as needed
   ];
 

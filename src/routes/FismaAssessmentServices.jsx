@@ -21,11 +21,8 @@ import { motion } from 'framer-motion';
 
 const slides = [
     {id: 4, cat: "Blog", img: PostImg4, title: "What NIST 800-53 Revision 5 Means to Cybersecurity?", content: "NIST Special Publication (SP) 800-53, Revision 5, Security and Privacy Controls for Information Systems and Organizations, represents a multi-year effort to develop the next generation of security and privacy controls needed to strengthen and support the federal government and every sector of critical infrastructure. These next-generation controls offer a proactive and systematic approach to ensuring that critical systems, components, and services are sufficiently trustworthy and have the necessary resilience to defend the economic and national security interests of the United States.", link: "https://wilsoncgrp.com/blog/what-nist-800-53-revision-5-means-to-cybersecurity"},
-    {id: 5, cat: "Blog", img: PostImg5, title: "Compliance Consulting Saves Businesses", content: "Many firms that suffer from cyber-breaches not only struggle financially, but their credibility within their industry may also be jeopardized. This can lead to customers losing trust in the company, resulting in loss of potential sales and a struggle to regain customer trust. For these reasons, compliance with federal, industry, and/or cyber regulations is mandatory for businesses and organizations to save themselves from devastating consequences of becoming non-compliant.", link: "https://wilsoncgrp.com/blog/compliance-consulting-saves-businesses"},
-    { id: 1, cat: 'Blog', img: PostImg1, title: 'ROLE AND IMPACT OF WOMEN IN TECHNOLOGY', content: 'Even with the underrepresentation of women in the technology industry, many women have taken leadership roles in the industry and are recognized globally.', link: 'https://wilsoncgrp.com/blog/role-and-impact-of-women-in-technology' },
-    { id: 2, cat: 'Blog', img: PostImg2, title: 'COVID-19 FACTS: HOW BUSINESS LEADERS SHOULD TAKE ACTION', content: 'At the current time, much is unknown about the COVID-19 pandemic that has swept the globe. However, there is an undeniable threat to local and international health and economic status.', link: 'https://wilsoncgrp.com/blog/covid-19-facts-how-business-leaders-should-take-action' },
-    { id: 3, cat: 'Blog', img: PostImg3, title: 'SURVIVING SECURITY RISKS EXISTENT IN THIRD-PARTY SOFTWARE', content: 'Third-Party Software is comprised of software libraries, modules and other components that are either purchased from a third-party vendor or made freely available.', link: 'https://wilsoncgrp.com/blog/surviving-security-risks-existent-in-third-party-software' }
-    // Add more slides as needed
+    {id: 5, cat: "Blog", img: PostImg5, title: "Compliance Consulting Saves Businesses", content: "Many firms that suffer from cyber-breaches not only struggle financially, but their credibility within their industry may also be jeopardized. This can lead to customers losing trust in the company, resulting in loss of potential sales and a struggle to regain customer trust. For these reasons, compliance with federal, industry, and/or cyber regulations is mandatory for businesses and organizations to save themselves from devastating consequences of becoming non-compliant.", link: "https://wilsoncgrp.com/blog/compliance-consulting-saves-businesses"}
+     // Add more slides as needed
 ];
 
 const FismaAssessmentServices = () => {
@@ -45,9 +42,9 @@ const FismaAssessmentServices = () => {
 
     return (
         <>
-            <PageHeader requestConBtn="#contactUs" headTitle="FISMA Compliance Consulting | NIST 800-53 & FISMA Assessment" metaDesc="FISMA Assessment assists organizations and federal agencies to assess control implementation, improve their security posture, and achieve FISMA Compliance." parent="Risk Management Services" parentUrl="risk-management-and-assessment-services" title={"FISMA Assessment Services"} backgroundImage={headerBg} />
+            <PageHeader requestConBtn="#contactUs" headTitle="FISMA Compliance Consulting | NIST 800-53 & FISMA Assessment" metaDesc="FISMA Assessment assists organizations and federal agencies to assess control implementation, improve their security posture, and achieve FISMA Compliance." parent="Compliance Services" parentUrl="risk-management-and-assessment-services" title={"FISMA Assessment Services"} backgroundImage={headerBg} />
             <Box className="mainContent">
-                <Box className="pageInfoSection" py={{ md: 12, xs: 4 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>
+                <Box className="pageInfoSection" py={{ md: 12, xs: 6 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>
                     <Box className="container">
                         <Typography variant='h2' className='sectionTitle'>What is FISMA Compliance?</Typography>
                         <Box mt={{ xs: 2, md: 3 }}>
@@ -63,7 +60,7 @@ const FismaAssessmentServices = () => {
                     </Box>
                 </Box>
 
-                <Box className="fismaCompliance" bgcolor='primary.light' py={{ md: 10, xs: 4 }}>
+                <Box className="fismaCompliance" bgcolor='primary.light' py={{ md: 10, xs: 6 }}>
                     <Box className='container'>
                         <Typography variant='h2' className='sectionTitle' mb={3}>
                             Why do you need FISMA Compliance?
@@ -187,14 +184,14 @@ const FismaAssessmentServices = () => {
                             <Grid item sm={6}>
                                 <Typography fontSize='18px' fontWeight='500' py={2}>Our FISMA Assessment Service helps clients to:</Typography>
                                 <ul className='cusotmIconList'>
-                                    <li> <FaThumbsUp /> Categorize the information to be protected</li>
-                                    <li> <FaThumbsUp />Select minimum baseline controls</li>
-                                    <li> <FaThumbsUp /> Refine controls using a risk assessment procedure</li>
-                                    <li><FaThumbsUp /> Document the controls in the system security plan</li>
-                                    <li><FaThumbsUp /> Implement security controls in appropriate information systems</li>
-                                    <li><FaThumbsUp /> Assess the effectiveness of the security controls once they have been implemented</li>
-                                    <li><FaThumbsUp /> Determine agency-level risks to the mission or business case</li>
-                                    <li><FaThumbsUp /> Monitor the security controls on a continuous basis</li>
+                                    <li> <span><FaThumbsUp  /></span> Categorize the information to be protected</li>
+                                    <li> <span><FaThumbsUp  /></span>Select minimum baseline controls</li>
+                                    <li> <span><FaThumbsUp  /></span> Refine controls using a risk assessment procedure</li>
+                                    <li><span><FaThumbsUp  /></span> Document the controls in the system security plan</li>
+                                    <li><span><FaThumbsUp  /></span> Implement security controls in appropriate information systems</li>
+                                    <li><span><FaThumbsUp  /></span> Assess the effectiveness of the security controls once they have been implemented</li>
+                                    <li><span><FaThumbsUp  /></span> Determine agency-level risks to the mission or business case</li>
+                                    <li><span><FaThumbsUp  /></span> Monitor the security controls on a continuous basis</li>
 
                                 </ul>
                             </Grid>

@@ -14,23 +14,15 @@ import bgFaq from '../../src/assets/img/rev-img-05.jpg';
 import ContactUs from '../components/ContactUs';
 import BlogSlider from '../components/BlogSlider';
 
-import PostImg1 from '../assets/img/cloud-serv.png';
-import PostImg2 from '../assets/img/network-2402637_960_720.webp';
-import PostImg3 from '../assets/img/cloud-3406627_960_720.webp';
-import PostImg4 from '../assets/img/Cracking-the-Enigma-of-Cloud-Computing-1200x450-1.webp';
-import PostImg5 from '../assets/img/cloud-computing-101.webp';
+
 import PostImg6 from '../assets/img/com_pst_06.jpg';
 import PostImg7 from '../assets/img/Cyber-Net-Over-City-1024x530-1.webp';
 
 
 const slides = [
-  { id: 1, cat: 'Data Sheet', img: PostImg1, title: 'Cloud Services', content: 'Cloud Services enable businesses to utilize a network of remote systems to transmit, process, store and access data, applications, and services over the Internet, which boosts their competitiveness in the digital space. Cloud solutions come in various forms and sizes to cater to different organizational needs. ', link: 'https://wilsoncgrp.com/uploads/1597586929593_Cloud%20Services.pdf' },
+  
   { id: 6, cat: 'Blog', img: PostImg6, title: 'Remote Work Security Challenges Amidst COVID-19', content: 'Since the COVID-19 outbreak in January 2020 and pandemic declaration in late March, organizations and federal agencies have been scrambling to secure their systems and create remote work contingency plans to keep continuity for their business matters.', link: 'https://wilsoncgrp.com/blog/covid-19-and-remote-work-security-challenges' },
   { id: 7, cat: 'Blog', img: PostImg7, title: 'An Imminent Connection: 5G and Its Cybersecurity Implications', content: 'Over the past few years, businesses have increasingly shifted towards digital customer communication and records. As efficiency and connectivity of this digitization of business has increased, so have the likelihood and potential damage of cyberattacks.', link: 'https://wilsoncgrp.com/blog/an-imminent-connection-5g-and-its-cybersecurity-implications' },
-  { id: 2, cat: 'Blog', img: PostImg2, title: 'Combatting the Security Risks of Cloud Computing', content: 'Small and large enterprises continue to benefit from increased digitization and greater use of cloud-based application and storage facilities.', link: 'https://wilsoncgrp.com/blog/combatting-the-security-risks-of-cloud-computing' },
-  { id: 3, cat: 'Blog', img: PostImg3, title: 'The Risks of Using Cloud Services', content: 'When J. C. R. “Lick” Licklider developed ARPAnet in 1962, he had the vision of creating a device that could receive and send data simultaneously amongst a large group of people. He called this idea the  “Intergalactic Computer Network”.', link: 'https://wilsoncgrp.com/blog/the-risks-of-using-cloud-services' },
-  { id: 4, cat: 'Blog', img: PostImg4, title: 'Cracking the Enigma of Cloud Computing', content: 'One of the most frequent questions tech industry insiders get from those working outside of the industry is “What is the cloud?” ', link: 'https://wilsoncgrp.com/blog/cracking-the-enigma-of-cloud-computing' },
-  { id: 5, cat: 'Blog', img: PostImg5, title: 'Cloud Computing 101', content: 'Visionary Steve Jobs once spoke of a dream in which data could be uploaded and accessed anywhere. Before there was the cloud, there were floppy disks, CD ROMs and very large immobile hardware. Fast forward to 2015 – now we are able to access and store information without physical limitations.', link: 'https://wilsoncgrp.com/blog/cloud-computing-101' }
   // Add more slides as needed
 ];
 const Faqs = [{
@@ -92,10 +84,10 @@ const ComprehensiveSecurityAssessment = () => {
         <Box className="pageInfoSection" py={{ md: 12, xs: 4 }} sx={{ position: 'relative', backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>
           <Box className="container">
             <Typography variant='h2' className='sectionTitle'>What is Comprehensive Security Assessment?</Typography>
-            <Box mt={{ md: 3 }}>
+            <Box mt={{ md: 3, xs: 2 }}>
               <Stack spacing={3}>
                 <Typography >
-                  Understanding your organization’s information and cyber security risks and identifying vulnerabilities are essential to protecting sensitive data. Having this understanding is also integral to regulatory compliance efforts. Not knowing your security risks can leave your organization open to attacks and breaches that can result in the loss, misuse or exposure of proprietary information. Security breaches even lead to significant financial losses, as well as damage your reputation and the trust of your customers.
+                  Understanding your organization's information and cyber security risks and identifying vulnerabilities are essential to protecting sensitive data. Having this understanding is also integral to regulatory compliance efforts. Not knowing your security risks can leave your organization open to attacks and breaches that can result in the loss, misuse or exposure of proprietary information. Security breaches even lead to significant financial losses, as well as damage your reputation and the trust of your customers.
                 </Typography>
                 <Typography >
                   To establish an effective security strategy, you must begin with an accurate evaluation of your current information security posture. The Comprehensive Security Assessment incorporates industry-leading penetration tests that use human expertise, creativity and logic to discover vulnerabilities that tests often miss. It provides a realistic view of what a cybercriminal could get into if he or she intentionally targeted an organization.
@@ -112,7 +104,7 @@ const ComprehensiveSecurityAssessment = () => {
             <Box >
               <Grid container >
                 <Grid item sm={6} sx={{ paddingRight: { md: 10 } }}>
-                  <Typography variant='h2' className='sectionTitle' mb={3}>
+                  <Typography variant='h2' className='sectionTitle' mb={{ md: 3, xs: 2 }}>
                     Methodology of Comprehensive Security Assessment
                   </Typography>
                   <Typography>Wilson Consulting Group’s Comprehensive Security Assessment identifies and thoroughly tests potential points of attack to pinpoint vulnerabilities. A typical comprehensive security assessment consists of the following assessment areas:</Typography>

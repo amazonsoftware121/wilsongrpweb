@@ -1704,7 +1704,7 @@ body {
       height: 45px;
       right: -5px;
       top: 0;
-      background-image: url(../public/assets/img/step_arrow.png);
+      background-image: url(../public/assets/img/step_arrow.svg);
       z-index: 999;
 
       @media only screen and (max-width : 900px) {
@@ -1716,10 +1716,10 @@ body {
 
       right: inherit;
       left: -5px;
-      background-image: url(../public/assets/img/step_arrow_right.png);
+      background-image: url(../public/assets/img/step_arrow_right.svg);
 
       @media only screen and (max-width : 900px) {
-        background-image: url(../public/assets/img/step_arrow.png);
+        background-image: url(../public/assets/img/step_arrow.svg);
         right: 5px;
         left: inherit;
       }
@@ -1935,6 +1935,9 @@ body {
     justify-content: left;
     height: 54px;
     align-items: center;
+    text-align: left;
+    line-height: 22px;
+   
 
     &:hover {
       border: 2px solid #fff;

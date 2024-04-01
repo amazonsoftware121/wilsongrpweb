@@ -17,7 +17,7 @@ const WCGApproach = () => {
                     </Box>
                     <Grid container spacing={4} pt={{md: 15, xs: 5}}>
                         <Grid item md={4} gap={2}>
-                            <Card sx={{ minHeight: '360px', boxShadow: 'none', borderRadius: '12px', borderBottom: '2px solid #28A0CF' }}>
+                            <Card sx={{height: {md: '100%', lg: 'auto', sm: 'auto'}, minHeight: {lg: '360px', md: 'auto', xs: 'auto' }, boxShadow: 'none', borderRadius: '12px', borderBottom: '2px solid #28A0CF' }}>
                                 <CardMedia
                                     component="img"
                                     alt="green iguana"
@@ -39,8 +39,8 @@ const WCGApproach = () => {
                         </Grid>
 
 
-                        <Grid item md={4} mt={{md: -8, xs: 0}}>
-                        <Card sx={{ minHeight: '360px', boxShadow: 'none', borderRadius: '12px', borderBottom: '2px solid #28A0CF' }}>
+                        <Grid item md={4} mt={{md: 0, xs: 0, lg: -8}}>
+                        <Card  sx={{ height: {md: '100%', lg: 'auto', sm: 'auto'}, minHeight: {lg: '360px', md: 'auto', xs: 'auto' }, boxShadow: 'none', borderRadius: '12px', borderBottom: '2px solid #28A0CF' }}>
                                 <CardMedia
                                     component="img"
                                     alt="green iguana"
@@ -62,7 +62,7 @@ const WCGApproach = () => {
 
 
                         <Grid item md={4}>
-                        <Card sx={{ minHeight: '360px', boxShadow: 'none', borderRadius: '12px', borderBottom: '2px solid #28A0CF' }}>
+                        <Card sx={{height: {md: '100%', lg: 'auto', sm: 'auto'}, minHeight: {lg: '360px', md: 'auto', xs: 'auto' }, boxShadow: 'none', borderRadius: '12px', borderBottom: '2px solid #28A0CF' }}>
                                 <CardMedia
                                     component="img"
                                     alt="green iguana"

@@ -93,14 +93,17 @@ const BlogSlider = (props) => {
                                     className="slideWrapper"
                                 >
                                     <Card variant="" sx={{ height: '100%', display: 'flex', padding: '20px', borderRadius: '15px', border: '1px solid #CCCCCC', flexDirection: 'column', justifyContent: 'space-between', gap: '15px', backgroundColor: 'transparent' }}>
+                                        <Box position='relative'>
                                         <CardMedia
                                             sx={{ height: 300 }}
                                             image={`${slide.img}`}
                                             title="green iguana"
                                         />
-                                        <CardContent sx={{ height: { md: '150px' },  padding: '10px 10px 0 10px', position: 'relative' }}>
+                                        <Typography sx={{ padding: '4px 29px', position: 'absolute', bottom: '15px', right: '20px', textTransform: 'uppercase', color: '#fff', fontWeight: 500 }} bgcolor='primary.main' className='subtitle' gutterBottom>{slide.cat}</Typography>
+                                        </Box>
+                                        <CardContent sx={{ height: '150px',overflow: 'hidden',  padding: '10px 10px 0 10px', position: 'relative' }}>
 
-                                            <Typography sx={{ padding: '4px 29px', position: 'absolute', top: '-65px', right: '20px', textTransform: 'uppercase', color: '#fff', fontWeight: 500 }} bgcolor='primary.main' className='subtitle' gutterBottom>{slide.cat}</Typography>
+                                            
                                             <Typography sx={{ color: "#000", fontSize: "20px", fontWeight: "600", lineHeight: 'normal', height: '60px', overflow: 'hidden' }} className='title resouBlogTitle' variant='h4' color="text.secondary" mb={2}>
                                                 <a href={slide.link} >{slide.title}</a>
                                             </Typography>

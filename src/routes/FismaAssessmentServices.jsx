@@ -3,9 +3,6 @@ import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import bgBlue from '../../src/assets/img/bg5.png';
 import WhyUs from '../components/WhyUs';
 import BlogSlider from '../components/BlogSlider';
-import PostImg1 from '../assets/img/roleImpact.jpg'
-import PostImg2 from '../assets/img/covid.jpg'
-import PostImg3 from '../assets/img/securityrisk.jpg';
 
 import PostImg4 from '../assets/img/what-nist.webp';
 import PostImg5 from '../assets/img/Compliance-Consulting-Saves-Businesses-1024x384-1.webp';
@@ -22,7 +19,6 @@ import { motion } from 'framer-motion';
 const slides = [
     {id: 4, cat: "Blog", img: PostImg4, title: "What NIST 800-53 Revision 5 Means to Cybersecurity?", content: "NIST Special Publication (SP) 800-53, Revision 5, Security and Privacy Controls for Information Systems and Organizations, represents a multi-year effort to develop the next generation of security and privacy controls needed to strengthen and support the federal government and every sector of critical infrastructure. These next-generation controls offer a proactive and systematic approach to ensuring that critical systems, components, and services are sufficiently trustworthy and have the necessary resilience to defend the economic and national security interests of the United States.", link: "https://wilsoncgrp.com/blog/what-nist-800-53-revision-5-means-to-cybersecurity"},
     {id: 5, cat: "Blog", img: PostImg5, title: "Compliance Consulting Saves Businesses", content: "Many firms that suffer from cyber-breaches not only struggle financially, but their credibility within their industry may also be jeopardized. This can lead to customers losing trust in the company, resulting in loss of potential sales and a struggle to regain customer trust. For these reasons, compliance with federal, industry, and/or cyber regulations is mandatory for businesses and organizations to save themselves from devastating consequences of becoming non-compliant.", link: "https://wilsoncgrp.com/blog/compliance-consulting-saves-businesses"}
-     // Add more slides as needed
 ];
 
 const FismaAssessmentServices = () => {
@@ -42,7 +38,7 @@ const FismaAssessmentServices = () => {
 
     return (
         <>
-            <PageHeader requestConBtn="#contactUs" headTitle="FISMA Compliance Consulting | NIST 800-53 & FISMA Assessment" metaDesc="FISMA Assessment assists organizations and federal agencies to assess control implementation, improve their security posture, and achieve FISMA Compliance." parent="Compliance Services" parentUrl="risk-management-and-assessment-services" title={"FISMA Assessment Services"} backgroundImage={headerBg} />
+            <PageHeader requestConBtn="#contactUs" headTitle="FISMA Compliance Consulting | NIST 800-53 & FISMA Assessment" metaDesc="FISMA Assessment assists organizations and federal agencies to assess control implementation, improve their security posture, and achieve FISMA Compliance." parent="Compliance Services" parentUrl="compliance-assessment-services" title={"FISMA Assessment Services"} backgroundImage={headerBg} />
             <Box className="mainContent">
                 <Box className="pageInfoSection" py={{ md: 12, xs: 6 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>
                     <Box className="container">

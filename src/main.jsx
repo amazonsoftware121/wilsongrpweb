@@ -143,35 +143,35 @@ const router = createBrowserRouter([
         }
       },
       {
-        path: "/vulnerability-assessment-new",
+        path: "/vulnerability-assessment",
         async lazy() {
           let VulnerabilityAssessment = await import("./routes/VulnerabilityAssessment.jsx");
           return { Component: VulnerabilityAssessment.default };
         }
       },
       {
-        path: '/security-assessment-and-authorization-saa-new',
+        path: '/security-assessment-and-authorization-saa',
         async lazy() {
           let SecurityAssessmentAndAuthorization = await import("./routes/SecurityAssessmentAndAuthorization.jsx");
           return { Component: SecurityAssessmentAndAuthorization.default };
         }
       },
       {
-        path: '/penetration-testing-new',
+        path: '/penetration-testing',
         async lazy() {
           let PenetrationTesting = await import("./routes/PenetrationTesting.jsx");
           return { Component: PenetrationTesting.default };
         }
       },
       {
-        path: '/network-security-awareness-training-and-development-new',
+        path: '/network-security-awareness-training-and-development',
         async lazy() {
           let NetworkSecurityAwareness = await import("./routes/NetworkSecurityAwareness.jsx");
           return { Component: NetworkSecurityAwareness.default };
         }
       },
       {
-        path: '/security-plans-policies-and-procedures-development-new',
+        path: '/security-plans-policies-and-procedures-development',
         
         async lazy() {
           let SecurityPoliciesAndProceduresDevelopment = await import("./routes/SecurityPoliciesAndProceduresDevelopment.jsx");
@@ -179,7 +179,7 @@ const router = createBrowserRouter([
         }
       },
       {
-        path: '/federal-information-security-management-act-fisma-assessment-new',
+        path: '/federal-information-security-management-act-fisma-assessment',
         async lazy() {
           let FismaAssessmentServices = await import("./routes/FismaAssessmentServices.jsx");
           return { Component: FismaAssessmentServices.default };

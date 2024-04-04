@@ -17,6 +17,21 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import { Stack } from '@mui/system';
 
+import ServiceImg1 from '../../assets/img/services/Vulnerability-Assessment.webp'; 
+import ServiceImg2 from '../../assets/img/services/Penetration-Testing-Services.webp';
+import ServiceImg3 from '../../assets/img/services/Security-Assessment-and-Authorization.webp'; 
+import ServiceImg4 from '../../assets/img/services/Security-Policies-and-Procedures-Development.webp'; 
+import ServiceImg5 from '../../assets/img/services/FedRAMPAdvisoryand.webp'; 
+import ServiceImg6 from '../../assets/img/services/CybersecurityMaturityModelCertificationCMMC.webp';
+import ServiceImg7 from '../../assets/img/services/FISMAAssessmentServices.webp'; 
+import ServiceImg8 from '../../assets/img/services/gdpr_bg.webp'; 
+import ServiceImg9 from '../../assets/img/services/IT-Governance.webp'; 
+import ServiceImg10 from '../../assets/img/services/Network-Security-Awareness-Training-and-Development.webp'; 
+import ServiceImg11 from '../../assets/img/services/Gramm-Leach-Bliley-ActGLBA-Compliance.webp'; 
+import ServiceImg12 from '../../assets/img/services/CaliforniaConsumerPrivacyActCCPA.webp'; 
+import ServiceImg13 from '../../assets/img/services/HealthInsurancePortabilityandAccountabilityActHIPAA.webp'; 
+
+
 
 const Services = () => {
 
@@ -64,21 +79,21 @@ const Services = () => {
 
 
     const slides = [
-        { id: 1, img: 'Vulnerability-Assessment.jpg', title: 'Vulnerability Assessment', content: 'Wilson Consulting Group’s cyber security Vulnerability Assessment are designed to evaluate any threats and vulnerabilities to an organization’s information systems and environment.', link: 'https://wilsoncgrp.com/vulnerability-assessment' },
-        { id: 2, img: 'Penetration-Testing-Services.jpg', title: 'Penetration Testing', content: 'WCG conducts cyber security penetration testing of an organization’s applications, systems and devices to identify vulnerable Internet Protocol (IP) access points, determine where resilience to internal & external attacks and breaches are weak.', link: 'https://wilsoncgrp.com/penetration-testing' },
-        { id: 3, img: 'Security-Assessment-and-Authorization.jpg', title: 'Security Assessment and Authorization (SA & A)', content: 'WCG’s Security Assessment and Authorization Service is a formal test that evaluates the management, operational and technical controls of the application and system to ensure that the security controls are adequate, configured properly, and satisfy the NIST standards.', link: 'https://wilsoncgrp.com/security-assessment-and-authorization-saa' },
-        { id: 4, img: 'Security-Policies-and-Procedures-Development.jpg', title: 'Security Policies and Procedures Development', content: 'Wilson Consulting Group (WCG) assists organizations in developing sound policies and procedures to ensure proper control over information systems and related resources.', link: 'https://wilsoncgrp.com/security-plans-policies-and-procedures-development' },
-        { id: 5, img: 'FedRAMPAdvisoryand.jpg', title: 'FedRAMP Advisory and Assessment Services', content: 'Achieve and maintain your FedRAMP Authority to Operate (ATO) with a reliable certified FedRAMP Third-Party Assessment Organization (3PAO)', link: 'https://wilsoncgrp.com/fedramp-consulting' },
-        { id: 6, img: 'CybersecurityMaturityModelCertificationCMMC.jpg', title: 'Cybersecurity Maturity Model Certification (CMMC)', content: 'Get ready for DoD CMMC with our efficient compliance consulting and remediation services. Reduce your level of efforts & risks. Start your journey with WCG today to maintain and win DoD contracts.', link: 'https://wilsoncgrp.com/cybersecurity-maturity-model-certification' },
-        { id: 7, img: 'FISMAAssessmentServices.jpg', title: 'FISMA Assessment Services', content: 'Wilson Consulting Group’s Federal Information Security Management Act (FISMA) Assessment provides knowledgeable and experienced consultants to assist organizations and federal agencies to improve their security posture and become compliant with FISMA.', link: 'https://wilsoncgrp.com/federal-information-security-management-act-fisma-assessment' },
-        { id: 8, img: 'gdpr_bg.jpg', title: 'GDPR Compliance Consulting', content: 'Wilson Consulting Group (WCG) understands the complexity of the European Union (EU) General Data Protection Regulation (GDPR) and provides organizations with GDPR Consulting Services to address their challenges of compliance.', link: 'https://wilsoncgrp.com/gdpr' },
+        { id: 1, img: ServiceImg1, title: 'Vulnerability Assessment', content: 'Wilson Consulting Group’s cyber security Vulnerability Assessment are designed to evaluate any threats and vulnerabilities to an organization’s information systems and environment.', link: 'https://wilsoncgrp.com/vulnerability-assessment' },
+        { id: 2, img: ServiceImg2, title: 'Penetration Testing', content: 'WCG conducts cyber security penetration testing of an organization’s applications, systems and devices to identify vulnerable Internet Protocol (IP) access points, determine where resilience to internal & external attacks and breaches are weak.', link: 'https://wilsoncgrp.com/penetration-testing' },
+        { id: 3, img: ServiceImg3, title: 'Security Assessment and Authorization (SA & A)', content: 'WCG’s Security Assessment and Authorization Service is a formal test that evaluates the management, operational and technical controls of the application and system to ensure that the security controls are adequate, configured properly, and satisfy the NIST standards.', link: 'https://wilsoncgrp.com/security-assessment-and-authorization-saa' },
+        { id: 4, img: ServiceImg4, title: 'Security Policies and Procedures Development', content: 'Wilson Consulting Group (WCG) assists organizations in developing sound policies and procedures to ensure proper control over information systems and related resources.', link: 'https://wilsoncgrp.com/security-plans-policies-and-procedures-development' },
+        { id: 5, img: ServiceImg5, title: 'FedRAMP Advisory and Assessment Services', content: 'Achieve and maintain your FedRAMP Authority to Operate (ATO) with a reliable certified FedRAMP Third-Party Assessment Organization (3PAO)', link: 'https://wilsoncgrp.com/fedramp-consulting' },
+        { id: 6, img: ServiceImg6, title: 'Cybersecurity Maturity Model Certification (CMMC)', content: 'Get ready for DoD CMMC with our efficient compliance consulting and remediation services. Reduce your level of efforts & risks. Start your journey with WCG today to maintain and win DoD contracts.', link: 'https://wilsoncgrp.com/cybersecurity-maturity-model-certification' },
+        { id: 7, img: ServiceImg7, title: 'FISMA Assessment Services', content: 'Wilson Consulting Group’s Federal Information Security Management Act (FISMA) Assessment provides knowledgeable and experienced consultants to assist organizations and federal agencies to improve their security posture and become compliant with FISMA.', link: 'https://wilsoncgrp.com/federal-information-security-management-act-fisma-assessment' },
+        { id: 8, img: ServiceImg8, title: 'GDPR Compliance Consulting', content: 'Wilson Consulting Group (WCG) understands the complexity of the European Union (EU) General Data Protection Regulation (GDPR) and provides organizations with GDPR Consulting Services to address their challenges of compliance.', link: 'https://wilsoncgrp.com/gdpr' },
 
 
-        { id: 9, img: "IT-Governance.jpg", title: 'IT Governance', content: "Wilson Consulting Group assists businesses and government agencies by offering practical frameworks, processes, and tool kits to optimize existing governance systems or initiate governance for the first time.", link: "https://wilsoncgrp.com/information-technology-governance" },
-        { id: 10, img: 'Network-Security-Awareness-Training-and-Development.jpg', title: 'Network Security Awareness Training and Development', content: 'WCG provides comprehensive and continuous awareness and training programs designed to help organizations protect data, increase productivity, and safely utilize information technology.', link: 'https://wilsoncgrp.com/network-and-security-professional-development' },
-        { id: 11, img: 'Gramm-Leach-Bliley-ActGLBA-Compliance.jpg', title: 'Gramm-Leach Bliley Act (GLBA) Compliance', content: 'Evaluate your compliance level to meet GLBA requirements and ensure security controls are sufficient in development and implementation to remediate any non-compliance.', link: 'https://wilsoncgrp.com/gramm-leach-bliley-act-glba' },
-        { id: 12, img: 'CaliforniaConsumerPrivacyActCCPA.jpg', title: 'California Consumer Privacy Act (CCPA)', content: 'WCG has strengthened and unified data production for customers within the European Union. We are ready to assist other businesses in accomplishing the regulatory CCPA Compliance.', link: 'https://wilsoncgrp.com/california-consumer-privacy-act-ccpa-compliance' },
-        { id: 13, img: 'HealthInsurancePortabilityandAccountabilityActHIPAA.jpg', title: 'Health Insurance Portability and Accountability Act (HIPAA)', content: 'Wilson Consulting Group (WCG) provides HIPAA compliance services for organizations looking to assess and determine their compliance with the HIPAA Security Rule.', link: 'https://wilsoncgrp.com/health-insurance-portability-and-accountability-act-hipaa' }
+        { id: 9, img: ServiceImg9, title: 'IT Governance', content: "Wilson Consulting Group assists businesses and government agencies by offering practical frameworks, processes, and tool kits to optimize existing governance systems or initiate governance for the first time.", link: "https://wilsoncgrp.com/information-technology-governance" },
+        { id: 10, img: ServiceImg10, title: 'Network Security Awareness Training and Development', content: 'WCG provides comprehensive and continuous awareness and training programs designed to help organizations protect data, increase productivity, and safely utilize information technology.', link: 'https://wilsoncgrp.com/network-and-security-professional-development' },
+        { id: 11, img: ServiceImg11, title: 'Gramm-Leach Bliley Act (GLBA) Compliance', content: 'Evaluate your compliance level to meet GLBA requirements and ensure security controls are sufficient in development and implementation to remediate any non-compliance.', link: 'https://wilsoncgrp.com/gramm-leach-bliley-act-glba' },
+        { id: 12, img: ServiceImg12, title: 'California Consumer Privacy Act (CCPA)', content: 'WCG has strengthened and unified data production for customers within the European Union. We are ready to assist other businesses in accomplishing the regulatory CCPA Compliance.', link: 'https://wilsoncgrp.com/california-consumer-privacy-act-ccpa-compliance' },
+        { id: 13, img: ServiceImg13, title: 'Health Insurance Portability and Accountability Act (HIPAA)', content: 'Wilson Consulting Group (WCG) provides HIPAA compliance services for organizations looking to assess and determine their compliance with the HIPAA Security Rule.', link: 'https://wilsoncgrp.com/health-insurance-portability-and-accountability-act-hipaa' }
         // Add more slides as needed
     ];
 
@@ -109,7 +124,7 @@ const Services = () => {
                                     transition={{ duration: 0.6 }}
                                     className="slideWrapper"
                                     style={{
-                                        backgroundImage: `url(assets/img/${slide.img})`,
+                                        backgroundImage: `url(${slide.img})`,
                                         boxSizing: 'border-box',
                                         position: 'relative',
                                     }} >

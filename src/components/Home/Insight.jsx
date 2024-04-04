@@ -9,12 +9,12 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 
-import img1 from '../../../src/assets/img/microsoftteams-image-1.jpg';
-import img2 from '../../../src/assets/img/newBaselineSecurityControl.jpg';
-import img3 from '../../../src/assets/img/cloudservices.jpg';
-import img4 from '../../../src/assets/img/medical-banner-with-doctor-working-laptop.jpg';
-import img5 from '../../../src/assets/img/fedRAMPCompliance.jpg';
-import img6 from '../../../src/assets/img/whatnist.jpg';
+import img1 from '../../../src/assets/img/microsoftteams-image-1.webp';
+import img2 from '../../../src/assets/img/newBaselineSecurityControl.webp';
+import img3 from '../../../src/assets/img/cloudservices.webp';
+import img4 from '../../../src/assets/img/medical-banner-with-doctor-working-laptop.webp';
+import img5 from '../../../src/assets/img/fedRAMPCompliance.webp';
+import img6 from '../../../src/assets/img/whatnist.webp';
 
 import { Navigation } from 'swiper/modules';
 

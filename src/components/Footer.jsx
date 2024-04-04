@@ -1,15 +1,16 @@
 import { Container, Box, Grid } from '@mui/material'
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 import { FaFacebookF,FaTwitter,FaRss,FaLinkedinIn,FaYoutube,FaInstagram,FaEnvelopeOpen,FaPhoneAlt  } from "react-icons/fa";
 import { FaLocationDot, FaXTwitter  } from "react-icons/fa6";
-import Newsletter from './Newsletter';
+
+import FooterBg from '../assets/img/footer.webp';
 
 
 
 const Footer = () => {
     return (
-        <Box className='footer'>
+        <Box className='footer' sx={{backgroundImage: `url(${FooterBg})` }}>
         
 
         <Container>

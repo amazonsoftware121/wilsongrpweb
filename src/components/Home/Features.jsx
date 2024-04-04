@@ -9,16 +9,12 @@ import 'swiper/css/navigation';
 
 import { Mousewheel, Pagination } from 'swiper/modules';
 import { FaArrowRight } from 'react-icons/fa';
-import { Label } from '@mui/icons-material';
 import { useRef } from "react";
-import hover3d from '../../utils/hover';
-
 import { motion, useScroll, useTransform } from 'framer-motion';
-import Communication from '../../../src/assets/img/communications_new.jpg';
-import Features2 from '../../../src/assets/img/features2.jpg';
-import HealthIndustiresnew from '../../../src/assets/img/healthIndustiresnew.jpg';
-import InsuranceNew from '../../../src/assets/img/insuranceNew.jpg'
-import FinancialInstitutions from '../../../src/assets/img/financial_institution.jpg'
+import Communication from '../../../src/assets/img/communications_new.webp';
+import Features2 from '../../../src/assets/img/features2.webp';
+import InsuranceNew from '../../../src/assets/img/insuranceNew.webp'
+import FinancialInstitutions from '../../../src/assets/img/financial_institution.webp'
 
 
 

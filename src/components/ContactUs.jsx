@@ -70,6 +70,9 @@ const ContactUs = () => {
                     message: ''
                 });
                 setSuccMsg('Message sent successfully!');
+                setTimeout(() => {
+                    window.location.href = 'https://wilsoncgrp.com/thank-you'; // Redirect to your thank you page
+                  }, 2000); // Delay time in milliseconds
             } else {
                 throw new Error('Failed to send message.');
             }

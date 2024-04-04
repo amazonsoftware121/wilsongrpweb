@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHeader from '../components/PageHeader';
-import headerBg from '../assets/img/cloudbanner.jpg';
+import headerBg from '../assets/img/banner/cloudbanner.webp';
 import { Box, Grid, Stack, Typography } from '@mui/material';
 import { FaCloudUploadAlt } from "react-icons/fa";
 import bgBlue from '../../src/assets/img/bg5.png'
@@ -14,7 +14,7 @@ import WhyUs from '../components/WhyUs';
 import BlogSlider from '../components/BlogSlider';
 import ContactUs from '../components/ContactUs';
 
-import PostImg1 from '../assets/img/cloud-serv.png';
+import PostImg1 from '../assets/img/cloud-serv.webp';
 import PostImg2 from '../assets/img/network-2402637_960_720.webp';
 import PostImg3 from '../assets/img/cloud-3406627_960_720.webp';
 import PostImg4 from '../assets/img/Cracking-the-Enigma-of-Cloud-Computing-1200x450-1.webp';

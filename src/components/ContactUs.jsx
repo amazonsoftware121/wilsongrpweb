@@ -49,6 +49,10 @@ const ContactUs = () => {
         } else {
             setEmailErrorMsg('');
         }
+
+        setTimeout(() => {
+            window.location.href = 'https://wilsoncgrp.com/thank-you'; // Redirect to your thank you page
+          }, 1000); // Delay time in milliseconds
     
         try {
             const response = await fetch('https://wilsoncgrp.com/contact-us-api', {
@@ -69,10 +73,8 @@ const ContactUs = () => {
                     subject: '',
                     message: ''
                 });
-                setSuccMsg('Message sent successfully!');
-                setTimeout(() => {
-                    window.location.href = 'https://wilsoncgrp.com/thank-you'; // Redirect to your thank you page
-                  }, 2000); // Delay time in milliseconds
+                //setSuccMsg('Message sent successfully!');
+                
             } else {
                 throw new Error('Failed to send message.');
             }

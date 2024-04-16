@@ -1045,6 +1045,25 @@ body {
     /* Add this CSS */
   }
 
+   .ContentSlider {
+    img{
+      float: left;
+    }
+    .customBottomNav {
+     
+      position: absolute;
+      z-index: 99999;
+      bottom: 35px;
+    justify-content: end;
+    padding-right: 50px;
+    margin: 0;
+      .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet{
+        width: 63px;
+        height: 2px;
+      }
+    }
+  }
+
   /*Footer*/
   .footer {
     //background-image: url(/src/assets/img/footer.jpg); 
@@ -1769,11 +1788,12 @@ body {
     border-width: 5px 0px 0px 5px;
     border-style: solid;
     border-color: #28A0CF;
+
     @media only screen and (max-width : 900px) {
       left: -18px;
-    top: -10px;
-    width: 70px;
-    height: 70px;
+      top: -10px;
+      width: 70px;
+      height: 70px;
     }
   }
 }
@@ -1937,7 +1957,7 @@ body {
     align-items: center;
     text-align: left;
     line-height: 22px;
-   
+
 
     &:hover {
       border: 2px solid #fff;
@@ -2142,6 +2162,7 @@ body {
       margin-top: 250px;
       padding: 0 20px 0 50px;
       box-shadow: 9px 16px 25px 0px rgba(0, 0, 0, 0.19);
+
       @media only screen and (max-width : 900px) {
         margin-left: -10px;
         padding-left: 15px;
@@ -2153,8 +2174,9 @@ body {
         left: inherit;
         -webkit-transform: scaleX(-1);
         transform: scaleX(-1);
+
         @media only screen and (max-width : 900px) {
-         right: -49px;
+          right: -49px;
         }
 
       }

@@ -184,6 +184,13 @@ const router = createBrowserRouter([
           let FismaAssessmentServices = await import("./routes/FismaAssessmentServices.jsx");
           return { Component: FismaAssessmentServices.default };
         }
+      },
+      {
+        path: '/health-insurance-portability-and-accountability-act-hipaa-new',
+        async lazy() {
+          let Hipaa = await import("./routes/Hipaa.jsx");
+          return { Component: Hipaa.default };
+        }
       }
     ]
   },

@@ -85,8 +85,8 @@ const ContentSlider = (props) => {
                                             </Box>
                                             <Box sx={{ width: {sm: '100%', xs: '100%', md: '55%'} }} >
                                             <Box py={{md: 10, xs: 3, sm: 4}} px={{md: 9, xs: 3, sm: 4}} >
-                                                <Typography variant='h4' pb={3} fontSize='28px' fontWeight='700'>{slide.title}</Typography>
-                                                <Typography pb={{md:0, xs: 6}} fontSize='18px' lineHeight='32px'>{slide.content}</Typography>
+                                                <Typography variant='h4' pb={{md: 3, xs: 1}} fontSize='28px' fontWeight='700'>{slide.title}</Typography>
+                                                <Typography pb={{md:0, xs: 6}} fontSize={{xs: '16px', md:'18px'}} lineHeight={{xs: '26px', md:'32px'}}>{slide.content}</Typography>
                                             </Box>
                                             </Box>
                                         </Box>

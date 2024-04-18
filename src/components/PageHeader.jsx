@@ -39,7 +39,7 @@ const PageHeader = (props) => {
         alignItems="center"
         sx={{ padding: '0 15px', height: '550px', backgroundImage: `url(${props.backgroundImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
         <Stack spacing={3} direction='column' >
-          <Typography variant='h2' fontWeight='500' fontSize={{xs: '42px', md: '3.75rem'}} className='pageHeaderTitle' component='h1'>{props.title}</Typography>
+          <Typography variant='h2' fontWeight='500' fontSize={{xs: '30px', md: '3.75rem'}} className='pageHeaderTitle' component='h1'>{props.title}</Typography>
           <PageBreadcrumbs title={props.title} parent={props.parent} parentUrl={props.parentUrl} />
           <Stack justifyContent='center' columnGap={3} direction='row' mt={3} sx={{flexWrap: 'wrap'}} rowGap={2} >
             {props.requestConBtn && <Button  size="large" endIcon={<FaArrowRight size={14} />} variant="contained"  href={props.requestConBtn}>Request Consultation</Button>}

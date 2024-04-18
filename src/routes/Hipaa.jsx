@@ -77,7 +77,7 @@ const Hipaa = () => {
               <Grid item xs={12} md={5}>
 
               </Grid>
-              <Grid item xs={12} md={7} bgcolor='#fff' px={{ md: 0, xs: 2 }} pb={6} sx={{ zIndex: 9, borderRadius: '12px', boxShadow: { md: '10px 10px 35px 0px #0000001A', xs: 'none' } }}>
+              <Grid item xs={12} md={7} bgcolor='#fff' px={{ md: 0, xs: 2 }} pb={{md: 6, xs: 2}} sx={{ zIndex: 9, borderRadius: '12px', boxShadow: { md: '10px 10px 35px 0px #0000001A', xs: 'none' } }}>
                 <Box p={{ md: 7 }} py={6} >
                   <Typography variant="h2" color='' className='sectionTitle titleDes2'>Why is HIPAA important?</Typography>
                   <Box pt={4}>
@@ -104,10 +104,10 @@ const Hipaa = () => {
 
 
 
-        <Box bgcolor='primary.light' py={{ md: 13, xs: 4 }}>
+        <Box bgcolor='primary.light' py={{ md: 13, xs: 6 }}>
           <Box className="container">
             <Typography variant='h2' className='sectionTitle'>How will WCG help you with HIPAA Compliance?</Typography>
-            <Typography pb={1} pt={4}>Wilson Consulting Group (WCG) provides HIPAA Compliance Services for organizations looking to assess and determine their compliance with HIPAA’s administrative, physical, and technical safeguards.</Typography>
+            <Typography pb={1} pt={{xs: 2, md:4}}>Wilson Consulting Group (WCG) provides HIPAA Compliance Services for organizations looking to assess and determine their compliance with HIPAA’s administrative, physical, and technical safeguards.</Typography>
             <ContentSlider resourcesSlide={contentSlide} />
             <Typography fontSize="18px" fontWeight='500'>These HIPAA Compliance Services help organizations within the healthcare industry to design, restructure, and/or implement the necessary safeguards to ensure the confidentiality, integrity, and security of electronically protected health information, thereby satisfying the Security Rule and ensuring their HIPAA compliance.
             </Typography>

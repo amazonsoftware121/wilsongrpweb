@@ -38,7 +38,7 @@ const FismaAssessmentServices = () => {
 
     return (
         <>
-            <PageHeader requestConBtn="#contactUs" headTitle="FISMA Compliance Consulting | NIST 800-53 & FISMA Assessment" metaDesc="FISMA Assessment assists organizations and federal agencies to assess control implementation, improve their security posture, and achieve FISMA Compliance." parent="Compliance Services" parentUrl="compliance-assessment-services" title={"FISMA Assessment Services"} backgroundImage={headerBg} />
+            <PageHeader canonicalUrl="federal-information-security-management-act-fisma-assessment" requestConBtn="#contactUs" headTitle="FISMA Compliance Consulting | NIST 800-53 & FISMA Assessment" metaDesc="FISMA Assessment assists organizations and federal agencies to assess control implementation, improve their security posture, and achieve FISMA Compliance." parent="Compliance Services" parentUrl="compliance-assessment-services" title={"FISMA Assessment Services"} backgroundImage={headerBg} />
             <Box className="mainContent">
                 <Box className="pageInfoSection" py={{ md: 12, xs: 6 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>
                     <Box className="container">

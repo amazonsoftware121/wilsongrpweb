@@ -79,7 +79,7 @@ const ComprehensiveSecurityAssessment = () => {
   };
   return (
     <>
-      <PageHeader requestConBtn="#contactUs" headTitle="Comprehensive Security Assessment | IT Security Program" metaDesc="Comprehensive Security Assessment thoroughly evaluates your existing security policies, procedures, and controls in relation to industry best practices." title={"Comprehensive Security Assessment"} backgroundImage={headerBg} parent="Risk Management Services" parentUrl="https://wilsoncgrp.com/risk-management-and-assessment-services" />
+      <PageHeader canonicalUrl="comprehensive-security-assessment" requestConBtn="#contactUs" headTitle="Comprehensive Security Assessment | IT Security Program" metaDesc="Comprehensive Security Assessment thoroughly evaluates your existing security policies, procedures, and controls in relation to industry best practices." title={"Comprehensive Security Assessment"} backgroundImage={headerBg} parent="Risk Management Services" parentUrl="https://wilsoncgrp.com/risk-management-and-assessment-services" />
       <Box className="mainContent">
         <Box className="pageInfoSection" py={{ md: 12, xs: 4 }} sx={{ position: 'relative', backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>
           <Box className="container">

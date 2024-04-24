@@ -31,7 +31,7 @@ const slides = [
 const SecurityPoliciesAndProceduresDevelopment = () => {
     return (
         <>
-            <PageHeader requestConBtn="#contactUs" headTitle="Security Plans, Policies and Procedures Development | WCG" metaDesc="WCG helps you develop sound plans, policies, and procedures to ensure proper security control over information systems and compliance with desired regulations." parent="Risk Management Services" parentUrl="risk-management-and-assessment-services" title={"Security Policies and Procedures Development"} backgroundImage={headerBg} />
+            <PageHeader canonicalUrl="security-plans-policies-and-procedures-development" requestConBtn="#contactUs" headTitle="Security Plans, Policies and Procedures Development | WCG" metaDesc="WCG helps you develop sound plans, policies, and procedures to ensure proper security control over information systems and compliance with desired regulations." parent="Risk Management Services" parentUrl="risk-management-and-assessment-services" title={"Security Policies and Procedures Development"} backgroundImage={headerBg} />
             <Box className="mainContent">
 
                 <Box className="pageInfoSection" py={{ md: 12, xs: 4 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>

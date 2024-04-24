@@ -32,12 +32,16 @@ const PageHeader = (props) => {
       <Helmet>
         <title>{props.headTitle && props.headTitle}</title>
         <meta name="description" content={props.metaDesc && props.metaDesc} />
+        
+        {props.canonicalUrl && <link rel="canonical" href={"https://wilsoncgrp.com/"+props.canonicalUrl} />}
+
       </Helmet>
       <Grid container
         direction="row"
         justifyContent="center"
         alignItems="center"
         sx={{ padding: '0 15px', height: '550px', backgroundImage: `url(${props.backgroundImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
+        <Box className="container">
         <Stack spacing={3} direction='column' >
           <Typography variant='h2' fontWeight='500' fontSize={{xs: '30px', md: '3.75rem'}} className='pageHeaderTitle' component='h1'>{props.title}</Typography>
           <PageBreadcrumbs title={props.title} parent={props.parent} parentUrl={props.parentUrl} />
@@ -48,6 +52,7 @@ const PageHeader = (props) => {
 
 
         </Stack>
+        </Box>
       </Grid>
 
       <Modal open={open} onClose={handleClose} >

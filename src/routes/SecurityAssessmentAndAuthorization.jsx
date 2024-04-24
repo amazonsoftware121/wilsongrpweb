@@ -61,7 +61,7 @@ const SecurityAssessmentAndAuthorization = () => {
     return (
         <>
 
-            <PageHeader requestConBtn="#contactUs" headTitle="Security Assessment and Authorization (SA&A) Services | WCG" metaDesc="WCG’s SA&A service rigorously assesses application and system controls to ensure compliance with NIST 800-53, verifying proper configuration for security." parent="Risk Management Services" parentUrl="risk-management-and-assessment-services" title={"Security Assessment and Authorization"} backgroundImage={headerBg} />
+            <PageHeader canonicalUrl="security-assessment-and-authorization-saa" requestConBtn="#contactUs" headTitle="Security Assessment and Authorization (SA&A) Services | WCG" metaDesc="WCG’s SA&A service rigorously assesses application and system controls to ensure compliance with NIST 800-53, verifying proper configuration for security." parent="Risk Management Services" parentUrl="risk-management-and-assessment-services" title={"Security Assessment and Authorization"} backgroundImage={headerBg} />
             <Box className="mainContent">
 
                 <Box className="pageInfoSection" py={{ md: 12, xs: 4 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>

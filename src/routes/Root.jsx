@@ -18,6 +18,7 @@ const Root = () => {
             <Helmet>
                 <title>Wilson Consulting Group | Global Cyber Security Firm</title>
                 <meta name="description" content="Wilson Consulting Group is an innovative global cybersecurity consulting firm headquartered in Washington D.C., with a European office in London, England." />
+                <link rel="canonical" href="https://wilsoncgrp.com/" />
             </Helmet>
             <div className='home'>
                 <MainBanner />

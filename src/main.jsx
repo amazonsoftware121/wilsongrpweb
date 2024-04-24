@@ -128,7 +128,7 @@ const router = createBrowserRouter([
           return { Component: DataAndAnalyticsServices.default };
         }
       },
-      {
+      { 
         path: "/web-application-security-assessment-services",
         async lazy() {
           let ApplicationSecurityAssessment = await import("./routes/ApplicationSecurityAssessment.jsx");
@@ -190,6 +190,13 @@ const router = createBrowserRouter([
         async lazy() {
           let Hipaa = await import("./routes/Hipaa.jsx");
           return { Component: Hipaa.default };
+        }
+      },
+      {
+        path: 'gdpr-new',
+        async lazy(){
+          let Gdpr = await import("./routes/Gdpr.jsx");
+          return {Component: Gdpr.default};
         }
       }
     ]

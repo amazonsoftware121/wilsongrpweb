@@ -41,7 +41,7 @@ const NetworkSecurityAwareness = () => {
         };
     return (
         <>
-            <PageHeader requestConBtn="#contactUs" headTitle="Network Security Awareness Training and Development Services" metaDesc="Wilson Consulting Group provides comprehensive training programs designed to help organizations protect data, increase productivity, and lower overhead costs. Each training course is designed to meet industry standards for IT professionals." parent="Risk Management Services" parentUrl="risk-management-and-assessment-services" title={"Network Security Awareness Training and Development"} backgroundImage={headerBg} />
+            <PageHeader canonicalUrl="network-security-awareness-training-and-development" requestConBtn="#contactUs" headTitle="Network Security Awareness Training and Development Services" metaDesc="Wilson Consulting Group provides comprehensive training programs designed to help organizations protect data, increase productivity, and lower overhead costs. Each training course is designed to meet industry standards for IT professionals." parent="Risk Management Services" parentUrl="risk-management-and-assessment-services" title={"Network Security Awareness Training and Development"} backgroundImage={headerBg} />
             <Box className="mainContent">
                 <Box className="pageInfoSection" py={{ md: 12, xs: 4 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>
                     <Box className="container">

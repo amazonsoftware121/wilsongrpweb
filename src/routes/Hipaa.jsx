@@ -46,7 +46,7 @@ const Hipaa = () => {
   };
   return (
     <>
-      <PageHeader requestConBtn="#contactUs" videoUrl={iframeElement} headTitle="HIPAA Compliance Consulting | HIPAA Assessment Services" metaDesc="HIPAA Security Risk Assessment identifies potential gaps and vulnerabilities within current data infrastructure, providing recommendations for improvement to ensure your organization is fully compliant with HIPAA standards." parent="Compliance Services" parentUrl="compliance-assessment-services" title={"Health Insurance Portability and Accountability Act (HIPAA)"} backgroundImage={headerBg} />
+      <PageHeader canonicalUrl="health-insurance-portability-and-accountability-act-hipaa" requestConBtn="#contactUs" videoUrl={iframeElement} headTitle="HIPAA Compliance Consulting | HIPAA Assessment Services" metaDesc="HIPAA Security Risk Assessment identifies potential gaps and vulnerabilities within current data infrastructure, providing recommendations for improvement to ensure your organization is fully compliant with HIPAA standards." parent="Compliance Services" parentUrl="compliance-assessment-services" title={"Health Insurance Portability and Accountability Act (HIPAA)"} backgroundImage={headerBg} />
       <Box className="mainContent">
         <Box className="pageInfoSection" py={{ md: 12, xs: 6 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>
           <Box className="container">
@@ -109,7 +109,7 @@ const Hipaa = () => {
             <Typography variant='h2' className='sectionTitle'>How will WCG help you with HIPAA Compliance?</Typography>
             <Typography pb={1} pt={{xs: 2, md:4}}>Wilson Consulting Group (WCG) provides HIPAA Compliance Services for organizations looking to assess and determine their compliance with HIPAA’s administrative, physical, and technical safeguards.</Typography>
             <ContentSlider resourcesSlide={contentSlide} />
-            <Typography fontSize="18px" fontWeight='500'>These HIPAA Compliance Services help organizations within the healthcare industry to design, restructure, and/or implement the necessary safeguards to ensure the confidentiality, integrity, and security of electronically protected health information, thereby satisfying the Security Rule and ensuring their HIPAA compliance.
+            <Typography fontSize="16px" >These HIPAA Compliance Services help organizations within the healthcare industry to design, restructure, and/or implement the necessary safeguards to ensure the confidentiality, integrity, and security of electronically protected health information, thereby satisfying the Security Rule and ensuring their HIPAA compliance.
             </Typography>
           </Box>
         </Box>

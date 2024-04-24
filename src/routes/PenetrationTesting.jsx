@@ -50,7 +50,7 @@ const PenetrationTesting = () => {
     const iframeElement = <iframe width="100%" height="480" src="https://www.youtube.com/embed/72qUsBDDvE4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
     return (
         <>
-            <PageHeader requestConBtn="#contactUs" videoUrl={iframeElement} headTitle="Penetration Testing Services | Quarterly Pen Test" metaDesc="Penetration Testing (Pen Test) Services identify vulnerable Internet Protocol access points and determine where resilience to attacks and breaches are weak." parent="Risk Management Services" parentUrl="risk-management-and-assessment-services" title={"Penetration Testing Services"} backgroundImage={headerBg}  />
+            <PageHeader canonicalUrl="penetration-testing" requestConBtn="#contactUs" videoUrl={iframeElement} headTitle="Penetration Testing Services | Quarterly Pen Test" metaDesc="Penetration Testing (Pen Test) Services identify vulnerable Internet Protocol access points and determine where resilience to attacks and breaches are weak." parent="Risk Management Services" parentUrl="risk-management-and-assessment-services" title={"Penetration Testing Services"} backgroundImage={headerBg}  />
             <Box className="mainContent">
                 <Box className="pageInfoSection" py={{ md: 12, xs: 4 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>
                     <Box className="container">

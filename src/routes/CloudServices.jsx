@@ -40,7 +40,7 @@ const CloudServices = () => {
   console.log(expandIcon);
   return (
     <>
-      <PageHeader requestConBtn="#contactUs" videoUrl={iframeElement}  metaDesc="WCG's Cloud Services provide a holistic assessment of your current cloud approach, illuminating the threats to cloud security and advantages of implementation." headTitle={"Cloud Computing Services | Cloud Security Solutions"} title={"Cloud Services"} backgroundImage={headerBg} />
+      <PageHeader canonicalUrl="cloud-services" requestConBtn="#contactUs" videoUrl={iframeElement}  metaDesc="WCG's Cloud Services provide a holistic assessment of your current cloud approach, illuminating the threats to cloud security and advantages of implementation." headTitle={"Cloud Computing Services | Cloud Security Solutions"} title={"Cloud Services"} backgroundImage={headerBg} />
       <Box className="mainContent">
 
         <Box className="pageInfoSection" py={{ md: 12, xs: 4 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>

@@ -6,12 +6,17 @@ import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import WhyUs from '../components/WhyUs';
 import BlogSlider from '../components/BlogSlider';
 
-import PostImg1 from '../assets/img/Frame-1.webp'
-import PostImg2 from '../assets/img/cyber_security.jpg'
-import PostImg3 from '../assets/img/AdobeStock_124587776-1024x576-1.jpg';
-import PostImg4 from '../assets/img/The-Need-for-Ongoing-Security-Awareness-Training-1024x384-1.webp';
+import PostImg1 from '../assets/img/gdpr_assement.webp'
+import PostImg2 from '../assets/img/Wilson3.jpg'
+import PostImg3 from '../assets/img/gdpr-3442145_960_720.webp'
+import PostImg4 from '../assets/img/AdobeStock_137501063-1-Converted-1024x683-1.webp'
+import PostImg5 from '../assets/img/computer-1591018_960_720-825x510-1.webp'
+import PostImg6 from '../assets/img/AdobeStock_191931404-1024x634-1.webp'
+import PostImg7 from '../assets/img/Is-your-Business-a-Target-of-Ransomware_01.webp'
+import PostImg8 from '../assets/img/GDPR-New-Frontiers-in-Regulating-Data-Protection-and-Privacy-Standards.webp'
+
 import ContactUs from '../components/ContactUs';
-import bgNeed from '../assets/img/gdpr_faq_bg.webp';
+import bgNeed from '../assets/img/gdpr_faq_bg_new.webp';
 import { FaThumbsUp } from 'react-icons/fa';
 
 import Accordion from '@mui/material/Accordion';
@@ -21,10 +26,15 @@ import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 
 const slides = [
-    { id: 1, cat: 'Blog', img: PostImg1, title: 'Improving Cybersecurity Awareness in Healthcare', content: "Many cyberattacks succeed due to mistakes by employees and a lack of awareness of basic aspects of cybersecurity. According to the 2022 Verizon Data Breach Investigations Report, 82% of data breaches in 2021 involved the human element. Improving security awareness of the workforce by focusing on key behaviors will go a long way toward improving security and preventing data breaches.", link: 'https://wilsoncgrp.com/blog/improving-cybersecurity-awareness-in-healthcare' },
-    { id: 2, cat: 'Blog', img: PostImg2, title: "Ways to Mitigate Social Engineering-based Cyber Attacks", content: "Social engineering is an attack mechanism majorly aimed at misleading employees or individuals to hand over relevant information for the attacker's financial gain. Social engineering attacks are launched mostly via email, social media, and over the phone.", link: 'https://wilsoncgrp.com/blog/ways-to-mitigate-social-engineering-based-cyber-attacks' },
-    { id: 3, cat: 'Blog', img: PostImg3, title: 'Insider Threat in Financial Sector', content: "According to CA Technologies, 53% of the organizations they surveyed experienced an insider threat in the past 12 months and it is only growing in frequency. How can a company combat a threat when it's coming from their own people?", link: 'https://wilsoncgrp.com/blog/insider-threat-in-financial-sector' },
-    { id: 4, cat: 'Blog', img: PostImg4, title: 'The Need for Ongoing Security Awareness Training', content: "Humans are often regarded as the weakest link in a security breach. According to a study from CompTIA conducted in 2015, which surveyed people from several organizations in the United States, human error represents 52 percent of the cause of security breaches.[1] Businesses spend large amounts of money annually on security solutions but fail to properly address the human element of information security.  Human error, whether accidental or malicious, can cause serious security risks or breaches.", link: 'https://wilsoncgrp.com/blog/the-need-for-ongoing-security-awareness-training' },
+    { id: 1, cat: 'Data Sheet', img: PostImg1, title: 'GDPR Assessment Services', content: "The rapid growing number of consumer data breaches has driven the EU to create The General Data Protection Regulation (GDPR). This regulation was developed to strengthen and unify data security, ensuring protection across all businesses that service EU citizens. Strict enforcement of this regulation was put into effect on May 25th, 2018. Are you compliant with the GDPR regulations?", link: 'https://wilsoncgrp.com/uploads/1579858538992_GDPR.pdf' },
+    { id: 2, cat: 'Blog', img: PostImg2, title: "Global Privacy Laws and Data Protection Regulations", content: "The protection of employee and consumer data has become a priority for companies and organizations, especially with the ever-increasing potential for liability due to the use of new technologies. The collection and management of data require a broad range of legal compliance activities. It is essential to prioritize and protect sensitive, confidential, and proprietary information. Data breaches or losses can have a substantial adverse effect on a company's financials and reputation. This article discusses several privacy laws expected to guide organizations in the protection of their information assets, and the privacy rights of individuals, through compliance.", link: 'https://wilsoncgrp.com/blog/global-privacy-laws-and-data-protection-regulations' },
+    { id: 3, cat: 'Blog', img: PostImg3, title: "The link between Data Loss Prevention (DLP) and GDPR compliance", content: "Humanity entrance into the Fourth Industrial Revolution has made exponential changes to how people relate with one another and with their technology. Data is easily uploaded and shared to other gadgets through high-speed Internet and Cloud storage. The increased use of these and other supply chain networks has also made files easier to access and harder to protect.", link: 'https://wilsoncgrp.com/blog/the-link-between-data-loss-prevention-dlp-and-gdpr-compliance' },
+    { id: 4, cat: 'Blog', img: PostImg4, title: "Internet of Things and the Impact of Smart Technology on Cybersecurity", content: "In 2015, experts declared that the fourth industrial revolution had begun in Germany and other countries. The manufacturing industry started developing smart machines to do more complex work and in the years that followed, these smart machines include fitness bracelets connected to mobile applications that give real-time updates on exercise routines, and in smart refrigerators that can communicate if it’s time to order more groceries. When devices connect to the Internet to share data with each other, this is called an Internet of Things. These smart machines mean to make work easier for individuals with their day to day lives; and by 2020, it is projected that more than half of new businesses will be making use of this technology. In 2019, anything that can be connected, will be connected. What does this pose for this year’s trends?", link: 'https://wilsoncgrp.com/blog/internet-of-things-and-the-impact-of-smart-technology-on-cybersecurity' },
+    { id: 5, cat: 'Blog', img: PostImg5, title: "A 2018 Cybersecurity Review", content: "Cyber advancements and events took center stage this year. This brought about new threats, opportunities, and solutions that are worth looking back to and learning from.", link: 'https://wilsoncgrp.com/blog/a-2018-cybersecurity-review' },
+    { id: 6, cat: 'Blog', img: PostImg6, title: "Meeting GDPR Requirements", content: "The European Union’s General Data Protection Regulation’s (GDPR) came into effect on 25 May 2018. The GDPR law has triggered several immediate changes. The new regulation safeguards security and privacy rights for users. GDPR has forced companies to change their practices on data gathering and processing in many ways.", link: 'https://wilsoncgrp.com/blog/meeting-gdpr-requirements' },
+    { id: 7, cat: 'Blog', img: PostImg7, title: "GDPR’s Data Protection Impact Assessment and its Implications for Organizations", content: "A data breach may be viewed as the accidental or unlawful destruction, loss, alteration or unauthorized disclosure or, access to data . Over the years, the security broadcasts are generally replete with numerous incidences of data breaches across the globe. Therefore, it is little surprise that 1 in 4 business have experienced this type of incident . The significant financial impact is also unmistakable as the total average cost is estimated to be 3.62 million dollars, which equates to in excess of$300,000 dollars .", link: 'https://wilsoncgrp.com/blog/gdprs-data-protection-impact-assessment-and-its-implications-for-organizations' },
+    { id: 8, cat: 'Blog', img: PostImg8, title: "GDPR - New Frontiers in Regulating Data Protection and Privacy Standards", content: "In recent years, the world has become even more data-driven. We have seen the explosive demand for data which ushered in the creation of unprecedented volume, velocity and variety.", link: 'https://wilsoncgrp.com/blog/gdpr-new-frontiers-in-regulating-data-protection-and-privacy-standards' }
+
 
     // Add more slides as needed
 ];
@@ -63,7 +73,7 @@ const Faqs = [{
 ];
 
 
-
+const iframeElement = <iframe width="100%" height="480" src="https://www.youtube.com/embed/YayFgsOo5dA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 const Gdpr = () => {
 
     const [expanded, setExpanded] = React.useState('panel1');
@@ -86,7 +96,7 @@ const Gdpr = () => {
     };
     return (
         <>
-            <PageHeader canonicalUrl="gdpr" requestConBtn="#contactUs" headTitle="GDPR Compliance Consulting | GDPR Assessment Services" metaDesc="WCG understands the complexity of the EU General Data Protection Regulation (GDPR) and assists organizations in addressing the challenges of GDPR compliance." parent="Compliance Services" parentUrl="compliance-assessment-services" title={"GENERAL DATA PROTECTION REGULATION (GDPR) COMPLIANCE"} backgroundImage={headerBg} />
+            <PageHeader videoUrl={iframeElement} canonicalUrl="gdpr" requestConBtn="#contactUs" headTitle="GDPR Compliance Consulting | GDPR Assessment Services" metaDesc="WCG understands the complexity of the EU General Data Protection Regulation (GDPR) and assists organizations in addressing the challenges of GDPR compliance." parent="Compliance Services" parentUrl="compliance-assessment-services" title={"GDPR Compliance"} backgroundImage={headerBg} />
             <Box className="mainContent">
                 <Box className="pageInfoSection" py={{ md: 12, xs: 4 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>
                     <Box className="container">
@@ -106,18 +116,22 @@ const Gdpr = () => {
 
 
 
-                <Box className="keyPrincipalGdpr" bgcolor="primary.light">
-                <Grid container className="gdrpKeyBg">
-                
-                <Grid xs={12} md={6}>
-                <Box className="gdrpKeyBg_wrapper">
-                    <Box className="gdrpKeyBg_box1"></Box>
-                    <Box className="gdrpKeyBg_box2"></Box>
-                    <Box className="gdrpKeyBg_box3">asdfasfasf</Box>
-                </Box>
-                </Grid>
-                <Grid xs={12} md={6} ></Grid>
-                </Grid>
+                <Box className="keyPrincipalGdpr" bgcolor="primary.light" py={{ md: 12, xs: 4 }}>
+                    <Grid container className="gdrpKeyBg">
+
+                        <Grid xs={12} md={6}>
+                            <Box className="gdrpKeyBg_wrapper">
+                                <Box className="gdrpKeyBg_box1">
+                                    <Box className="gdrpKeyBg_box2">
+                                        <Typography variant='h2' className='sectionTitle' fontSize='36px' fontWeight='700'>Key Principles of the <span className='colorPrimary'>GDPR</span></Typography>
+                                    </Box>
+                                </Box>
+
+                                <Box className="gdrpKeyBg_box3"></Box>
+                            </Box>
+                        </Grid>
+                        <Grid xs={12} md={6} ></Grid>
+                    </Grid>
                     <Box className="container">
                         <Grid container>
                             <Grid item xs={12} md={6}></Grid>
@@ -165,6 +179,26 @@ const Gdpr = () => {
                     </Box>
                 </Box>
 
+
+                <Box className="video_section" py={{ md: 12, xs: 4 }} zIndex="9999" position="relative" backgroundColor="#fff">
+                    <Box className="container">
+                        <Grid container rowSpacing={2}>
+                            <Grid item xs={12} md={6}>
+                                <Typography mb={3} variant='h2' className='sectionTitle'>Why should your organization pay attention?</Typography>
+                                <ul className='keyBenefitsGdpr'>
+                                    <li>            The regulation applies to all organizations processing the personal data of data subjects residing in the EU.</li>
+
+                                    <li>The location of your organization does not matter.</li>
+
+                                    <li>If your organization breaches GDPR, you can be fined up to 4% of annual global turnover or €20 Million (whichever is greater).</li>
+                                </ul>
+                            </Grid>
+                            <Grid item xs={12} md={6}>
+                                <iframe src="https://www.youtube.com/embed/YayFgsOo5dA" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="100%" height="384"></iframe>
+                            </Grid>
+                        </Grid>
+                    </Box>
+                </Box>
 
 
 

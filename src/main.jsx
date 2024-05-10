@@ -198,19 +198,20 @@ const router = createBrowserRouter([
           let Gdpr = await import("./routes/Gdpr.jsx");
           return {Component: Gdpr.default};
         }
+      },
+      {
+        path: 'privacy-impact-assessment-new',
+        async lazy(){
+          let PrivacyImpactAssessment = await import("./routes/PrivacyImpactAssessment.jsx");
+          return {Component: PrivacyImpactAssessment.default};
+        }
       }
     ]
   },
 ]);
-
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>,
 )
-
-
-
-

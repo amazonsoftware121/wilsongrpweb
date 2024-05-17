@@ -193,17 +193,38 @@ const router = createBrowserRouter([
         }
       },
       {
-        path: 'gdpr-new',
+        path: 'gdpr',
         async lazy(){
           let Gdpr = await import("./routes/Gdpr.jsx");
           return {Component: Gdpr.default};
         }
       },
       {
-        path: 'privacy-impact-assessment-new',
+        path: 'privacy-impact-assessment',
         async lazy(){
           let PrivacyImpactAssessment = await import("./routes/PrivacyImpactAssessment.jsx");
           return {Component: PrivacyImpactAssessment.default};
+        }
+      },
+      {
+        path: 'gramm-leach-bliley-act-compliance-new',
+        async lazy(){
+          let GrammLeachBlileyActCompliance = await import("./routes/GrammLeachBlileyActCompliance.jsx");
+          return {Component: GrammLeachBlileyActCompliance.default};
+        }
+      },
+      {
+        path: 'system-and-organization-controls-soc-audit-new',
+        async lazy(){
+          let SocAudit = await import("./routes/SocAudit.jsx");
+          return {Component: SocAudit.default};
+        }
+      },
+      {
+        path: 'california-consumer-privacy-act-ccpa-compliance-new',
+        async lazy(){
+          let CcpaCompliance = await import("./routes/CcpaCompliance.jsx");
+          return {Component: CcpaCompliance.default};
         }
       }
     ]

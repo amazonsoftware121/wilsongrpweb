@@ -1068,9 +1068,11 @@ body {
 
   .gdrpKeyBg {
     position: absolute;
+
     @media screen and (max-width: 899px) {
       position: relative;
     }
+
     width: 100%;
     height: 100%;
   }
@@ -1084,23 +1086,26 @@ body {
       border-radius: 50%;
       background: linear-gradient(217.35deg, #000000 11.69%, #28A0CF 80.88%);
       margin-left: -230px;
-    padding: 200px;
-    max-width: 950px;
-    max-height: 950px;
-    @media screen and (max-width: 899px) {
-      width: 100%;
-      background: transparent;
-      height: auto;
-      border-radius: 13%;
-      margin: 0;
-      padding: 30px;
-    }
-    @media screen and (max-width: 1280px) {
-      height: 50vw;
-      width: 50vw;
-      padding: 100px;
-      margin-left: -120px;
-    }
+      padding: 200px;
+      max-width: 950px;
+      max-height: 950px;
+
+      @media screen and (max-width: 1280px) {
+        height: 50vw;
+        width: 50vw;
+        padding: 100px;
+        margin-left: -120px;
+      }
+
+      @media screen and (max-width: 899px) {
+        width: 100%;
+        background: transparent;
+        height: auto;
+        border-radius: 13%;
+        margin: 0;
+        padding: 30px 15px;
+      }
+
       .gdrpKeyBg_box2 {
         background-color: #fff;
         height: 100%;
@@ -1110,14 +1115,16 @@ body {
         align-items: center;
         justify-content: center;
         padding: 100px;
-        @media screen and (max-width: 899px) {
-         background-color: transparent; 
 
-         justify-content: start;
-         padding: 0;
-        }
         @media screen and (max-width: 1280px) {
           padding: 50px;
+        }
+
+        @media screen and (max-width: 899px) {
+          background-color: transparent;
+
+          justify-content: start;
+          padding: 0;
         }
       }
     }
@@ -1125,6 +1132,7 @@ body {
 
   .keyBenefitsGdpr {
     padding-left: 20px;
+
     li {
       margin-bottom: 30px;
       list-style-type: disc;
@@ -2260,6 +2268,248 @@ body {
       }
     }
   }
+}
+
+/*PrivacyImpactAssessment*/
+.pia {
+  img {
+
+    width: 100%;
+    max-width: 521px;
+  }
+
+}
+
+/* Gamma Page */
+.threeBox {
+  .arrowUpIcon {
+    background-color: #28A0CF;
+    width: 71px;
+    height: 71px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 26px;
+    transform: rotate(45deg);
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.numberList {
+  margin-top: 30px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+
+  li {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto 1fr;
+    margin-bottom: 20px;
+
+    .numberCustom {
+      font-size: 24px;
+      font-weight: 700;
+      width: 45px;
+      height: 45px;
+      display: inline-block;
+      text-align: center;
+      line-height: 45px;
+      border-radius: 50%;
+      background-color: #28A0CF;
+      color: #fff;
+    }
+  }
+}
+
+.leftGradBorderWrapper {
+  padding-left: 25px;
+  position: relative;
+  @media only screen and (max-width : 900px) {
+    padding-left: 0px;
+  }
+ 
+
+  .leftGradBorder {
+position: relative;
+
+    .iconHeading {
+      font-weight: 700;
+      font-size: 18px;
+      margin: 20px 0 15px 0px;
+      position: relative;
+
+      .iconBorder {
+        color: #28A0CF;
+        left: -47px;
+        top: -5px;
+        position: absolute;
+        width: 32px;
+        font-size: 24px;
+        display: flex;
+        height: 32px;
+        align-items: center;
+        justify-content: center;
+        border-top: 3px solid;
+        border-color: #28A0CF;
+        border-bottom: 3px solid #28A0CF;
+        border-left: 2px solid #28A0CF;
+        border-right: 2px solid #28A0CF;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(180deg, #28A0CF 0%, #004059 100%);
+    }
+  }
+}
+
+/*SOC PAGE*/
+.boxLayout {
+  .imgWrapper {
+    position: relative;
+    height: 100%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      /* background-color: #fff; */
+      right: 0;
+      top: 0;
+      /* transform: rotate(-49deg); */
+      border-top: 76px solid #fff;
+      border-left: 76px solid transparent;
+      border-right: 80px solid #fff;
+      border-bottom: 100px solid transparent;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .boxLayout__bgContent {
+    margin-top: 20px;
+    background: linear-gradient(90deg, #145169 0%, #28A0CF 100%);
+    width: calc(100% + 218px);
+    margin-left: -218px;
+    z-index: 9999;
+    position: relative;
+    padding: 70px 50px;
+    border-radius: 0px 0px 80px 0px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -82px;
+      border-top: 0px solid transparent;
+      border-left: 171px solid transparent;
+      border-right: 0px solid transparent;
+      border-bottom: 83px solid #006086;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &.box2 {
+    .imgWrapper {
+      &::after {
+        left: 0;
+        top: 0;
+        /* transform: rotate(-49deg); */
+        border-top: 71px solid #fff;
+        border-left: 91px solid #fff;
+        border-right: 61px solid transparent;
+        border-bottom: 100px solid transparent;
+      }
+    }
+
+    .boxLayout__bgContent {
+      background: linear-gradient(90.93deg, #28A0CF 0.75%, #145169 99.34%);
+      width: calc(100% + 218px);
+      margin-right: 218px;
+      border-radius: 0px 0px 0px 80px;
+      margin-left: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: inherit;
+        right: 0;
+        top: -82px;
+        border-top: 0px solid transparent;
+        border-right: 171px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 83px solid #006086;
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+}
+
+
+/*ccpa Page*/
+.hexList{
+  li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+    span  {
+      height: 55px;
+      aspect-ratio: 0.8660254038;
+      clip-path: polygon(-50% 50%, 50% 100%, 150% 50%, 50% 0);
+      background: #28A0CF;
+      display: inline-block;
+      color: #fff;
+      font-size: 26px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 55px;
+  }
+  }
+}
+.numberBox{
+  .number{
+    display: flex;
+    align-items: center;
+    font-size: 46px;
+    font-weight: 700;
+    color: #28A0CF; 
+    margin-bottom: 10px;
+  }
+}
+.hexIcon{
+  height: 90px;
+      aspect-ratio: 0.8660254038;
+      clip-path: polygon(-50% 50%, 50% 100%, 150% 50%, 50% 0);
+      background: #28A0CF33;
+      display: inline-block;
+      color: #fff;
+      font-size: 26px;
+      font-weight: 700;
+      text-align: center;
+      margin-right: -40px;
 }
 
 // Body Closing

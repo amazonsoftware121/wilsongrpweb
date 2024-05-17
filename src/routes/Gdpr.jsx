@@ -180,16 +180,14 @@ const Gdpr = () => {
                 </Box>
 
 
-                <Box className="video_section" py={{ md: 12, xs: 4 }} zIndex="9999" position="relative" backgroundColor="#fff">
+                <Box className="video_section" py={{ md: 12, xs: 4 }} zIndex="9" position="relative" backgroundColor="#fff">
                     <Box className="container">
-                        <Grid container rowSpacing={2}>
+                        <Grid container columnSpacing={3}>
                             <Grid item xs={12} md={6}>
                                 <Typography mb={3} variant='h2' className='sectionTitle'>Why should your organization pay attention?</Typography>
                                 <ul className='keyBenefitsGdpr'>
                                     <li>            The regulation applies to all organizations processing the personal data of data subjects residing in the EU.</li>
-
                                     <li>The location of your organization does not matter.</li>
-
                                     <li>If your organization breaches GDPR, you can be fined up to 4% of annual global turnover or €20 Million (whichever is greater).</li>
                                 </ul>
                             </Grid>

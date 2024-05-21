@@ -71,7 +71,6 @@ const ContentSlider = (props) => {
                                 clickable: true,
                                 el: '.custom-pagination'
                             }}
-                            navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }}
 
                             modules={[Grid, Pagination, Navigation]}
                             className="mySwiper"

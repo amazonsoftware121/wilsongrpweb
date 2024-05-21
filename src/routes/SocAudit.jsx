@@ -7,8 +7,8 @@ import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import WhyUs from '../components/WhyUs';
 import BlogSlider from '../components/BlogSlider';
 
-import img02 from '../assets/img/soc_img_02.webp'
-import img03 from '../assets/img/soc_img_03.webp'
+import img02 from '../assets/img/soc_img_02_new.webp'
+import img03 from '../assets/img/soc_img_03_new.webp'
 
 import PostImg1 from '../assets/img/Wilson1.jpg'
 import ContactUs from '../components/ContactUs';
@@ -51,19 +51,19 @@ const SocAudit = () => {
 
                 <Box sx={{ backgroundImage: `url(${bg01})`, backgroundSize: 'cover' }} py={{ md: 12, xs: 4 }}>
                     <Box className="container">
-                        <Box sx={{ width: "90%", margin: '0 auto' }}>
-                            <Box sx={{ border: '2px solid #fff', padding: '20px' }}>
+                        <Box sx={{ width: {md: "90%", xs: '100%'}, margin: '0 auto' }}>
+                            <Box sx={{ border: '2px solid #fff', padding: {md: '20px', xs: 1} }}>
 
-                                <Box bgcolor='#FFFFFFE5' px={9} py={12}>
+                                <Box bgcolor='#FFFFFFE5' px={{md: 9, xs: 2}} py={{md: 12, xs: 4}}>
                                     <Stack spacing={3}>
                                         <Typography variant='h2' className='sectionTitle'>What will you gain from a SOC Audit?</Typography>
                                         <ul className='listDisc'>
-                                            <li>Better understanding of how risks are addressed in similar organizations in the same industry.</li>
-                                            <li>Enhanced organizational reputation and overall reduction of risk as a result of ability to correcting weaknesses and gaps identified in the report.</li>
-                                            <li>Savings in time and money – taking away the hassle of dealing with auditors and non-core activities.</li>
-                                            <li>Improved customer confidence in your organization’s Trust Service Criteria (security, availability, processing, integrity, confidentiality, privacy).</li>
-                                            <li>Increased shareholder confidence in designed controls to effectively mitigate risks.</li>
-                                            <li>In an increasingly competitive environment, a SOC Audit can strengthen your position in the market.</li>
+                                            <li>Better understanding of how risks are addressed in similar organizations in the same industry.</li>
+                                            <li>Enhanced organizational reputation and overall reduction of risk as a result of ability to correcting weaknesses and gaps identified in the report.</li>
+                                            <li>Savings in time and money - taking away the hassle of dealing with auditors and non-core activities.</li>
+                                            <li>Improved customer confidence in your organization's Trust Service Criteria (security, availability, processing, integrity, confidentiality, privacy).</li>
+                                            <li>Increased shareholder confidence in designed controls to effectively mitigate risks.</li>
+                                            <li>In an increasingly competitive environment, a SOC Audit can strengthen your position in the market.</li>
                                         </ul>
                                         <Typography>Let WCG partner with you to keep your organization and your clients assured of the integrity of your services.</Typography>
 
@@ -76,7 +76,7 @@ const SocAudit = () => {
                 </Box>
 
 
-                <Box className="boxLayout" py={{ md: 12, xs: 4 }}>
+                <Box className="boxLayout" py={{ md: 12, xs: 8 }}>
                     <Box className="container">
                         <Grid container columnSpacing={6}>
                             <Grid item md={6} xs={12}>
@@ -116,9 +116,9 @@ const SocAudit = () => {
 
                 </Box>
 
-                <Box className="boxLayout box2" pt={{ md: 4, xs: 4 }} pb={{md: 12, xs: 4}}>
+                <Box className="boxLayout box2" pt={{ md: 4, xs: 0 }} pb={{md: 12, xs: 4}}>
                     <Box className="container">
-                        <Grid container columnSpacing={6}>
+                        <Grid container columnSpacing={6} direction={{xs: "column-reverse", md: 'row'}}>
                             <Grid item md={6} xs={12}>
                                 <Box >
                                     <Stack spacing={2}>

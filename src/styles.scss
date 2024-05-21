@@ -2402,6 +2402,12 @@ position: relative;
       border-bottom: 100px solid transparent;
       width: 0;
       height: 0;
+      @media only screen and (max-width : 600px) {
+        border-top: 38px solid #fff;
+        border-left: 38px solid transparent;
+        border-right: 40px solid #fff;
+        border-bottom: 50px solid transparent;
+      }
     }
   }
 
@@ -2410,10 +2416,16 @@ position: relative;
     background: linear-gradient(90deg, #145169 0%, #28A0CF 100%);
     width: calc(100% + 218px);
     margin-left: -218px;
-    z-index: 9999;
+    z-index: 99;
     position: relative;
     padding: 70px 50px;
     border-radius: 0px 0px 80px 0px;
+    @media only screen and (max-width : 900px) {
+      padding: 30px 15px;
+      width: calc(100% + 15px);
+      margin-left: -15px;
+      border-radius: 0px 0px 30px 0px;
+    }
 
     &::before {
       content: "";
@@ -2426,6 +2438,13 @@ position: relative;
       border-bottom: 83px solid #006086;
       width: 0;
       height: 0;
+      @media only screen and (max-width : 900px) {
+        top: -8px;
+        border-top: 0px solid transparent;
+        border-left: 15px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 8px solid #006086;
+      }
     }
   }
 
@@ -2439,6 +2458,12 @@ position: relative;
         border-left: 91px solid #fff;
         border-right: 61px solid transparent;
         border-bottom: 100px solid transparent;
+        @media only screen and (max-width : 600px) {
+          border-top: 35px solid #fff;
+        border-left: 45px solid #fff;
+        border-right: 30px solid transparent;
+        border-bottom: 50px solid transparent;
+        }
       }
     }
 
@@ -2448,6 +2473,12 @@ position: relative;
       margin-right: 218px;
       border-radius: 0px 0px 0px 80px;
       margin-left: 0;
+      @media only screen and (max-width : 900px) {
+        padding: 30px 15px;
+      width: calc(100% + 15px);
+      margin-left: 0px;
+      border-radius: 0px 0px 0px 30px;
+      }
 
       &::before {
         content: "";
@@ -2461,6 +2492,13 @@ position: relative;
         border-bottom: 83px solid #006086;
         width: 0;
         height: 0;
+        @media only screen and (max-width : 900px) {
+          top: -8px;
+          border-top: 0px solid transparent;
+          border-right: 15px solid transparent;
+          border-left: 0px solid transparent;
+          border-bottom: 8px solid #006086;
+        }
       }
     }
   }

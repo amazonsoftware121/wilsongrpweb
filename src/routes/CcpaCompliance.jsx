@@ -60,7 +60,7 @@ const CcpaCompliance = () => {
         </Box>
 
 
-        <Box sx={{ backgroundImage: `url(${bgImg01})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} py={{ md: 25 }}>
+        <Box sx={{ backgroundImage: `url(${bgImg01})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} py={{ sm: 5, lg: 25, xs: 5,md: 7  }}>
           <Box className="container">
             <Grid container>
               <Grid item md={7} xs={12}>
@@ -79,25 +79,25 @@ const CcpaCompliance = () => {
 
         <Box py={{ md: 14, xs: 4 }}>
           <Box className="container">
-            <Typography pb={{ md: 6, xs: 2 }} className='sectionTitle' textAlign="center">What is the penalty for Non-compliance?</Typography>
+            <Typography pb={{ md: 6, xs: 4 }} className='sectionTitle' textAlign="center">What is the penalty for Non-compliance?</Typography>
             <Box>
-              <Grid container>
-                <Grid item md={4} px={13}>
+              <Grid container rowGap={3}>
+                <Grid item sm={12} xs={12} md={4} px={{lg: 8,sm: 0}}>
                   <Box className="numberBox">
                     <Box className="number"><span className='hexIcon'></span> $7,500</Box>
-                    <Typography>Fine for violation of CCPA Compliance is $2,500 to $7,500</Typography>
+                    <Typography>Fine for violation of CCPA<br/> Compliance is $2,500 to $7,500</Typography>
                   </Box>
                 </Grid>
 
-                <Grid item md={4} px={14}>
+                <Grid item sm={12} xs={12} md={4} px={{lg: 8, sm: 0}}>
                   <Box className="numberBox">
                     <Box className="number"><span className='hexIcon'></span> $750</Box>
-                    <Typography>$100 to $750 per consumer  per incident after civil action</Typography>
+                    <Typography>$100 to $750 per consumer <br/> per incident after civil action</Typography>
                   </Box>
                 </Grid>
 
 
-                <Grid item md={4} px={7}>
+                <Grid item sm={6} xs={12} md={4} px={{lg: 7, sm: 0}}>
                   <Box className="numberBox">
                     <Box className="number"><span className='hexIcon'></span> 30</Box>
                     <Typography>Businesses have 30 days to cure violations of this California data privacy law and inform consumers that they have done so</Typography>

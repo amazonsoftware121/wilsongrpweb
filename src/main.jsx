@@ -186,7 +186,7 @@ const router = createBrowserRouter([
         }
       },
       {
-        path: '/health-insurance-portability-and-accountability-act-hipaa-new',
+        path: '/health-insurance-portability-and-accountability-act-hipaa',
         async lazy() {
           let Hipaa = await import("./routes/Hipaa.jsx");
           return { Component: Hipaa.default };
@@ -207,7 +207,7 @@ const router = createBrowserRouter([
         }
       },
       {
-        path: 'gramm-leach-bliley-act-compliance-new',
+        path: 'gramm-leach-bliley-act-compliance',
         async lazy(){
           let GrammLeachBlileyActCompliance = await import("./routes/GrammLeachBlileyActCompliance.jsx");
           return {Component: GrammLeachBlileyActCompliance.default};

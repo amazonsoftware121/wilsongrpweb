@@ -214,14 +214,14 @@ const router = createBrowserRouter([
         }
       },
       {
-        path: 'system-and-organization-controls-soc-audit-new',
+        path: 'system-and-organization-controls-soc-audit',
         async lazy(){
           let SocAudit = await import("./routes/SocAudit.jsx");
           return {Component: SocAudit.default};
         }
       },
       {
-        path: 'california-consumer-privacy-act-ccpa-compliance-new',
+        path: 'california-consumer-privacy-act-ccpa-compliance',
         async lazy(){
           let CcpaCompliance = await import("./routes/CcpaCompliance.jsx");
           return {Component: CcpaCompliance.default};

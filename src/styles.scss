@@ -2531,10 +2531,14 @@ position: relative;
   .number{
     display: flex;
     align-items: center;
+    
     font-size: 46px;
     font-weight: 700;
     color: #28A0CF; 
     margin-bottom: 10px;
+    @media only screen and (max-width : 900px) {
+      justify-content: center;
+    }
   }
 }
 .hexIcon{

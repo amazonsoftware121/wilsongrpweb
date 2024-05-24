@@ -81,9 +81,9 @@ const CcpaCompliance = () => {
           <Box className="container">
             <Typography pb={{ md: 6, xs: 4 }} className='sectionTitle' textAlign="center">What is the penalty for Non-compliance?</Typography>
             <Box>
-              <Grid container rowGap={3}>
+              <Grid container rowGap={3} sx={{textAlign: {xs: 'center', md: 'left'}}}>
                 <Grid item sm={12} xs={12} md={4} px={{lg: 8,sm: 0}}>
-                  <Box className="numberBox">
+                  <Box className="numberBox" >
                     <Box className="number"><span className='hexIcon'></span> $7,500</Box>
                     <Typography>Fine for violation of CCPA<br/> Compliance is $2,500 to $7,500</Typography>
                   </Box>
@@ -97,8 +97,8 @@ const CcpaCompliance = () => {
                 </Grid>
 
 
-                <Grid item sm={6} xs={12} md={4} px={{lg: 7, sm: 0}}>
-                  <Box className="numberBox">
+                <Grid item sm={12} xs={12} md={4} px={{lg: 7, sm: 0}}>
+                  <Box className="numberBox" sx={{maxWidth: {xs: '350px', md: 'none'}, margin: '0 auto'}}>
                     <Box className="number"><span className='hexIcon'></span> 30</Box>
                     <Typography>Businesses have 30 days to cure violations of this California data privacy law and inform consumers that they have done so</Typography>
                   </Box>
@@ -158,7 +158,7 @@ const CcpaCompliance = () => {
                 <Button sx={{justifyContent: 'start',marginTop: '15px', fontSize: '20px', fontWeight: '700', padding: '0'}} variant='text' href='https://wilsoncgrp.com/contact-us' className='textBtn-sky' > Connect with Our Expert &nbsp; <span><FaArrowRight size={14} /></span></Button>
                 </Stack>
               </Grid>
-              <Grid item md={6} xs={12}> <iframe src="https://www.youtube.com/embed/gbKUgTtmQKo" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="100%" height="380" frameborder="0"></iframe></Grid>
+              <Grid item md={6} xs={12}> <iframe src="https://www.youtube.com/embed/gbKUgTtmQKo" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="100%" height="380" frameBorder="0"></iframe></Grid>
             </Grid>
           </Box>
         </Box>

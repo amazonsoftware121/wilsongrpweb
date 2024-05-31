@@ -226,6 +226,20 @@ const router = createBrowserRouter([
           let CcpaCompliance = await import("./routes/CcpaCompliance.jsx");
           return {Component: CcpaCompliance.default};
         }
+      },
+      {
+        path: 'cybersecurity-maturity-model-certification-new',
+        async lazy(){
+          let CybersecurityMaturityModelCertification = await import("./routes/CybersecurityMaturityModelCertification.jsx");
+          return {Component: CybersecurityMaturityModelCertification.default};
+        }
+      },
+      {
+        path: 'fedramp-consulting-new',
+        async lazy(){
+          let FedrampConsulting = await import("./routes/FedrampConsulting.jsx");
+          return {Component: FedrampConsulting.default};
+        }
       }
     ]
   },

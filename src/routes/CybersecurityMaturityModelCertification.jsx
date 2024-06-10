@@ -7,7 +7,7 @@ import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import bgBlue from '../../src/assets/img/bg5.png';
 import cmmcBg from '../../src/assets/img/cmmc_bg.jpg';
 import { motion } from 'framer-motion';
-import { FaExclamation, FaNewspaper } from "react-icons/fa";
+import { FaExclamation, FaNewspaper, FaHandshake  } from "react-icons/fa";
 
 
 const CybersecurityMaturityModelCertification = () => {
@@ -41,29 +41,95 @@ const CybersecurityMaturityModelCertification = () => {
           <Box sx={{ opacity: 0.3, top: 0, position: 'absolute', backgroundImage: `url(${cmmcBg})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', width: '100%', height: '100%' }}></Box>
           <Box className="container" sx={{ position: 'relative', zIndex: '9' }}>
             <Typography variant='h2' textAlign='center' className='sectionTitle'>CMMC Timeline</Typography>
-            <Box className="leftGradBorderWrapper">
-              <Grid container rowGap={3}>
-                <Grid xs={12} md={6} pr={{ md: 15, xs: 0 }} pt={{  }}>
-                </Grid>
-
-
-
-
-
-                <Grid ml={{ md: 0, xs: '15px' }} className="leftGradBorder" xs={12} md={6} pt={{ }}>
-                  <Box  pb={5} pl={4}>
-                  <Box className='iconHeading' mt={0}><span className='iconBorder'><FaExclamation /></span></Box>
-                    <motion.div initial={{ x: 100, opacity: 0 }}
+            <Box className="centerBorderWrapper" mt={8}>
+              <Grid container>
+              <Grid  className="centerBorderWrapperContent " xs={12} md={6} >
+                  <Box pb={5} className="centerBorderWrapperContentInner left">
+                    <Box className='iconHeading' mt={0}><span className='iconBorder'><FaExclamation /></span></Box>
+                    <motion.div initial={{ x: -100, opacity: 0 }}
                       whileInView={{ x: 0, opacity: 1 }}
                       transition={{ duration: 1 }}
                       viewport={{ once: true }}>
-                      <Typography variant='h4'>Review and /or Develop GLBA Data Maps</Typography>
-                      Data mapping articulates and illustrates how data is stored, transmitted, and processed internally and externally. WCG reviews or develops GLBA data maps for financial institutions to ensure the data flows are accurate and sufficiently meet GLBA compliance requirements.
+                      <Box maxWidth="350px" mt={3}>
+                      <Stack spacing={2}>
+                        
+                        <Typography variant='h4' sx={{ fontSize: '20px', fontWeight: 'bold' }} color='primary.main'>October 2019</Typography>
+                        <Typography sx={{ fontWeight: 500 }}>CMMC implemented requirements released</Typography>
+                        <Typography sx={{ fontWeight: 'bold', fontSize: '18px', color: '#333333' }} variant='h5'>PHASE 01</Typography>
+                      </Stack>
+                      </Box>
                     </motion.div>
 
                   </Box>
                 </Grid>
+                <Grid xs={12} md={6}>
+                </Grid>
+
+
+
+
+
+               
               </Grid>
+
+              <Grid container >
+              <Grid xs={12} md={6}>
+                </Grid>
+              <Grid className="centerBorderWrapperContent" xs={12} md={6}>
+                  <Box pb={5} className="centerBorderWrapperContentInner right">
+                    <Box className='iconHeading' mt={0}><span className='iconBorder'><FaNewspaper /></span></Box>
+                    <motion.div initial={{ x: 100, opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{ duration: 1 }}
+                      viewport={{ once: true }}>
+                      <Box maxWidth="350px" mt={3}>
+                      <Stack spacing={2}>
+                        
+                        <Typography variant='h4' sx={{ fontSize: '20px', fontWeight: 'bold' }} color='primary.main'>January 2020</Typography>
+                        <Typography sx={{ fontWeight: 500 }}>Version 1.0 finalization; compliance checklist released</Typography>
+                        <Typography sx={{ fontWeight: 'bold', fontSize: '18px', color: '#333333' }} variant='h5'>PHASE 02</Typography>
+                      </Stack>
+                      </Box>
+                    </motion.div>
+
+                  </Box>
+                </Grid> 
+              </Grid>
+
+
+              <Grid container >
+              
+              <Grid className="centerBorderWrapperContent" xs={12} md={6}>
+                  <Box pb={5} className="centerBorderWrapperContentInner left">
+                    <Box className='iconHeading' mt={0}><span className='iconBorder'><FaHandshake  /></span></Box>
+                    <motion.div initial={{ x: -100, opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{ duration: 1 }}
+                      viewport={{ once: true }}>
+                      <Box maxWidth="350px" mt={3}>
+                      <Stack spacing={2}>
+                        
+                        <Typography variant='h4' sx={{ fontSize: '20px', fontWeight: 'bold' }} color='primary.main'>January 2020</Typography>
+                        <Typography sx={{ fontWeight: 500 }}>Version 1.0 finalization; compliance checklist released</Typography>
+                        <Typography sx={{ fontWeight: 'bold', fontSize: '18px', color: '#333333' }} variant='h5'>PHASE 02</Typography>
+                      </Stack>
+                      </Box>
+                    </motion.div>
+
+                  </Box>
+                </Grid>
+                <Grid xs={12} md={6}>
+                </Grid>
+                
+
+
+
+
+
+               
+              </Grid>
+
+
             </Box>
 
 

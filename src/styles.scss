@@ -2330,13 +2330,14 @@ body {
 .leftGradBorderWrapper {
   padding-left: 25px;
   position: relative;
+
   @media only screen and (max-width : 900px) {
     padding-left: 0px;
   }
- 
+
 
   .leftGradBorder {
-position: relative;
+    position: relative;
 
     .iconHeading {
       font-weight: 700;
@@ -2364,6 +2365,7 @@ position: relative;
         background-color: #fff;
       }
     }
+
     &::before {
       position: absolute;
       content: '';
@@ -2402,6 +2404,7 @@ position: relative;
       border-bottom: 100px solid transparent;
       width: 0;
       height: 0;
+
       @media only screen and (max-width : 600px) {
         border-top: 38px solid #fff;
         border-left: 38px solid transparent;
@@ -2420,6 +2423,7 @@ position: relative;
     position: relative;
     padding: 70px 50px;
     border-radius: 0px 0px 80px 0px;
+
     @media only screen and (max-width : 900px) {
       padding: 30px 15px;
       width: calc(100% + 15px);
@@ -2438,6 +2442,7 @@ position: relative;
       border-bottom: 83px solid #006086;
       width: 0;
       height: 0;
+
       @media only screen and (max-width : 900px) {
         top: -8px;
         border-top: 0px solid transparent;
@@ -2458,11 +2463,12 @@ position: relative;
         border-left: 91px solid #fff;
         border-right: 61px solid transparent;
         border-bottom: 100px solid transparent;
+
         @media only screen and (max-width : 600px) {
           border-top: 35px solid #fff;
-        border-left: 45px solid #fff;
-        border-right: 30px solid transparent;
-        border-bottom: 50px solid transparent;
+          border-left: 45px solid #fff;
+          border-right: 30px solid transparent;
+          border-bottom: 50px solid transparent;
         }
       }
     }
@@ -2473,11 +2479,12 @@ position: relative;
       margin-right: 218px;
       border-radius: 0px 0px 0px 80px;
       margin-left: 0;
+
       @media only screen and (max-width : 900px) {
         padding: 30px 15px;
-      width: calc(100% + 15px);
-      margin-left: 0px;
-      border-radius: 0px 0px 0px 30px;
+        width: calc(100% + 15px);
+        margin-left: 0px;
+        border-radius: 0px 0px 0px 30px;
       }
 
       &::before {
@@ -2492,6 +2499,7 @@ position: relative;
         border-bottom: 83px solid #006086;
         width: 0;
         height: 0;
+
         @media only screen and (max-width : 900px) {
           top: -8px;
           border-top: 0px solid transparent;
@@ -2506,14 +2514,15 @@ position: relative;
 
 
 /*ccpa Page*/
-.hexList{
+.hexList {
   li {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 15px;
     margin: 20px 0;
-    span  {
+
+    span {
       height: 55px;
       aspect-ratio: 0.8660254038;
       clip-path: polygon(-50% 50%, 50% 100%, 150% 50%, 50% 0);
@@ -2524,95 +2533,197 @@ position: relative;
       font-weight: 700;
       text-align: center;
       line-height: 55px;
-  }
+    }
   }
 }
-.numberBox{
-  .number{
+
+.numberBox {
+  .number {
     display: flex;
     align-items: center;
-    
+
     font-size: 46px;
     font-weight: 700;
-    color: #28A0CF; 
+    color: #28A0CF;
     margin-bottom: 10px;
+
     @media only screen and (max-width : 900px) {
       justify-content: center;
     }
   }
 }
-.hexIcon{
+
+.hexIcon {
   height: 90px;
-      aspect-ratio: 0.8660254038;
-      clip-path: polygon(-50% 50%, 50% 100%, 150% 50%, 50% 0);
-      background: #28A0CF33;
-      display: inline-block;
-      color: #fff;
-      font-size: 26px;
-      font-weight: 700;
-      text-align: center;
-      margin-right: -40px;
+  aspect-ratio: 0.8660254038;
+  clip-path: polygon(-50% 50%, 50% 100%, 150% 50%, 50% 0);
+  background: #28A0CF33;
+  display: inline-block;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin-right: -40px;
 }
 
 
 /*CMMC Page*/
 
-.cmmmTimeline{
-  .centerBorderWrapper{
+.cmmmTimeline {
+  .centerBorderWrapper {
     position: relative;
-    &::before{
-      position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    width: 5px;
-    height: 100%;
-    background: $color-primary;
-    left: calc(50% - 2px);
-    z-index: -9;
-    }
-.iconHeading{
-  margin: 0;
-  .iconBorder{
-    background-color: $color-primary;
-    color: #fff;
-    height: 75px;
-    width: 75px;
-    font-size: 48px;
-    position: static;
-    display: flex;
-    line-height: 75px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-  }
-}
-.centerBorderWrapperContent{
-.centerBorderWrapperContentInner{
-  display: flex;
-  flex-direction: column;
-  
- &.left{
-    align-items: end;
-    text-align: right;
-    padding-right: 35px;
-    .iconHeading{
-      margin-right: -71px;
-       
-     }
-  }
-  &.right{
-    align-items: start;
-    text-align: left;
-    padding-left: 35px;
-    .iconHeading{
-      margin-left: -72px;       
-     }
-  }
-}
-} 
 
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 5px;
+      height: 100%;
+      background: $color-primary;
+      left: calc(50% - 2px);
+      z-index: -9;
+    }
+
+    .iconHeading {
+      margin: 0;
+
+      .iconBorder {
+        background-color: $color-primary;
+        color: #fff;
+        height: 75px;
+        width: 75px;
+        font-size: 48px;
+        position: static;
+        display: flex;
+        line-height: 75px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+    }
+
+    .centerBorderWrapperContent {
+      .centerBorderWrapperContentInner {
+        display: flex;
+        flex-direction: column;
+
+        &.left {
+          align-items: end;
+          text-align: right;
+          padding-right: 35px;
+
+          .iconHeading {
+            margin-right: -71px;
+
+          }
+        }
+
+        &.right {
+          align-items: start;
+          text-align: left;
+          padding-left: 35px;
+
+          .iconHeading {
+            margin-left: -72px;
+          }
+        }
+      }
+    }
+
+  }
 }
+
+/*Fedramp Consulting Page*/
+
+.customItemBox2{
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 13px 19px #0000001c;
+  padding: 35px;
+  display: flex;
+  gap: 25px;
+  .iconRight{
+    width: 72px;
+    height: 72px;
+    display: flex;
+    font-size: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #252B42;
+    &.icon01{
+      background-color: #D4EAF6;
+    }
+    &.icon02{
+      background-color: #F6D4E9;
+    }
+    &.icon03{
+      background-color: #C1FEB8;
+    }
+    
+  }
+  .customItemBox2__title{
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  p{
+    color: #333333;
+  }
+}
+.customizeTable{
+  thead{
+    background-color: $color-primary;
+    td,th{
+      color: #fff;
+      font-size: 22px;
+      border: 1px solid #e0e0e0;
+    }
+  }
+  tbody tr th{
+    font-weight: bold;
+    background-color: #f0f0f0;
+  }
+  td{
+    border: 1px solid #e0e0e0;
+  }
+}
+.faqSection2{
+  max-width: 1200px;
+  margin: 0 auto;
+  .MuiAccordionSummary-content p{
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+  }
+  .MuiPaper-root{
+    border: 1px solid #CCCCCC !important;
+    border-radius: 18px !important;
+    margin-bottom: 25px;
+    box-shadow: none;
+    padding: 35px 30px;
+    &::before{
+      display: none;
+    }
+    &.Mui-expanded{
+      border: 2px solid #000 !important;
+      box-shadow: 0 4px 4px #00000038;
+    }
+  }
+  .MuiAccordionSummary-expandIconWrapper{
+    svg{
+      fill: #CCCCCC;
+      color: #000;
+    }
+  }
+  .Mui-expanded{
+    svg{
+      fill: #000;
+    }
+  }
+  
 }
 
 // Body Closing

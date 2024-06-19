@@ -21,22 +21,13 @@ import CmmcLevelGraph from '../assets/img/CMMC-Level-graph-20201228_2x.png'
 import globeX from '../assets/img/globe_x.svg';
 
 
-import PostImg1 from '../assets/img/Frame-1.webp';
-import PostImg2 from '../assets/img/hipaa-compliance-services_bg.webp';
-import PostImg3 from '../assets/img/Why-HIPAA-Compliance-Is-Important.webp';
-import PostImg4 from '../assets/img/Why-HIPAA-Compliance-Is-Important.webp';
-import PostImg5 from '../assets/img/cyber-security-1914950_960_720.webp';
-import PostImg6 from '../assets/img/the-fda-guide-how-medical-devices-can-be-secured.jpg';
+import PostImg1 from '../assets/img/cmmc-info.jpg';
+
 import BlogSlider from '../components/BlogSlider';
 
 
 const slides = [
-  { id: 1, cat: "Blog", img: PostImg1, title: "Improving Cybersecurity Awareness in Healthcare", content: "Many cyberattacks succeed due to mistakes by employees and a lack of awareness of basic aspects of cybersecurity. According to the 2022 Verizon Data Breach Investigations Report, 82% of data breaches in 2021 involved the human element. Improving security awareness of the workforce by focusing on key behaviors will go a long way toward improving security and preventing data breaches.", link: "https://wilsoncgrp.com/blog/improving-cybersecurity-awareness-in-healthcare" },
-  { id: 2, cat: "Blog", img: PostImg2, title: "HIPAA Compliance Services", content: "The 1996 Health Insurance Portability and Accountability Act (HIPAA) promotes the security and privacy of employee health information. HIPAA seeks to facilitate efficient and effective electronic transfer of healthcare information between healthcare facilities as well as protect patients’ privacy. The Health and Human Services Department (HHS) was mandated to develop with security standards that they issued in 2003. The resulting health security standards rule gives patients rights over their health information and set standards on who can access it. The act further articulates precautions that all healthcare providers must take to protect and secure electronically collected health information. Agencies, organizations, and individuals classified as covered entities must comply with HIPAA.", link: "https://wilsoncgrp.com/blog/hipaa-compliance-services" },
-  { id: 3, cat: "Blog", img: PostImg3, title: "Managing Vulnerabilities and Risks in the Healthcare Sector", content: "The healthcare industry processes a large volume of sensitive personal data of billions of people worldwide. A security breach therefore has significant financial, personal and organizational consequences. It is therefore hardly surprising that the cost of data breach in healthcare organizations more than double the average cost in other sectors. According to the 2017 Cost of Data Breach Study, healthcare organizations had an average cost of $380 for each lost or stolen record . This is compared to the average global cost of data breach being $141.", link: "https://wilsoncgrp.com/blog/managing-vulnerabilities-and-risks-in-the-healthcare-sector" },
-  { id: 4, cat: "Blog", img: PostImg4, title: "Why HIPAA Compliance Is Important", content: "Healthcare organizations have increasingly become a target for cyber attacks. Numerous malicious, large scale health data breaches have taken place this year such as the Anthem data breach, which affected nearly 80 million individuals.[1]More recently, UCLA Health suffered a massive data breach in May 2015, where hackers accessed the medical files of more than 4.5 million patients, according to a UCLA Health notice published in July.[2]According to a 2015 Harris Poll commissioned by Vormetric Data Security, 26 percent of healthcare IT decision makers are protecting data because of a data breach in the past.[3] The report also stated that 48 percent of U.S. healthcare organizations reported either encountering a data breach or failing a compliance audit in the last year.", link: "https://wilsoncgrp.com/blog/why-hipaa-compliance-is-important" },
-  { id: 5, cat: "Blog", img: PostImg5, title: "Security and Privacy Issues of Connected Medical Devices", content: "The healthcare sector is developing more technologically advanced devices aimed at making healthcare more accurate and safer. While the goal is to accelerate the body's capacity to heal, computer-hacking threats to these devices that millions of people depend on pose serious issues. It is also not a surprise why hackers are extremely interested in health record data; while social security number is worth 10 cents on the dark web, and credit card 25 cents, medical health record data could be worth hundreds or even thousands of dollars. This means trouble not only for healthcare providers but also the patients they help.", link: "https://wilsoncgrp.com/blog/security-and-privacy-issues-of-connected-medical-devices" },
-  { id: 6, cat: "Blog", img: PostImg6, title: "The FDA Guide: How Medical Devices Can Be Secured", content: "Medical devices have gone from simple bandages that help wrap up wounds to MRI machines that scan the body for organ irregularities. With increasing complexity over the last five years, these devices have come to rely on software and the Internet to assist people with more efficiency. Now that these machines are able to communicate with one another, their network is susceptible to data loss and compromise due to cyberattacks. A good example of this was the 2017 WannaCry’s ransomware attack against the UK’s National Health Service (NHS), costing them £92M to recover the data and its subsequent cleanup.", link: "https://wilsoncgrp.com/blog/the-fda-guide-how-medical-devices-can-be-secured" }
+  { id: 1, cat: "Data Sheet", img: PostImg1, title: "CYBERSECURITY MATURITY MODEL CERTIFICATION (CMMC) COMPLIANCE", content: "Get ready for CMMC with our effective compliance consulting and remediation services. Reduce your level of efforts & risks. Start your journey with WCG today to maintain and win DoD contracts!", link: "https://wilsoncgrp.com/uploads/CMMC-INFO-SHEET.pdf" }
 ];
 
 const CybersecurityMaturityModelCertification = () => {
@@ -51,7 +42,7 @@ const CybersecurityMaturityModelCertification = () => {
 
   return (
     <>
-      <PageHeader canonicalUrl="cybersecurity-maturity-model-certification" requestConBtn="#contactUs" videoUrl={iframeElement} headTitle="CMMC Compliance Consulting | CMMC Assessment and Remediation" metaDesc="WCG’s CMMC Compliance Consulting and Remediation Services reduce your organization’s level of efforts & risks and help maintain and win DoD contracts." parent="Compliance Services" parentUrl="cybersecurity-maturity-model-certification" title={"Cybersecurity Maturity Model Certification (CMMC)"} backgroundImage={headerBg} />
+      <PageHeader canonicalUrl="cybersecurity-maturity-model-certification" requestConBtn="#contactUs" videoUrl={iframeElement} headTitle="CMMC Compliance Consulting | CMMC Assessment and Remediation" metaDesc="WCG’s CMMC Compliance Consulting and Remediation Services reduce your organization’s level of efforts & risks and help maintain and win DoD contracts." parent="Compliance Services" parentUrl="/compliance-assessment-services" title={"Cybersecurity Maturity Model Certification (CMMC)"} backgroundImage={headerBg} />
       <Box className="mainContent">
         <Box className="pageInfoSection" py={{ md: 12, xs: 6 }} sx={{ backgroundImage: `url(${bgBlue})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom 50px right', backgroundSize: '160px' }}>
           <Box className="container">
@@ -79,7 +70,7 @@ const CybersecurityMaturityModelCertification = () => {
             <Typography variant='h2' textAlign='center' className='sectionTitle'>CMMC Timeline</Typography>
             <Box className="centerBorderWrapper" mt={8}>
               <Grid container>
-                <Grid className="centerBorderWrapperContent " xs={12} md={6} >
+                <Grid className="centerBorderWrapperContent " xs={6} sm={6} md={6} >
                   <Box pb={5} className="centerBorderWrapperContentInner left">
                     <Box className='iconHeading' mt={0}><span className='iconBorder'><FaExclamation /></span></Box>
                     <motion.div initial={{ x: -100, opacity: 0 }}
@@ -96,13 +87,13 @@ const CybersecurityMaturityModelCertification = () => {
                     </motion.div>
                   </Box>
                 </Grid>
-                <Grid xs={12} md={6}>
+                <Grid xs={6} sm={6} md={6}>
                 </Grid>
               </Grid>
               <Grid container >
-                <Grid xs={12} md={6}>
+                <Grid xs={6} sm={6} md={6}>
                 </Grid>
-                <Grid className="centerBorderWrapperContent" xs={12} md={6}>
+                <Grid className="centerBorderWrapperContent" xs={6} sm={6} md={6}>
                   <Box pb={5} className="centerBorderWrapperContentInner right">
                     <Box className='iconHeading' mt={0}><span className='iconBorder'><FaNewspaper /></span></Box>
                     <motion.div initial={{ x: 100, opacity: 0 }}
@@ -121,7 +112,7 @@ const CybersecurityMaturityModelCertification = () => {
                 </Grid>
               </Grid>
               <Grid container >
-                <Grid className="centerBorderWrapperContent" xs={12} md={6}>
+                <Grid className="centerBorderWrapperContent" xs={6} sm={6} md={6}>
                   <Box pb={5} className="centerBorderWrapperContentInner left">
                     <Box className='iconHeading' mt={0}><span className='iconBorder'><FaHandshake /></span></Box>
                     <motion.div initial={{ x: -100, opacity: 0 }}
@@ -140,14 +131,14 @@ const CybersecurityMaturityModelCertification = () => {
 
                   </Box>
                 </Grid>
-                <Grid xs={12} md={6}>
+                <Grid xs={6} sm={6} md={6}>
                 </Grid>
               </Grid>
 
               <Grid container >
-                <Grid xs={12} md={6}>
+                <Grid xs={6} sm={6} md={6}>
                 </Grid>
-                <Grid className="centerBorderWrapperContent" xs={12} md={6}>
+                <Grid className="centerBorderWrapperContent" xs={6} sm={6} md={6}>
                   <Box pb={5} className="centerBorderWrapperContentInner right">
                     <Box className='iconHeading' mt={0}><span className='iconBorder'><FaRocketchat /></span></Box>
                     <motion.div initial={{ x: 100, opacity: 0 }}
@@ -168,7 +159,7 @@ const CybersecurityMaturityModelCertification = () => {
 
 
               <Grid container >
-                <Grid className="centerBorderWrapperContent" xs={12} md={6}>
+                <Grid className="centerBorderWrapperContent" xs={6} sm={6} md={6}>
                   <Box pb={5} className="centerBorderWrapperContentInner left">
                     <Box className='iconHeading' mt={0}><span className='iconBorder'><FaGlobeAmericas /></span></Box>
                     <motion.div initial={{ x: -100, opacity: 0 }}
@@ -187,14 +178,14 @@ const CybersecurityMaturityModelCertification = () => {
 
                   </Box>
                 </Grid>
-                <Grid xs={12} md={6}>
+                <Grid xs={6} md={6} sm={6}>
                 </Grid>
               </Grid>
 
               <Grid container >
-                <Grid xs={12} md={6}>
+                <Grid xs={6} sm={6} md={6}>
                 </Grid>
-                <Grid className="centerBorderWrapperContent" xs={12} md={6}>
+                <Grid className="centerBorderWrapperContent" xs={6} sm={6} md={6}>
                   <Box pb={5} className="centerBorderWrapperContentInner right">
                     <Box className='iconHeading' mt={0}><span className='iconBorder'><FaCalendarAlt /></span></Box>
                     <motion.div initial={{ x: 100, opacity: 0 }}
@@ -237,7 +228,7 @@ const CybersecurityMaturityModelCertification = () => {
                 </Box>
               </Grid>
               <Grid item md={6}>
-                <img src={cmmcImg02} />
+                <img src={cmmcImg02} style={{maxWidth: '100%'}} />
               </Grid>
 
 
@@ -268,7 +259,7 @@ const CybersecurityMaturityModelCertification = () => {
                       id="panel1bh-header"
                       sx={{ borderBottom: expanded === 'panel1' ? '1px solid #28A0CF' : 'none' }}
                     >
-                      <Typography variant='h3' sx={{ fontSize: '24px', fontWeight: 'bold', lineHeight: 'normal', color: expanded === 'panel1' ? '#28A0CF' : '#000' }}> Level 5 – Advanced / Progressive </Typography>
+                      <Typography variant='h3' sx={{ fontSize: {md: '24px', xs: "20px"}, fontWeight: 'bold', lineHeight: 'normal', color: expanded === 'panel1' ? '#28A0CF' : '#000' }}> Level 5 – Advanced / Progressive </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                       <Typography>
@@ -285,7 +276,7 @@ const CybersecurityMaturityModelCertification = () => {
                       id="panel2bh-header"
                       sx={{ borderBottom: expanded === 'panel2' ? '1px solid #28A0CF' : 'none' }}
                     >
-                      <Typography variant='h3' sx={{ fontSize: '24px', fontWeight: 'bold', lineHeight: 'normal', color: expanded === 'panel2' ? '#28A0CF' : '#000' }}>  Level 4 – Proactive </Typography>
+                      <Typography variant='h3' sx={{ fontSize: {md: '24px', xs: "20px"}, fontWeight: 'bold', lineHeight: 'normal', color: expanded === 'panel2' ? '#28A0CF' : '#000' }}>  Level 4 – Proactive </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                       <Typography>
@@ -297,14 +288,14 @@ const CybersecurityMaturityModelCertification = () => {
 
 
 
-                  <Accordion sx={{ background: 'none', border: 'none', boxShadow: 'none', borderRadius: '0 !important', borderBottom: expanded === 'panel2' ? `none` : '2px solid #000' }} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                  <Accordion sx={{ background: 'none', border: 'none', boxShadow: 'none', borderRadius: '0 !important', borderBottom: expanded === 'panel3' ? `none` : '2px solid #000' }} expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
                     <AccordionSummary
-                      expandIcon={expanded === 'panel2' ? <FaMinus color='#28A0CF' size={26} /> : <FaPlus color='#000' size={26} />}
-                      aria-controls="panel2bh-content"
-                      id="panel2bh-header"
-                      sx={{ borderBottom: expanded === 'panel2' ? '1px solid #28A0CF' : 'none' }}
+                      expandIcon={expanded === 'panel3' ? <FaMinus color='#28A0CF' size={26} /> : <FaPlus color='#000' size={26} />}
+                      aria-controls="panel3bh-content"
+                      id="panel3bh-header"
+                      sx={{ borderBottom: expanded === 'panel3' ? '1px solid #28A0CF' : 'none' }}
                     >
-                      <Typography variant='h3' sx={{ fontSize: '24px', fontWeight: 'bold', lineHeight: 'normal', color: expanded === 'panel2' ? '#28A0CF' : '#000' }}>  Level 3 – Good Cyber Hygiene </Typography>
+                      <Typography variant='h3' sx={{ fontSize: {md: '24px', xs: "20px"}, fontWeight: 'bold', lineHeight: 'normal', color: expanded === 'panel3' ? '#28A0CF' : '#000' }}>  Level 3 – Good Cyber Hygiene </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                       <Typography>
@@ -314,14 +305,14 @@ const CybersecurityMaturityModelCertification = () => {
                   </Accordion>
 
 
-                  <Accordion sx={{ background: 'none', border: 'none', boxShadow: 'none', borderRadius: '0 !important', borderBottom: expanded === 'panel2' ? `none` : '2px solid #000' }} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                  <Accordion sx={{ background: 'none', border: 'none', boxShadow: 'none', borderRadius: '0 !important', borderBottom: expanded === 'panel4' ? `none` : '2px solid #000' }} expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
                     <AccordionSummary
-                      expandIcon={expanded === 'panel2' ? <FaMinus color='#28A0CF' size={26} /> : <FaPlus color='#000' size={26} />}
-                      aria-controls="panel2bh-content"
-                      id="panel2bh-header"
-                      sx={{ borderBottom: expanded === 'panel2' ? '1px solid #28A0CF' : 'none' }}
+                      expandIcon={expanded === 'panel4' ? <FaMinus color='#28A0CF' size={26} /> : <FaPlus color='#000' size={26} />}
+                      aria-controls="panel4bh-content"
+                      id="panel4bh-header"
+                      sx={{ borderBottom: expanded === 'panel4' ? '1px solid #28A0CF' : 'none' }}
                     >
-                      <Typography variant='h3' sx={{ fontSize: '24px', fontWeight: 'bold', lineHeight: 'normal', color: expanded === 'panel2' ? '#28A0CF' : '#000' }}>  Level 2 – Intermediate Cyber Hygiene  </Typography>
+                      <Typography variant='h3' sx={{ fontSize: {md: '24px', xs: "20px"}, fontWeight: 'bold', lineHeight: 'normal', color: expanded === 'panel4' ? '#28A0CF' : '#000' }}>  Level 2 – Intermediate Cyber Hygiene  </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                       <Typography>
@@ -332,14 +323,14 @@ const CybersecurityMaturityModelCertification = () => {
 
 
 
-                  <Accordion sx={{ background: 'none', border: 'none', boxShadow: 'none', borderRadius: '0 !important', borderBottom: expanded === 'panel2' ? `none` : '2px solid #000' }} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                  <Accordion sx={{ background: 'none', border: 'none', boxShadow: 'none', borderRadius: '0 !important', borderBottom: expanded === 'panel5' ? `none` : '2px solid #000' }} expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
                     <AccordionSummary
-                      expandIcon={expanded === 'panel2' ? <FaMinus color='#28A0CF' size={26} /> : <FaPlus color='#000' size={26} />}
-                      aria-controls="panel2bh-content"
-                      id="panel2bh-header"
-                      sx={{ borderBottom: expanded === 'panel2' ? '1px solid #28A0CF' : 'none' }}
+                      expandIcon={expanded === 'panel5' ? <FaMinus color='#28A0CF' size={26} /> : <FaPlus color='#000' size={26} />}
+                      aria-controls="panel5bh-content"
+                      id="panel5bh-header"
+                      sx={{ borderBottom: expanded === 'panel5' ? '1px solid #28A0CF' : 'none' }}
                     >
-                      <Typography variant='h3' sx={{ fontSize: '24px', fontWeight: 'bold', lineHeight: 'normal', color: expanded === 'panel2' ? '#28A0CF' : '#000' }}>  Level 1 – Basic Cyber Hygiene  </Typography>
+                      <Typography variant='h3' sx={{ fontSize: {md: '24px', xs: "20px"}, fontWeight: 'bold', lineHeight: 'normal', color: expanded === 'panel5' ? '#28A0CF' : '#000' }}>  Level 1 – Basic Cyber Hygiene  </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                       <Typography>
@@ -360,18 +351,19 @@ const CybersecurityMaturityModelCertification = () => {
           </Box>
         </Box>
 
-        <Box py={{ md: 12, xs: 6, }} position='relative'>
-          <Box sx={{ backgroundImage: `url(${halfBg2})`, width: "calc(50% - 30px)", position: 'absolute', height: '100%', backgroundSize: 'cover', top: 0, zIndex: 9 }} ></Box>
+        <Box py={{ md: 12, xs: 0, }} position='relative'>
+          <Box sx={{ display: {md: 'block', xs: 'none'}, backgroundImage: `url(${halfBg2})`, width: {md: "calc(50% - 30px)", xs: "calc(100% - 0px)" }, position: 'absolute', height: '100%', backgroundSize: 'cover', top: 0, zIndex: 9 }} ></Box>
           <Box className="container">
             <Grid container alignItems="center">
 
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} md={6} py={{xs: 6, md: 0}} position="relative">
+              <Box sx={{ display: {md: 'none', xs: 'block'}, backgroundImage: `url(${halfBg2})`, left: "-15px", width: {md: "calc(50% - 30px)", xs: "calc(100% + 30px)" }, position: 'absolute', height: '100%', backgroundSize: 'cover', top: 0, zIndex: 9 }} ></Box>
                 <Box position="relative" zIndex='99' pr={{ md: "80px", xs: 0 }}>
                   <Typography variant='h2' sx={{ color: "#fff !important" }} mb={3} className='sectionTitle'>How  can we help?</Typography>
                   <Typography sx={{ color: "#fff", lineHeight: '26px' }}>It is never too late to evaluate your cybersecurity posture. WCG is your reliable partner that understands the CMMC compliance landscape and has the experience of working with federal third-party vendors. Although the CMMC-AB program is not yet finalized, we are offering consulting and remediation services based on the latest draft version of the certification model to help you get ready for CMMC Compliance. If you do not know where your organization stands, WCG provides the following:</Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} md={6} py={{xs: 4, md: 0}}>
                 <Box display='flex' gap={3}>
                   <Box><img src={globeX} /></Box>
                   <Box>
@@ -385,7 +377,7 @@ const CybersecurityMaturityModelCertification = () => {
                   </Box>
                 </Box>
 
-                <Box display='flex' gap={3} mt={5}>
+                <Box display='flex' gap={3} mt={{md: 5, xs: 3}}>
                   <Box><img src={globeX} /></Box>
                   <Box>
                     <Typography variant='h3' fontSize="24px" mb={2} mt={1} fontWeight="700">CMMC Remediation</Typography>

@@ -13,11 +13,6 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-
-
-import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
@@ -32,28 +27,26 @@ import BlogSlider from '../components/BlogSlider';
 
 
 
-import PostImg1 from '../assets/img/Frame-1.webp';
-import PostImg2 from '../assets/img/hipaa-compliance-services_bg.webp';
-import PostImg3 from '../assets/img/Why-HIPAA-Compliance-Is-Important.webp';
-import PostImg4 from '../assets/img/Why-HIPAA-Compliance-Is-Important.webp';
-import PostImg5 from '../assets/img/cyber-security-1914950_960_720.webp';
-import PostImg6 from '../assets/img/the-fda-guide-how-medical-devices-can-be-secured.jpg';
+import PostImg1 from '../assets/img/microsoftteams-image-1.webp';
+import PostImg2 from '../assets/img/microsoftteams-image.jpg';
+import PostImg3 from '../assets/img/Fedramp-mandatory-services-for-your-cloud-services.jpg';
+import PostImg4 from '../assets/img/fedramp_resources.webp';
+
 
 const slides = [
-  { id: 1, cat: "Blog", img: PostImg1, title: "Improving Cybersecurity Awareness in Healthcare", content: "Many cyberattacks succeed due to mistakes by employees and a lack of awareness of basic aspects of cybersecurity. According to the 2022 Verizon Data Breach Investigations Report, 82% of data breaches in 2021 involved the human element. Improving security awareness of the workforce by focusing on key behaviors will go a long way toward improving security and preventing data breaches.", link: "https://wilsoncgrp.com/blog/improving-cybersecurity-awareness-in-healthcare" },
-  { id: 2, cat: "Blog", img: PostImg2, title: "HIPAA Compliance Services", content: "The 1996 Health Insurance Portability and Accountability Act (HIPAA) promotes the security and privacy of employee health information. HIPAA seeks to facilitate efficient and effective electronic transfer of healthcare information between healthcare facilities as well as protect patients’ privacy. The Health and Human Services Department (HHS) was mandated to develop with security standards that they issued in 2003. The resulting health security standards rule gives patients rights over their health information and set standards on who can access it. The act further articulates precautions that all healthcare providers must take to protect and secure electronically collected health information. Agencies, organizations, and individuals classified as covered entities must comply with HIPAA.", link: "https://wilsoncgrp.com/blog/hipaa-compliance-services" },
-  { id: 3, cat: "Blog", img: PostImg3, title: "Managing Vulnerabilities and Risks in the Healthcare Sector", content: "The healthcare industry processes a large volume of sensitive personal data of billions of people worldwide. A security breach therefore has significant financial, personal and organizational consequences. It is therefore hardly surprising that the cost of data breach in healthcare organizations more than double the average cost in other sectors. According to the 2017 Cost of Data Breach Study, healthcare organizations had an average cost of $380 for each lost or stolen record . This is compared to the average global cost of data breach being $141.", link: "https://wilsoncgrp.com/blog/managing-vulnerabilities-and-risks-in-the-healthcare-sector" },
-  { id: 4, cat: "Blog", img: PostImg4, title: "Why HIPAA Compliance Is Important", content: "Healthcare organizations have increasingly become a target for cyber attacks. Numerous malicious, large scale health data breaches have taken place this year such as the Anthem data breach, which affected nearly 80 million individuals.[1]More recently, UCLA Health suffered a massive data breach in May 2015, where hackers accessed the medical files of more than 4.5 million patients, according to a UCLA Health notice published in July.[2]According to a 2015 Harris Poll commissioned by Vormetric Data Security, 26 percent of healthcare IT decision makers are protecting data because of a data breach in the past.[3] The report also stated that 48 percent of U.S. healthcare organizations reported either encountering a data breach or failing a compliance audit in the last year.", link: "https://wilsoncgrp.com/blog/why-hipaa-compliance-is-important" },
-  { id: 5, cat: "Blog", img: PostImg5, title: "Security and Privacy Issues of Connected Medical Devices", content: "The healthcare sector is developing more technologically advanced devices aimed at making healthcare more accurate and safer. While the goal is to accelerate the body's capacity to heal, computer-hacking threats to these devices that millions of people depend on pose serious issues. It is also not a surprise why hackers are extremely interested in health record data; while social security number is worth 10 cents on the dark web, and credit card 25 cents, medical health record data could be worth hundreds or even thousands of dollars. This means trouble not only for healthcare providers but also the patients they help.", link: "https://wilsoncgrp.com/blog/security-and-privacy-issues-of-connected-medical-devices" },
-  { id: 6, cat: "Blog", img: PostImg6, title: "The FDA Guide: How Medical Devices Can Be Secured", content: "Medical devices have gone from simple bandages that help wrap up wounds to MRI machines that scan the body for organ irregularities. With increasing complexity over the last five years, these devices have come to rely on software and the Internet to assist people with more efficiency. Now that these machines are able to communicate with one another, their network is susceptible to data loss and compromise due to cyberattacks. A good example of this was the 2017 WannaCry’s ransomware attack against the UK’s National Health Service (NHS), costing them £92M to recover the data and its subsequent cleanup.", link: "https://wilsoncgrp.com/blog/the-fda-guide-how-medical-devices-can-be-secured" }
+  { id: 1, cat: "Blog", img: PostImg1, title: "FedRAMP’s Latest Changes and Expectations", content: "Everything changes, which means nothing stays the same. The Federal Risk and Authorization Management Program (FedRAMP) has encountered changes, and those changes mean that requirements are not the same for Cloud Service Providers (CSPs) who provide or plan to provide cloud service offerings (CSOs) to U.S. Government agencies.", link: "https://wilsoncgrp.com/blog/fedramp-latest-changes-and-expectations" },
+  { id: 2, cat: "Blog", img: PostImg2, title: "FedRAMP Has New Baseline Security Control Requirements", content: "Beware all cyber threats; you have new challenges to face! The Federal Risk and Authorization Management Program(FedRAMP) has implemented the new National Institute of Standards and Technology (NIST) 800-53 Rev.5 baseline and security control requirements to address cyber threats.", link: "https://wilsoncgrp.com/blog/fedramp-has-new-baseline-security-control-requirements" },
+  { id: 3, cat: "Blog", img: PostImg3, title: "FedRAMP: Mandatory Protection for Your Cloud Services with Federal Businesses", content: 'These days, many questions arise surrounding the security of data and cloud posture: “How did this happen, why did this happen, and can this happen again?"', link: "https://wilsoncgrp.com/blog/mandatory-protection-for-your-cloud-services" },
+  { id: 4, cat: "Data Sheet", img: PostImg4, title: "FedRAMP Datasheet", content: "Reduce compliance expenditures and expedite authorization process", link: "https://wilsoncgrp.com/uploads/WCG-FedRAMP-Datasheet-20220815-2.pdf" },
 ];
 
-
-
 const FedrampConsulting = () => {
+
+  const iframeElement = <iframe width="100%" height="480" src="https://www.youtube.com/embed/4_nIVONppiQ?si=6OxyhKM3M0TP6wDb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>;
+
   return (
     <>
-      <PageHeader canonicalUrl="fedramp-consulting" requestConBtn="#contactUs" headTitle="FedRAMP Advisory and Assessment Services | Certified 3PAO" metaDesc="FedRAMP Compliance Consulting Services help you meet mandatory FedRAMP security requirements while providing a painless audit experience tailored to your needs." parent="Compliance Services" parentUrl="compliance-assessment-services" title={"FedRAMP Advisory and Assessment Services"} backgroundImage={headerBg} />
+      <PageHeader videoUrl={iframeElement} canonicalUrl="fedramp-consulting" requestConBtn="#contactUs" headTitle="FedRAMP Advisory and Assessment Services | Certified 3PAO" metaDesc="FedRAMP Compliance Consulting Services help you meet mandatory FedRAMP security requirements while providing a painless audit experience tailored to your needs." parent="Compliance Services" parentUrl="compliance-assessment-services" title={"FedRAMP Advisory and Assessment Services"} backgroundImage={headerBg} />
       <Box className="mainContent">
         <Box className="pageInfoSection" py={{ md: 12, xs: 6 }}>
           <Box className="container">
@@ -303,7 +296,7 @@ const FedrampConsulting = () => {
               </Accordion>
               <Accordion>
                 <AccordionSummary
-                  expandIcon={<IoIosArrowDropdownCircle  size={70} />}
+                  expandIcon={<IoIosArrowDropdownCircle size={70} />}
                   aria-controls="panel2-content"
                   id="panel2-header"
                 >
@@ -329,69 +322,64 @@ const FedrampConsulting = () => {
 
               <Accordion>
                 <AccordionSummary
-                  expandIcon={<IoIosArrowDropdownCircle  size={70} />}
+                  expandIcon={<IoIosArrowDropdownCircle size={70} />}
                   aria-controls="panel2-content"
                   id="panel2-header"
                 >
                   <Typography>What is the difference between FedRAMP and FISMA?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 700 }} aria-label="customized table" className='customizeTable'>
-        <TableHead >
-          <TableRow>
-            <TableCell></TableCell>
-            <TableCell >FedRAMP</TableCell>
-            <TableCell >FISMA</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          
-            <TableRow >
-              <TableCell component="th" scope="row">
-              Purpose
-              </TableCell>
-              <TableCell >Provides a standardized approach to security assessment, authorization, and continuous monitoring for cloud products/services/offerings.</TableCell>
-              <TableCell >Provides a framework to ensure the effectiveness of security controls over information and information systems supporting federal operations and assets.</TableCell>
-            </TableRow>
+                  <TableContainer>
+                    <Table sx={{ minWidth: 700 }} aria-label="customized table" className='customizeTable'>
+                      <TableHead >
+                        <TableRow>
+                          <TableCell></TableCell>
+                          <TableCell >FedRAMP</TableCell>
+                          <TableCell >FISMA</TableCell>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
 
-            <TableRow >
-              <TableCell component="th" scope="row">
-              Applicability
-              </TableCell>
-              <TableCell >Mandatory for all Cloud Service Providers (CSPs) that hold federal data and are providing or seeking to provide services to federal agencies.</TableCell>
-              <TableCell >Mandatory for all federal agencies and any contractors or other organizations supporting a federal agency.</TableCell>
-            </TableRow>
+                        <TableRow >
+                          <TableCell component="th" scope="row">
+                            Purpose
+                          </TableCell>
+                          <TableCell >Provides a standardized approach to security assessment, authorization, and continuous monitoring for cloud products/services/offerings.</TableCell>
+                          <TableCell >Provides a framework to ensure the effectiveness of security controls over information and information systems supporting federal operations and assets.</TableCell>
+                        </TableRow>
 
-            <TableRow >
-              <TableCell component="th" scope="row">
-              Compliance Assessor
-              </TableCell>
-              <TableCell >
-              Only FedRAMP certified 3PAO is authorized to conduct FedRAMP Readiness Assessment and Full Security Assessment for CSPs.
-              </TableCell>
-              <TableCell >
-              Any third party capable of conducting an assessment against the NIST SP 800-53 standards can be used to evaluate compliance.
-              </TableCell>
-            </TableRow>
+                        <TableRow >
+                          <TableCell component="th" scope="row">
+                            Applicability
+                          </TableCell>
+                          <TableCell >Mandatory for all Cloud Service Providers (CSPs) that hold federal data and are providing or seeking to provide services to federal agencies.</TableCell>
+                          <TableCell >Mandatory for all federal agencies and any contractors or other organizations supporting a federal agency.</TableCell>
+                        </TableRow>
 
-            <TableRow >
-              <TableCell component="th" scope="row">
-              Controls/Framework
-              </TableCell>
-              <TableCell >
-              Leverages NIST SP 800-53 Revision 5 with control parameters defined by FedRAMP and additional controls required by FedRAMP.
-              </TableCell>
-              <TableCell >Leverages NIST SP 800-53 Revision 5 with control parameters defined by the organization providing services to a federal agency.</TableCell>
-            </TableRow>
+                        <TableRow >
+                          <TableCell component="th" scope="row">
+                            Compliance Assessor
+                          </TableCell>
+                          <TableCell >
+                            Only FedRAMP certified 3PAO is authorized to conduct FedRAMP Readiness Assessment and Full Security Assessment for CSPs.
+                          </TableCell>
+                          <TableCell >
+                            Any third party capable of conducting an assessment against the NIST SP 800-53 standards can be used to evaluate compliance.
+                          </TableCell>
+                        </TableRow>
 
-            
-
-
-          
-        </TableBody>
-      </Table>
-    </TableContainer>
+                        <TableRow >
+                          <TableCell component="th" scope="row">
+                            Controls/Framework
+                          </TableCell>
+                          <TableCell >
+                            Leverages NIST SP 800-53 Revision 5 with control parameters defined by FedRAMP and additional controls required by FedRAMP.
+                          </TableCell>
+                          <TableCell >Leverages NIST SP 800-53 Revision 5 with control parameters defined by the organization providing services to a federal agency.</TableCell>
+                        </TableRow>
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
                 </AccordionDetails>
               </Accordion>
 
@@ -400,7 +388,7 @@ const FedrampConsulting = () => {
           </Box>
         </Box>
         <BlogSlider resourcesSlide={slides} />
-<ContactUs />
+        <ContactUs />
       </Box>
     </>
   )

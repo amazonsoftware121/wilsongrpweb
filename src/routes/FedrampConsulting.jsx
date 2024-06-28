@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+
 import PageHeader from '../components/PageHeader'
 import headerBg from '../assets/img/banner/fredrampBanner.webp';
 import { Box, Button, Grid, Stack, Typography } from '@mui/material';
@@ -41,6 +43,21 @@ const slides = [
 ];
 
 const FedrampConsulting = () => {
+
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const newWidth = Math.min(100, scrollY / 15); // Adjust the divisor to control the speed of the width change
+      setWidth(newWidth);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
 
   const iframeElement = <iframe width="100%" height="480" src="https://www.youtube.com/embed/4_nIVONppiQ?si=6OxyhKM3M0TP6wDb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>;
 
@@ -85,7 +102,15 @@ const FedrampConsulting = () => {
             <Box py={{ md: 8, xs: 5 }}>
               <Grid container columnSpacing={7} alignItems="center">
                 <Grid item md={6} sm={12} pr={7}>
-                  <img src={fedRampS1} style={{ width: '100%' }} />
+                <motion.div
+      style={{ overflow: 'hidden' }}
+    >
+      <motion.img 
+        src={fedRampS1} 
+        style={{ width: `${width}%` }}
+        transition={{ duration: 0.2, ease: 'easeOut' }}
+      />
+    </motion.div>
                 </Grid>
                 <Grid item md={6} sm={12}>
                   <Typography color="primary.main" mb={1}>

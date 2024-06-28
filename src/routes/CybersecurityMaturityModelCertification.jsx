@@ -49,12 +49,9 @@ const CybersecurityMaturityModelCertification = () => {
             <Typography variant='h2' className='sectionTitle'>What is CMMC?</Typography>
             <Box mt={{ xs: 2, md: 3 }}>
               <Stack spacing={3}>
-
                 <Typography >
                   The Cybersecurity Maturity Model Certification (CMMC) is the Department of Defense’s (DoD) latest verification mechanism designed to ensure that cybersecurity controls and processes adequately protect Controlled Unclassified Information (CUI) that resides on Defense Industrial Base (DIB) systems and networks.
-
                 </Typography>
-
                 <Typography>
                   The DoD CMMC establishes five CMMC certification levels that reflect the maturity and reliability of an organization’s cybersecurity infrastructure to safeguard sensitive government information on contractors' information systems. This DoD CMMC framework is the vehicle by which the government will mandate a contractor’s cyber security maturity level to be verified by an independent third-party audit.
                 </Typography>
@@ -207,7 +204,7 @@ const CybersecurityMaturityModelCertification = () => {
             </Box>
           </Box>
         </Box>
-
+ 
         <Box py={{ md: 5, xs: 4 }}>
           <Box className="container">
 

@@ -228,7 +228,7 @@ const router = createBrowserRouter([
         }
       },
       {
-        path: 'cybersecurity-maturity-model-certification-new',
+        path: 'cybersecurity-maturity-model-certification',
         async lazy(){
           let CybersecurityMaturityModelCertification = await import("./routes/CybersecurityMaturityModelCertification.jsx");
           return {Component: CybersecurityMaturityModelCertification.default};

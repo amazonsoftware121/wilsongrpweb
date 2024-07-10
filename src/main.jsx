@@ -235,7 +235,7 @@ const router = createBrowserRouter([
         }
       },
       {
-        path: 'fedramp-consulting-new',
+        path: 'fedramp-consulting',
         async lazy(){
           let FedrampConsulting = await import("./routes/FedrampConsulting.jsx");
           return {Component: FedrampConsulting.default};

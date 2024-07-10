@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-
 import PageHeader from '../components/PageHeader'
 import headerBg from '../assets/img/banner/fredrampBanner.webp';
 import { Box, Button, Grid, Stack, Typography } from '@mui/material';
@@ -21,7 +20,7 @@ import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+
 
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import ContactUs from '../components/ContactUs';
@@ -33,6 +32,10 @@ import PostImg1 from '../assets/img/microsoftteams-image-1.webp';
 import PostImg2 from '../assets/img/microsoftteams-image.jpg';
 import PostImg3 from '../assets/img/Fedramp-mandatory-services-for-your-cloud-services.jpg';
 import PostImg4 from '../assets/img/fedramp_resources.webp';
+import LeftImageAnimation from '../components/LeftImageAnimation';
+import RightImageAnimation from '../components/RightImageAnimation';
+import LeftTextAnimation from '../components/LeftTextAnimation';
+import RightTextAnimation from '../components/RightTextAnimation';
 
 
 const slides = [
@@ -43,19 +46,6 @@ const slides = [
 ];
 
 const FedrampConsulting = () => {
-
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const newWidth = Math.min(100, scrollY / 15); // Adjust the divisor to control the speed of the width change
-      setWidth(newWidth);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
 
 
@@ -100,51 +90,46 @@ const FedrampConsulting = () => {
             <Typography textAlign="center" variant='h2' className='sectionTitle'>FedRAMP Services</Typography>
             <Typography textAlign="center">We provide the following FedRAMP services to assist your organization in pursuing FedRAMP ATO.</Typography>
             <Box py={{ md: 8, xs: 5 }}>
-              <Grid container columnSpacing={7} alignItems="center">
-                <Grid item md={6} sm={12} pr={7}>
-                <motion.div
-      style={{ overflow: 'hidden' }}
-    >
-      <motion.img 
-        src={fedRampS1} 
-        style={{ width: `${width}%` }}
-        transition={{ duration: 0.2, ease: 'easeOut' }}
-      />
-    </motion.div>
+              <Grid container columnSpacing={7} alignItems="center" className='rightImageAnimation'>
+                <Grid item md={6} sm={12} pr={{sm: 0, md:7}}>
+                  <LeftImageAnimation imgSrc={fedRampS1} />
                 </Grid>
                 <Grid item md={6} sm={12}>
-                  <Typography color="primary.main" mb={1}>
-                    FedRAMP Advisory
-                  </Typography>
-                  <Stack spacing={3}>
-
-
-
-                    <Typography mt={0} variant='h4' fontSize="32px" lineHeight="38px" fontWeight="bold" mb={2} pr={{ md: 10 }}>
-                      Consulting and Documentation Assistance
+                  <LeftTextAnimation>
+                    <Typography color="primary.main" mb={1}>
+                      FedRAMP Advisory
                     </Typography>
+                    <Stack spacing={3}>
 
-                    <Typography>
-                      Before a CSP can begin the FedRAMP certification process, they must first develop and implement FedRAMP documentation and security controls. WCG FedRAMP consultants will guide you throughout the process and assist with Security Artifact Creation, such as Security Assessment Plan (SAP), System Security Plan (SSP), Security Assessment Report (SAR), and Plan of Action and Milestone (POA&M). WCG’s FedRAMP Consulting Services ensure you are fully prepared for FedRAMP audit and authorization.
-                    </Typography>
-                    <Typography fontWeight="bold">
-                      We also provide the following as part of our FedRAMP Consulting Services:
-                    </Typography>
-                    <ul className='listDisc'>
-                      <li>Assist in determining your cloud solution’s proper Federal Information Processing Standards (FIPS)-199 categorization of the risk level.</li>
-                      <li>Conduct FedRAMP Vulnerability Assessment and Penetration Test.</li>
-                      <li>Conduct a Gap Analysis to evaluate the sufficiency of security controls to determine organizations’ compliance level against FedRAMP requirements.</li>
-                      <li>Evaluate, review, and revise your Incident Response Plan, Process, and Procedures to ensure they adequately address FedRAMP requirements.</li>
-                    </ul>
-                  </Stack>
+
+
+                      <Typography mt={0} variant='h4' fontSize="32px" lineHeight="38px" fontWeight="bold" mb={2} pr={{ md: 10 }}>
+                        Consulting and Documentation Assistance
+                      </Typography>
+
+                      <Typography>
+                        Before a CSP can begin the FedRAMP certification process, they must first develop and implement FedRAMP documentation and security controls. WCG FedRAMP consultants will guide you throughout the process and assist with Security Artifact Creation, such as Security Assessment Plan (SAP), System Security Plan (SSP), Security Assessment Report (SAR), and Plan of Action and Milestone (POA&M). WCG’s FedRAMP Consulting Services ensure you are fully prepared for FedRAMP audit and authorization.
+                      </Typography>
+                      <Typography fontWeight="bold">
+                        We also provide the following as part of our FedRAMP Consulting Services:
+                      </Typography>
+                      <ul className='listDisc'>
+                        <li>Assist in determining your cloud solution’s proper Federal Information Processing Standards (FIPS)-199 categorization of the risk level.</li>
+                        <li>Conduct FedRAMP Vulnerability Assessment and Penetration Test.</li>
+                        <li>Conduct a Gap Analysis to evaluate the sufficiency of security controls to determine organizations’ compliance level against FedRAMP requirements.</li>
+                        <li>Evaluate, review, and revise your Incident Response Plan, Process, and Procedures to ensure they adequately address FedRAMP requirements.</li>
+                      </ul>
+                    </Stack>
+                  </LeftTextAnimation>
                 </Grid>
               </Grid>
             </Box>
 
             <Box pb={{ md: 9, xs: 5 }} >
-              <Grid container columnSpacing={7} alignItems="center">
+              <Grid container columnSpacing={7} alignItems="center" className='leftImageAnimation'>
 
                 <Grid item md={6} sm={12}>
+<RightTextAnimation>
                   <Typography color="primary.main" mb={1}>
                     FedRAMP Preparation
                   </Typography>
@@ -164,19 +149,21 @@ const FedrampConsulting = () => {
                     </Typography>
 
                   </Stack>
+                  </RightTextAnimation>
                 </Grid>
-                <Grid item md={6} sm={12} pl={7}>
-                  <img src={fedRampS2} style={{ width: '100%' }} />
+                <Grid item md={6} sm={12} pl={{sm: 0, md:7}}>
+                  <RightImageAnimation imgSrc={fedRampS2} />
                 </Grid>
               </Grid>
             </Box>
 
             <Box pb={{ md: 7, xs: 5 }}>
-              <Grid container columnSpacing={7} alignItems="center">
-                <Grid item md={6} sm={12} pr={15}>
-                  <img src={fedRampS3} style={{ width: '100%' }} />
+              <Grid container columnSpacing={7} alignItems="center" className='rightImageAnimation'>
+                <Grid item md={6} sm={12} pr={{sm: 0, md:15}}>
+                <LeftImageAnimation imgSrc={fedRampS3} />
                 </Grid>
                 <Grid item md={6} sm={12}>
+                <LeftTextAnimation>
                   <Typography color="primary.main" mb={1}>
                     FedRAMP Authorization
                   </Typography>
@@ -199,15 +186,17 @@ const FedrampConsulting = () => {
                       <li>Plan of Action and Milestones (POA&M) generated from FedRAMP assessment</li>
                     </ul>
                   </Stack>
+                  </LeftTextAnimation>
                 </Grid>
               </Grid>
             </Box>
 
             <Box pb={{ md: 9, xs: 5 }} >
-              <Grid container columnSpacing={7} alignItems="center">
+              <Grid container columnSpacing={7} alignItems="center" className='leftImageAnimation'>
 
                 <Grid item md={6} sm={12}>
-                  <Box pr={10}>
+                <RightTextAnimation>
+                  <Box pr={{sm: 0, md: 10}}>
                     <Typography color="primary.main" mb={1}>
                       FedRAMP Continuous Monitoring
                     </Typography>
@@ -232,9 +221,11 @@ const FedrampConsulting = () => {
 
                     </Stack>
                   </Box>
+                  </RightTextAnimation>
                 </Grid>
-                <Grid item md={6} sm={12} pl={7}>
-                  <img src={fedRampS4} style={{ width: '100%' }} />
+                <Grid item md={6} sm={12} pl={{xs: 0, md:7}}>
+                <RightImageAnimation imgSrc={fedRampS4}/>
+                  
                 </Grid>
               </Grid>
             </Box>
@@ -248,6 +239,9 @@ const FedrampConsulting = () => {
             </Typography>
             <Grid container columnSpacing={10}>
               <Grid item md={6}>
+              <motion.div initial={{ y: 200, opacity: 0 }}
+                                        whileInView={{ y: 0, opacity: 1 }}
+                                        transition={{ duration: 1.5 }}>
                 <Box className="customItemBox2">
                   <Box><span className='iconRight icon01'><FaUserClock /></span></Box>
                   <Box>
@@ -255,6 +249,7 @@ const FedrampConsulting = () => {
                     <Typography>Our FedRAMP process and use of internal application provide a faster and simplified approach to evaluate controls and identify deficiencies. We can effectively and efficiently get you ready for the authorization up to 60 days, which saves 80% faster time to market.</Typography>
                   </Box>
                 </Box>
+                </motion.div>
               </Grid>
             </Grid>
 
@@ -262,6 +257,9 @@ const FedrampConsulting = () => {
             <Grid container mt={-4}>
               <Grid item md={3}></Grid>
               <Grid item md={6}>
+              <motion.div initial={{ y: 200, opacity: 0 }}
+                                        whileInView={{ y: 0, opacity: 1 }}
+                                        transition={{ duration: 1.5 }}>
                 <Box className="customItemBox2">
                   <Box><span className='iconRight icon02'><FaCoins /></span></Box>
                   <Box>
@@ -269,12 +267,16 @@ const FedrampConsulting = () => {
                     <Typography>Our pricing is competitive and straightforward with no hidden agenda, miscellaneous charges, or add-on fees, which provides you with at least 40% cost savings compared to others’ pricing and approach.</Typography>
                   </Box>
                 </Box>
+                </motion.div>
               </Grid>
             </Grid>
 
             <Grid container mt={-4}>
               <Grid item md={6}></Grid>
               <Grid item md={6}>
+              <motion.div initial={{ y: 200, opacity: 0 }}
+                                        whileInView={{ y: 0, opacity: 1 }}
+                                        transition={{ duration: 1.5 }}>
                 <Box className="customItemBox2">
                   <Box><span className='iconRight icon03'><FaUsersCog /></span></Box>
                   <Box>
@@ -282,6 +284,7 @@ const FedrampConsulting = () => {
                     <Typography>Our team is highly talented, knowledgeable, and experienced in conducting FedRAMP assessments and providing consulting in accordance with NIST 800-53 Rev 5. We have unique experiences in working with federal agencies, which allow us to have the know-how to ensure businesses are successful with their assessments.</Typography>
                   </Box>
                 </Box>
+                </motion.div>
               </Grid>
             </Grid>
 

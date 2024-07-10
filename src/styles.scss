@@ -2741,6 +2741,31 @@ body {
   }
   
 }
+@media only screen and (max-width : 900px) {
+  .textAnimation{
+    transform: none !important;
+  }
+  .customItemBox2{
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .faqSection2 .MuiPaper-root{
+    padding: 0px;
+  }
+  .faqSection2 .MuiAccordionSummary-content p{
+    font-size: 18px;
+  }
+  .faqSection2 .MuiAccordionSummary-expandIconWrapper svg{
+    width: 50px;
+  }
+  body .rightImageAnimation {
+    flex-direction: column-reverse;
+  }
+  .rightImageAnimation h4,.leftImageAnimation h4{
+font-size: 22px;
+line-height: normal;
+  }
+}
 
 // Body Closing
 
